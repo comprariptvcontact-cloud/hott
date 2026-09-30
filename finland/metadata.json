@@ -1,0 +1,6 @@
+{
+  "name": "PANDORA IPTV",
+  "description": "Deutschsprachige Verkaufsplattform für Premium-iptv-store-Abonnements: Live-Sender, ein umfangreicher Film- und Serienkatalog, Abonnements, Kundenbewertungen und ein interaktives Zahlungsmodul.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

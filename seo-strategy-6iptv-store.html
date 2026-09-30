@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO Strategy Report — www.6iptv.store</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #0a0a0f; --bg-card: rgba(255,255,255,0.03); --bg-card-hover: rgba(255,255,255,0.06);
+    --border: rgba(255,255,255,0.08); --border-hover: rgba(255,255,255,0.15);
+    --text: #e8e8ed; --text-secondary: #8b8b9e; --text-muted: #5a5a6e;
+    --accent: #6366f1; --accent-glow: rgba(99,102,241,0.3);
+    --green: #22c55e; --green-bg: rgba(34,197,94,0.12); --green-border: rgba(34,197,94,0.25);
+    --yellow: #eab308; --yellow-bg: rgba(234,179,8,0.12); --yellow-border: rgba(234,179,8,0.25);
+    --red: #ef4444; --red-bg: rgba(239,68,68,0.12); --red-border: rgba(239,68,68,0.25);
+    --blue: #3b82f6; --blue-bg: rgba(59,130,246,0.12);
+    --orange: #f97316; --orange-bg: rgba(249,115,22,0.12); --orange-border: rgba(249,115,22,0.25);
+    --purple: #a78bfa; --purple-bg: rgba(167,139,250,0.08); --purple-border: rgba(167,139,250,0.15);
+    --radius: 16px; --radius-sm: 10px; --radius-xs: 6px;
+  }
+  ::selection { background: var(--accent); color: white; }
+  body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; overflow-x: hidden; }
+  body::before {
+    content: ''; position: fixed; top: -50%; left: -50%; width: 200%; height: 200%;
+    background: radial-gradient(ellipse at 20% 50%, rgba(99,102,241,0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(139,92,246,0.04) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 80%, rgba(59,130,246,0.03) 0%, transparent 50%);
+    z-index: -1; animation: ambientDrift 20s ease-in-out infinite;
+  }
+  @keyframes ambientDrift { 0%,100%{transform:translate(0,0);} 33%{transform:translate(-2%,1%);} 66%{transform:translate(1%,-1%);} }
+  @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.4;} }
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  .header { padding: 40px 0 0; text-align: center; }
+  .header-badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 100px; font-size: 12px; font-weight: 500; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 20px; }
+  .header-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); box-shadow: 0 0 8px var(--green); animation: pulse 2s ease-in-out infinite; }
+  .header h1 { font-family: 'Space Grotesk', sans-serif; font-size: 42px; font-weight: 700; line-height: 1.15; margin-bottom: 12px; background: linear-gradient(135deg, #fff 0%, #a5a5c0 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .header .subtitle { font-size: 16px; color: var(--text-secondary); margin-bottom: 32px; }
+  .score-section { display: flex; align-items: center; gap: 48px; margin-bottom: 40px; padding: 40px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); backdrop-filter: blur(20px); }
+  .score-circle-wrap { position: relative; flex-shrink: 0; }
+  .score-circle { width: 180px; height: 180px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-direction: column; position: relative; }
+  .score-circle svg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; transform: rotate(-90deg); }
+  .score-circle svg circle { fill: none; stroke-width: 6; stroke-linecap: round; }
+  .score-circle svg .bg-ring { stroke: rgba(255,255,255,0.06); }
+  .score-circle svg .progress-ring { stroke: var(--accent); stroke-dasharray: 502; stroke-dashoffset: 105; filter: drop-shadow(0 0 6px var(--accent-glow)); transition: stroke-dashoffset 1.5s ease-out; }
+  .score-number { font-family: 'Space Grotesk', sans-serif; font-size: 56px; font-weight: 700; line-height: 1; color: white; position: relative; z-index: 1; }
+  .score-label { font-size: 13px; color: var(--text-secondary); font-weight: 500; position: relative; z-index: 1; margin-top: 4px; }
+  .score-grade { font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; position: relative; z-index: 1; margin-top: 2px; }
+  .score-details { flex: 1; }
+  .score-details h2 { font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600; margin-bottom: 8px; }
+  .score-details p { color: var(--text-secondary); font-size: 15px; line-height: 1.7; margin-bottom: 20px; }
+  .sub-scores { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; }
+  .sub-score { padding: 14px 16px; background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: var(--radius-sm); }
+  .sub-score-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 6px; }
+  .sub-score-value { font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; }
+  .sub-score-bar { height: 3px; border-radius: 2px; background: rgba(255,255,255,0.06); margin-top: 8px; overflow: hidden; }
+  .sub-score-bar-fill { height: 100%; border-radius: 2px; transition: width 1s ease-out; }
+  .tabs { position: sticky; top: 0; z-index: 100; background: rgba(10,10,15,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); padding: 0; }
+  .tabs-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; gap: 0; overflow-x: auto; scrollbar-width: none; }
+  .tabs-inner::-webkit-scrollbar { display: none; }
+  .tab-btn { padding: 16px 24px; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; color: var(--text-muted); background: none; border: none; border-bottom: 2px solid transparent; cursor: pointer; white-space: nowrap; transition: all 0.2s; position: relative; }
+  .tab-btn:hover { color: var(--text-secondary); }
+  .tab-btn.active { color: var(--text); border-bottom-color: var(--accent); }
+  .tab-btn .tab-count { display: inline-flex; align-items: center; justify-content: center; min-width: 20px; height: 20px; padding: 0 6px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 100px; font-size: 11px; font-weight: 600; margin-left: 8px; color: var(--text-secondary); }
+  .tab-btn.active .tab-count { background: var(--accent); border-color: var(--accent); color: white; }
+  .tab-content { display: none; padding: 40px 0 80px; }
+  .tab-content.active { display: block; }
+  .section-title { font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+  .section-subtitle { color: var(--text-secondary); font-size: 15px; margin-bottom: 24px; }
+  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-bottom: 40px; }
+  .stat-card { padding: 24px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); text-align: center; transition: border-color 0.2s; }
+  .stat-card:hover { border-color: var(--border-hover); }
+  .stat-value { font-family: 'Space Grotesk', sans-serif; font-size: 36px; font-weight: 700; color: white; margin-bottom: 4px; }
+  .stat-label { font-size: 13px; color: var(--text-secondary); }
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; margin-bottom: 16px; transition: border-color 0.2s; }
+  .card:hover { border-color: var(--border-hover); }
+  .card-title { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 600; display: flex; align-items: center; gap: 12px; }
+  .badge { display: inline-flex; align-items: center; gap: 5px; padding: 4px 12px; border-radius: 100px; font-size: 12px; font-weight: 600; letter-spacing: 0.3px; }
+  .badge-critical { background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border); }
+  .badge-high { background: var(--orange-bg); color: var(--orange); border: 1px solid var(--orange-border); }
+  .badge-medium { background: var(--yellow-bg); color: var(--yellow); border: 1px solid var(--yellow-border); }
+  .badge-low { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+  .badge-pass { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+  .badge-warning { background: var(--yellow-bg); color: var(--yellow); border: 1px solid var(--yellow-border); }
+  .badge-fail { background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border); }
+  .finding { padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.04); display: grid; grid-template-columns: auto 1fr auto; gap: 16px; align-items: start; }
+  .finding:last-child { border-bottom: none; }
+  .finding-status { width: 8px; height: 8px; border-radius: 50%; margin-top: 8px; }
+  .finding-status.pass { background: var(--green); box-shadow: 0 0 6px rgba(34,197,94,0.4); }
+  .finding-status.warning { background: var(--yellow); box-shadow: 0 0 6px rgba(234,179,8,0.4); }
+  .finding-status.fail { background: var(--red); box-shadow: 0 0 6px rgba(239,68,68,0.4); }
+  .finding-content h4 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+  .finding-content p { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
+  .finding-rec { margin-top: 8px; padding: 10px 14px; background: rgba(99,102,241,0.06); border-left: 3px solid var(--accent); border-radius: 0 var(--radius-xs) var(--radius-xs) 0; font-size: 13px; color: var(--text); line-height: 1.5; }
+  .collapsible { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); margin-bottom: 12px; overflow: hidden; transition: border-color 0.2s; }
+  .collapsible:hover { border-color: var(--border-hover); }
+  .collapsible-header { padding: 20px 24px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none; }
+  .collapsible-header:hover { background: rgba(255,255,255,0.02); }
+  .collapsible-title { font-weight: 600; color: var(--text); font-size: 14px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .collapsible-body { overflow: hidden; max-height: 0; transition: max-height 0.35s ease; }
+  .collapsible.open .collapsible-body { max-height: 5000px; }
+  .collapsible-body-inner { padding: 0 24px 24px; }
+  .collapse-icon { width: 28px; height: 28px; border-radius: 50%; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; font-size: 14px; color: var(--text-muted); transition: transform 0.3s, background 0.2s; flex-shrink: 0; }
+  .collapsible.open .collapse-icon { transform: rotate(180deg); }
+  .page-table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+  .page-table th { text-align: left; padding: 12px 16px; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); border-bottom: 1px solid var(--border); font-weight: 600; }
+  .page-table td { padding: 12px 16px; font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.03); vertical-align: top; }
+  .page-table tr:hover td { background: rgba(255,255,255,0.02); }
+  .page-url { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--accent); word-break: break-all; }
+  .checklist-item { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.04); }
+  .checklist-item:last-child { border-bottom: none; }
+  .check-icon { width: 22px; height: 22px; border-radius: 6px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 12px; margin-top: 1px; }
+  .check-icon.pass { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+  .check-icon.fail { background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border); }
+  .check-icon.warn { background: var(--yellow-bg); color: var(--yellow); border: 1px solid var(--yellow-border); }
+  .check-text { font-size: 14px; color: var(--text); }
+  .check-text.muted { color: var(--text-secondary); }
+  .action-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 24px; margin-bottom: 12px; display: flex; gap: 20px; align-items: flex-start; transition: border-color 0.2s; }
+  .action-item:hover { border-color: var(--border-hover); }
+  .action-number { font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; color: var(--accent); flex-shrink: 0; width: 36px; text-align: center; opacity: 0.5; }
+  .action-content { flex: 1; }
+  .action-title { font-weight: 600; color: var(--text); font-size: 15px; margin-bottom: 6px; }
+  .action-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+  .action-impact { margin-top: 8px; font-size: 13px; color: var(--green); font-weight: 500; }
+  .cluster { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin-bottom: 16px; }
+  .cluster-title { font-family: 'Space Grotesk', sans-serif; font-weight: 600; color: var(--purple); font-size: 16px; margin-bottom: 4px; }
+  .cluster-desc { font-size: 13px; color: var(--text-secondary); margin-bottom: 12px; }
+  .cluster-pages { display: flex; flex-wrap: wrap; gap: 8px; }
+  .cluster-page { padding: 6px 14px; border-radius: 100px; background: var(--purple-bg); border: 1px solid var(--purple-border); font-size: 13px; font-family: 'JetBrains Mono', monospace; color: var(--text-secondary); }
+  .cluster-page.pillar { background: rgba(167,139,250,0.15); border-color: rgba(167,139,250,0.3); color: var(--purple); font-weight: 600; }
+  @media (max-width: 768px) {
+    .header h1 { font-size: 28px; }
+    .score-section { flex-direction: column; text-align: center; padding: 24px; gap: 24px; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .sub-scores { grid-template-columns: repeat(2, 1fr); }
+    .action-item { flex-direction: column; gap: 12px; }
+  }
+  @media print { .tabs { display: none; } .tab-content { display: block !important; page-break-before: always; } body::before { display: none; } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <div class="header-badge"><span class="dot"></span> Site-Wide SEO Audit</div>
+    <h1>www.6iptv.store</h1>
+    <p class="subtitle">Comprehensive analysis of 15 pages (of ~362 indexed URLs) — Generated September 14, 2026</p>
+  </div>
+</div>
+
+<div class="container" style="padding-top: 0; padding-bottom: 32px;">
+  <div class="score-section">
+    <div class="score-circle-wrap">
+      <div class="score-circle">
+        <svg viewBox="0 0 160 160">
+          <circle class="bg-ring" cx="80" cy="80" r="74"/>
+          <circle class="progress-ring" cx="80" cy="80" r="74"/>
+        </svg>
+        <span class="score-number">79</span>
+        <span class="score-grade">Grade B</span>
+        <span class="score-label">Overall Health</span>
+      </div>
+    </div>
+    <div class="score-details">
+      <h2>Strong technical bones, undermined by an empty homepage and heavy keyword overlap</h2>
+      <p>Every blog post ships Article + BreadcrumbList schema, complete Open Graph/Twitter tags, and a clean canonical — this is a well-engineered prerender pipeline (<code>scripts/prerender.ts</code>). But the homepage itself — the page most likely to rank for your #1 target keyword "6iptv" (1,000 searches/mo, transactional+navigational) — ships zero prerendered content: no H1, no body copy, no links, just an empty <code>&lt;div id="root"&gt;</code>. And across 324 German posts, several keyword clusters from your list (iptv line, german iptv, iptv abo, 4k iptv) are each split across 2–10 near-duplicate pages competing with themselves instead of building one authoritative ranking page.</p>
+      <div class="sub-scores">
+        <div class="sub-score"><div class="sub-score-label">Technical</div><div class="sub-score-value" style="color: var(--green)">82</div><div class="sub-score-bar"><div class="sub-score-bar-fill" style="width:82%; background: var(--green)"></div></div></div>
+        <div class="sub-score"><div class="sub-score-label">Content</div><div class="sub-score-value" style="color: var(--green)">80</div><div class="sub-score-bar"><div class="sub-score-bar-fill" style="width:80%; background: var(--green)"></div></div></div>
+        <div class="sub-score"><div class="sub-score-label">Architecture</div><div class="sub-score-value" style="color: var(--yellow)">68</div><div class="sub-score-bar"><div class="sub-score-bar-fill" style="width:68%; background: var(--yellow)"></div></div></div>
+        <div class="sub-score"><div class="sub-score-label">Cross-Page</div><div class="sub-score-value" style="color: var(--yellow)">63</div><div class="sub-score-bar"><div class="sub-score-bar-fill" style="width:63%; background: var(--yellow)"></div></div></div>
+        <div class="sub-score"><div class="sub-score-label">Social &amp; Schema</div><div class="sub-score-value" style="color: var(--green)">100</div><div class="sub-score-bar"><div class="sub-score-bar-fill" style="width:100%; background: var(--green)"></div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="tabs">
+  <div class="tabs-inner">
+    <button class="tab-btn active" onclick="switchTab('executive')">Executive Summary</button>
+    <button class="tab-btn" onclick="switchTab('pages')">Page Breakdown <span class="tab-count">15</span></button>
+    <button class="tab-btn" onclick="switchTab('sitewide')">Site-Wide Issues <span class="tab-count">9</span></button>
+    <button class="tab-btn" onclick="switchTab('technical')">Technical</button>
+    <button class="tab-btn" onclick="switchTab('content')">Content Strategy</button>
+    <button class="tab-btn" onclick="switchTab('linking')">Internal Linking</button>
+    <button class="tab-btn" onclick="switchTab('actions')">Action Plan</button>
+  </div>
+</div>
+
+<!-- ==================== TAB 1: EXECUTIVE SUMMARY ==================== -->
+<div id="tab-executive" class="tab-content active">
+<div class="container">
+
+  <div class="section-title">Executive Summary</div>
+  <div class="section-subtitle">High-level overview of www.6iptv.store's SEO health and top priorities</div>
+
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-value">15</div><div class="stat-label">Pages Audited</div></div>
+    <div class="stat-card"><div class="stat-value">2</div><div class="stat-label">Critical Issues</div></div>
+    <div class="stat-card"><div class="stat-value">4</div><div class="stat-label">High Priority</div></div>
+    <div class="stat-card"><div class="stat-value">6</div><div class="stat-label">Warnings</div></div>
+    <div class="stat-card"><div class="stat-value">516</div><div class="stat-label">Avg Word Count (blog)</div></div>
+    <div class="stat-card"><div class="stat-value">100%</div><div class="stat-label">Schema Coverage</div></div>
+  </div>
+
+  <div class="card" style="margin-bottom: 24px;">
+    <div class="card-title" style="margin-bottom: 16px;">Key Findings</div>
+    <div style="color: var(--text-secondary); font-size: 15px; line-height: 1.8;">
+      The site's German blog (324 posts, prerendered via <code>scripts/prerender.ts</code>) is technically excellent: every sampled post carries Article + BreadcrumbList JSON-LD, full Open Graph/Twitter Card tags, a correct canonical, and a single alt-tagged hero image. The homepage is the glaring exception — its <code>&lt;body&gt;</code> is a bare <code>&lt;div id="root"&gt;&lt;/div&gt;</code> with no H1, no text, and zero links in the static HTML, and its title/meta target the brand name "6PTV" rather than your #1 priority keyword "6iptv" (Transactional/Navigational, 1,000 searches/mo). Cross-referencing your keyword list against the sitemap surfaced a bigger structural problem: the "iptv line" theme alone has <strong>10 separate blog posts</strong> (<code>iptv-line</code>, <code>iptv-line-2026</code>, <code>iptv-lines-ueberblick</code>, <code>iptv-testline</code>, <code>iptv-test-line</code>, <code>iptv-testline-ratgeber</code>, <code>iptv-line-test</code>, <code>iptv-line-test-anleitung</code>, <code>iptv-line-kaufen-2026</code>, <code>iptv-lines-kaufen-ratgeber</code>), and the "german/germany iptv" theme has 5. Finally, the exact-match variants you flagged as priority — "iptv6" and "6 iptv" — have <strong>zero</strong> dedicated content anywhere on the site.
+    </div>
+  </div>
+
+  <div class="section-title" style="font-size: 18px; margin-top: 32px;">Top 3 Priorities</div>
+  <div class="section-subtitle">The highest-impact actions to take right now</div>
+  <div class="action-item">
+    <div class="action-number">1</div>
+    <div class="action-content">
+      <div class="action-title">Prerender real homepage content</div>
+      <div class="action-desc">Extend the homepage block in <code>scripts/prerender.ts</code> (currently ~lines 353–390, which only patches meta description + Organization JSON-LD into <code>&lt;head&gt;</code>) to also write actual <code>&lt;body&gt;</code> markup — an H1, intro copy, and links to <code>/blog</code> and your top posts — the same way it already does for every blog post, <code>/blog</code>, and <code>/agb</code>.</div>
+      <div class="action-impact">Expected impact: makes your highest-authority page indexable and crawlable independent of JS rendering, and gives it outbound links to distribute link equity site-wide (currently zero).</div>
+    </div>
+    <span class="badge badge-critical">Critical</span>
+  </div>
+  <div class="action-item">
+    <div class="action-number">2</div>
+    <div class="action-content">
+      <div class="action-title">Rebuild the homepage title/H1/meta around "6iptv"</div>
+      <div class="action-desc">Change the title from "6PTV — Premium IPTV Abonnement Deutschland" to lead with the literal keyword, e.g. "6iptv — Premium IPTV Abonnement für Deutschland", and work "6iptv" naturally into the new H1 and body copy from priority #1.</div>
+      <div class="action-impact">Expected impact: directly targets your #1 keyword (1,000/mo, transactional+navigational intent) on the page most likely to convert — currently no page on the site owns this exact term.</div>
+    </div>
+    <span class="badge badge-critical">Critical</span>
+  </div>
+  <div class="action-item">
+    <div class="action-number">3</div>
+    <div class="action-content">
+      <div class="action-title">Consolidate the keyword-cannibalizing blog clusters</div>
+      <div class="action-desc">Pick one canonical URL per cluster — "iptv line" (10 pages → 1), "german/germany iptv" (5 → 1), "iptv abo" (2 → 1), "4k/premium iptv" (5 → 1) — and 301-redirect or canonicalize the rest into it, folding in any unique sub-angles as sections.</div>
+      <div class="action-impact">Expected impact: stops roughly 20 pages from splitting ranking signals across the exact keywords your research says are highest-value ("iptv abo" KD59/590, "iptv line" KD50/590).</div>
+    </div>
+    <span class="badge badge-high">High</span>
+  </div>
+
+</div>
+</div>
+
+<!-- ==================== TAB 2: PAGE-BY-PAGE BREAKDOWN ==================== -->
+<div id="tab-pages" class="tab-content">
+<div class="container">
+
+  <div class="section-title">Page-by-Page Breakdown</div>
+  <div class="section-subtitle">15 pages sampled: homepage, /blog, /agb, and 12 representative blog posts covering your keyword clusters</div>
+
+  <div class="card" style="overflow-x: auto; padding: 0;">
+    <table class="page-table">
+      <thead><tr><th>Page</th><th>Title (len)</th><th>Words</th><th>H1</th><th>Meta Desc</th><th>Schema</th><th>OG Tags</th><th>Issues</th></tr></thead>
+      <tbody>
+        <tr><td><span class="page-url">/</span></td><td>42 chars</td><td>0</td><td><span class="badge badge-fail">Fail</span></td><td><span class="badge badge-warning">163ch</span></td><td><span class="badge badge-pass">Pass</span></td><td><span class="badge badge-warning">Partial*</span></td><td>5</td></tr>
+        <tr><td><span class="page-url">/blog</span></td><td>52 chars</td><td>~50 prose</td><td><span class="badge badge-pass">Pass</span></td><td><span class="badge badge-warning">173ch</span></td><td><span class="badge badge-pass">Pass</span></td><td><span class="badge badge-pass">Pass</span></td><td>2</td></tr>
+        <tr><td><span class="page-url">/agb</span></td><td>29 chars</td><td>149</td><td><span class="badge badge-pass">Pass</span></td><td><span class="badge badge-warning">165ch</span></td><td><span class="badge badge-pass">Pass</span></td><td><span class="badge badge-pass">Pass</span></td><td>3</td></tr>
+        <tr><td><span class="page-url">/blog/de-6iptv-erfahrungen</span></td><td>87 chars</td><td>592</td><td><span class="badge badge-pass">Pass</span></td><td><span class="badge badge-pass">157ch</span></td><td><span class="badge badge-pass">Pass</span></td><td><span class="badge badge-pass">Pass</span></td><td>3</td></tr>
+        <tr><td><span class="page-url">/blog/de-6iptv-kaufen</span></td><td>74 chars</td><td>528</td><td><span class="badge badge-pass">Pass</span></td><td><span class="badge badge-pass">153ch</span></td><td><span class="badge badge-pass">Pass</span></td><td><span class="badge badge-pass">Pass</span></td><td>3</td></tr>
+        <tr><td><span class="page-url">/blog/de-6iptv-kosten</span></td><td>79 chars</td><td>528</td><td><span class="badge badge-pass">Pass</span></td><td><span class="badge badge-pass">133ch</span></td><td><span class="badge badge-pass">Pass</span></td><td><span class="badge badge-pass">Pass</span></td><td>3</td></tr>
+        <tr><td><span class="page-url">/blog/de-6iptv-test</span></td><td>80 chars</td><td>557</td><td><span class="badge badge-pass">Pass</span></td><td><span class="badge badge-pass">156ch</span></td><td><span class="badge badge-pass">Pass</span></td><td><span class="badge badge-pass">Pass</span></td><td>3</td></tr>
+        <tr><td><span class="page-url">/blog/de-hakuna-tv</span></td><td>82 chars</td><td>629</td><td><span class="badge badge-pass">Pass</span></td><td><span class="badge badge-pass">158ch</span></td><td><span class="badge badge-pass">Pass</span></td><td><span class="badge badge-pass">Pass</span></td><td>4</td></tr>
+        <tr><td><span class="page-url">/blog/de-hakuna-iptv</span></td><td>52 chars</td><td>388</td><td><span class="badge badge-pass">Pass</span></td><td><span class="badge badge-warning">116ch</span></td><td><span class="badge badge-pass">Pass</span></td><td><span class="badge badge-pass">Pass</span></td><td>4</td></tr>
+        <tr><td><span class="page-url">/blog/de-iptv-abo</span></td><td>73 chars</td><td>532</td><td><span class="badge badge-pass">Pass</span></td><td><span class="badge badge-pass">154ch</span></td><td><span class="badge badge-pass">Pass</span></td><td><span class="badge badge-pass">Pass</span></td><td>4</td></tr>
+        <tr><td><span class="page-url">/blog/de-iptv-abo-2026</span></td><td>79 chars</td><td>463</td><td><span class="badge badge-pass">Pass</span></td><td><span class="badge badge-pass">133ch</span></td><td><span class="badge badge-pass">Pass</span></td><td><span class="badge badge-pass">Pass</span></td><td>4</td></tr>
+        <tr><td><span class="page-url">/blog/de-german-iptv</span></td><td>59 chars</td><td>435</td><td><span class="badge badge-pass">Pass</span></td><td><span class="badge badge-pass">120ch</span></td><td><span class="badge badge-pass">Pass</span></td><td><span class="badge badge-pass">Pass</span></td><td>3</td></tr>
+        <tr><td><span class="page-url">/blog/de-iptvgermany</span></td><td>77 chars</td><td>480</td><td><span class="badge badge-pass">Pass</span></td><td><span class="badge badge-pass">158ch</span></td><td><span class="badge badge-pass">Pass</span></td><td><span class="badge badge-pass">Pass</span></td><td>4</td></tr>
+        <tr><td><span class="page-url">/blog/de-iptv-line</span></td><td>82 chars</td><td>508</td><td><span class="badge badge-pass">Pass</span></td><td><span class="badge badge-pass">151ch</span></td><td><span class="badge badge-pass">Pass</span></td><td><span class="badge badge-pass">Pass</span></td><td>4</td></tr>
+        <tr><td><span class="page-url">/blog/de-iptv-line-2026</span></td><td>66 chars</td><td>548</td><td><span class="badge badge-pass">Pass</span></td><td><span class="badge badge-pass">151ch</span></td><td><span class="badge badge-pass">Pass</span></td><td><span class="badge badge-pass">Pass</span></td><td>4</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size: 12px; color: var(--text-muted); margin-top: 8px;">*Homepage Twitter Card ships only <code>twitter:card</code> — missing <code>twitter:title</code>/<code>description</code>/<code>image</code>, unlike every other page type.</p>
+
+  <div style="margin-top: 32px;">
+  <div class="collapsible">
+    <div class="collapsible-header" onclick="this.parentElement.classList.toggle('open')">
+      <span class="collapsible-title"><span class="page-url">/</span> (homepage) <span class="badge badge-critical">5 issues</span></span>
+      <span class="collapse-icon">&#9660;</span>
+    </div>
+    <div class="collapsible-body"><div class="collapsible-body-inner">
+      <div class="finding"><div class="finding-status fail"></div><div class="finding-content"><h4>No prerendered body content</h4><p>Raw HTML body is <code>&lt;div id="root"&gt;&lt;/div&gt;</code> — no H1, no paragraphs, no internal links. Everything else on the site (blog posts, /blog, /agb) is fully prerendered by <code>scripts/prerender.ts</code>; the homepage block only patches &lt;head&gt; meta.</p><div class="finding-rec">Write real body markup for "/" during the build, matching the pattern already used for /blog and /agb.</div></div><span class="badge badge-critical">Critical</span></div>
+      <div class="finding"><div class="finding-status fail"></div><div class="finding-content"><h4>Title/meta don't target "6iptv"</h4><p>Title is "6PTV — Premium IPTV Abonnement Deutschland" and meta description also only says "6PTV" — the literal keyword "6iptv" (your #1 priority, 1,000/mo) never appears.</p><div class="finding-rec">Lead the title and H1 with "6iptv" and use it 2-3× naturally in the new body copy.</div></div><span class="badge badge-critical">Critical</span></div>
+      <div class="finding"><div class="finding-status warning"></div><div class="finding-content"><h4>Meta description is 163 characters</h4><p>Slightly over the 160-char display budget; Google will likely truncate it.</p><div class="finding-rec">Trim to ≤160 characters while keeping "6iptv" and a clear value prop.</div></div><span class="badge badge-medium">Medium</span></div>
+      <div class="finding"><div class="finding-status warning"></div><div class="finding-content"><h4>Zero outgoing internal links</h4><p>With no body markup, the homepage passes no link equity to /blog or any post in the static HTML — the entire site's internal link graph currently depends on JS execution to be discoverable from "/".</p><div class="finding-rec">Solved by fix #1 above — add links to /blog and 4-6 flagship posts.</div></div><span class="badge badge-high">High</span></div>
+      <div class="finding"><div class="finding-status warning"></div><div class="finding-content"><h4>Incomplete Twitter Card</h4><p>Only <code>twitter:card</code> is set; <code>twitter:title</code>, <code>twitter:description</code>, and <code>twitter:image</code> are missing, unlike every blog post.</p><div class="finding-rec">Add the three missing Twitter tags to match the pattern used elsewhere in the codebase.</div></div><span class="badge badge-low">Low</span></div>
+    </div></div>
+  </div>
+
+  <div class="collapsible">
+    <div class="collapsible-header" onclick="this.parentElement.classList.toggle('open')">
+      <span class="collapsible-title"><span class="page-url">/blog</span> <span class="badge badge-medium">2 issues</span></span>
+      <span class="collapse-icon">&#9660;</span>
+    </div>
+    <div class="collapsible-body"><div class="collapsible-body-inner">
+      <div class="finding"><div class="finding-status warning"></div><div class="finding-content"><h4>359 H2-level headings on one page</h4><p>Every one of the 359 blog posts is listed as its own <code>&lt;h2&gt;&lt;a&gt;title&lt;/a&gt;&lt;/h2&gt;</code> with no categorization, filtering, or pagination — a flat wall of headings on a single 124KB page.</p><div class="finding-rec">Group posts into topic categories (or paginate) and drop most entries to non-heading list items, reserving H2 for category labels.</div></div><span class="badge badge-medium">Medium</span></div>
+      <div class="finding"><div class="finding-status warning"></div><div class="finding-content"><h4>Meta description is 173 characters</h4><p>Over the 160-char budget.</p><div class="finding-rec">Trim to ≤160 characters.</div></div><span class="badge badge-low">Low</span></div>
+    </div></div>
+  </div>
+
+  <div class="collapsible">
+    <div class="collapsible-header" onclick="this.parentElement.classList.toggle('open')">
+      <span class="collapsible-title"><span class="page-url">/agb</span> <span class="badge badge-medium">3 issues</span></span>
+      <span class="collapse-icon">&#9660;</span>
+    </div>
+    <div class="collapsible-body"><div class="collapsible-body-inner">
+      <div class="finding"><div class="finding-status warning"></div><div class="finding-content"><h4>Title is short (29 characters)</h4><p>"AGB &amp; Kundenschutz | 6PTV" is under the 30-char PASS floor — not wrong, just under-using the available SERP width.</p><div class="finding-rec">Low priority for a terms page; optional lengthening only.</div></div><span class="badge badge-low">Low</span></div>
+      <div class="finding"><div class="finding-status warning"></div><div class="finding-content"><h4>Meta description is 165 characters</h4><p>Slightly over budget.</p><div class="finding-rec">Trim by ~5-8 characters.</div></div><span class="badge badge-low">Low</span></div>
+      <div class="finding"><div class="finding-status warning"></div><div class="finding-content"><h4>Content is borderline thin (149 words)</h4><p>Just under the 150-word content-depth floor.</p><div class="finding-rec">Low priority — legal/trust pages are conventionally short; not a ranking priority.</div></div><span class="badge badge-low">Low</span></div>
+    </div></div>
+  </div>
+
+  <div class="collapsible">
+    <div class="collapsible-header" onclick="this.parentElement.classList.toggle('open')">
+      <span class="collapsible-title"><span class="page-url">/blog/de-iptv-line</span> + <span class="page-url">de-iptv-line-2026</span> <span class="badge badge-high">Cannibalization cluster (10 pages)</span></span>
+      <span class="collapse-icon">&#9660;</span>
+    </div>
+    <div class="collapsible-body"><div class="collapsible-body-inner">
+      <div class="finding"><div class="finding-status warning"></div><div class="finding-content"><h4>Title exceeds 60 characters</h4><p>Both "IPTV Line erklärt: Was das ist, Xtream vs. M3U und wie du eine Line testest — 6PTV" (82ch) and the 2026 variant (66ch) will be truncated in search results.</p><div class="finding-rec">Shorten; see sitewide title-length finding.</div></div><span class="badge badge-medium">Medium</span></div>
+      <div class="finding"><div class="finding-status warning"></div><div class="finding-content"><h4>Only 1 H2, 0 H3 despite 500+ words</h4><p>All body text sits under a single subheading — no scannable structure, no featured-snippet-ready sections.</p><div class="finding-rec">Break into 4-6 H2 sections (e.g. "Was ist eine IPTV Line", "M3U vs. Xtream", "So testest du eine Line", "Häufige Probleme").</div></div><span class="badge badge-medium">Medium</span></div>
+      <div class="finding"><div class="finding-status fail"></div><div class="finding-content"><h4>Part of a 10-page keyword cluster</h4><p>Ten distinct slugs all target "iptv line" or close variants: <code>iptv-line</code>, <code>iptv-line-2026</code>, <code>iptv-lines-ueberblick</code>, <code>iptv-testline</code>, <code>iptv-test-line</code>, <code>iptv-testline-ratgeber</code>, <code>iptv-line-test</code>, <code>iptv-line-test-anleitung</code>, <code>iptv-line-kaufen-2026</code>, <code>iptv-lines-kaufen-ratgeber</code>. This is your keyword list's "iptv line" term (KD50, 590/mo) split ten ways.</p><div class="finding-rec">Pick one pillar (recommend <code>de-iptv-line</code>), fold unique sub-angles (testing steps, buying advice, M3U vs Xtream) into it as sections, and 301 the rest.</div></div><span class="badge badge-critical">Critical (sitewide)</span></div>
+    </div></div>
+  </div>
+
+  <div class="collapsible">
+    <div class="collapsible-header" onclick="this.parentElement.classList.toggle('open')">
+      <span class="collapsible-title"><span class="page-url">/blog/de-german-iptv</span> + <span class="page-url">de-iptvgermany</span> <span class="badge badge-high">Cannibalization cluster (5 pages)</span></span>
+      <span class="collapse-icon">&#9660;</span>
+    </div>
+    <div class="collapsible-body"><div class="collapsible-body-inner">
+      <div class="finding"><div class="finding-status fail"></div><div class="finding-content"><h4>Part of a 5-page keyword cluster</h4><p><code>german-iptv</code>, <code>german-iptv-2026</code>, <code>iptvgermany</code>, <code>germany-iptv-anbieter</code>, and <code>iptv-germany-guide</code> all cover "which German-channel IPTV provider to pick" — nearly the same intent your list's "iptvgermany" (KD44, 480/mo) and "deutsch iptv" (KD53, 590/mo) target.</p><div class="finding-rec">Pick one pillar (recommend <code>de-iptvgermany</code>, matching the exact-match keyword), merge the rest in, and redirect.</div></div><span class="badge badge-critical">Critical (sitewide)</span></div>
+      <div class="finding"><div class="finding-status warning"></div><div class="finding-content"><h4>Only 1 H2, 0 H3</h4><p>Same shallow structure as the rest of the blog template.</p><div class="finding-rec">Add sections for channel lineup, device compatibility, pricing.</div></div><span class="badge badge-medium">Medium</span></div>
+    </div></div>
+  </div>
+
+  <div class="collapsible">
+    <div class="collapsible-header" onclick="this.parentElement.classList.toggle('open')">
+      <span class="collapsible-title"><span class="page-url">/blog/de-iptv-abo</span> + <span class="page-url">de-iptv-abo-2026</span> <span class="badge badge-high">Cannibalization pair</span></span>
+      <span class="collapse-icon">&#9660;</span>
+    </div>
+    <div class="collapsible-body"><div class="collapsible-body-inner">
+      <div class="finding"><div class="finding-status fail"></div><div class="finding-content"><h4>Two pages target the same commercial-intent keyword</h4><p>"iptv abo" is your highest-difficulty, highest-commercial-value term (KD59, 590/mo, Commercial intent) — and it's split across two pages differing mainly by a year in the title.</p><div class="finding-rec">Merge into one page; use a "Stand 2026" pricing section instead of a whole separate URL, so the single page accumulates all the ranking signal.</div></div><span class="badge badge-critical">Critical (sitewide)</span></div>
+      <div class="finding"><div class="finding-status warning"></div><div class="finding-content"><h4>No pricing/plan comparison table</h4><p>Zero <code>&lt;table&gt;</code> elements found across sampled pages, despite this being a Commercial-intent page about choosing between subscription terms — exactly the format Google favors for comparison queries.</p><div class="finding-rec">Add a plan-comparison table (duration × price × devices).</div></div><span class="badge badge-medium">Medium</span></div>
+    </div></div>
+  </div>
+
+  <div class="collapsible">
+    <div class="collapsible-header" onclick="this.parentElement.classList.toggle('open')">
+      <span class="collapsible-title"><span class="page-url">/blog/de-hakuna-tv</span> + <span class="page-url">de-hakuna-iptv</span> <span class="badge badge-medium">Related-brand cluster</span></span>
+      <span class="collapse-icon">&#9660;</span>
+    </div>
+    <div class="collapsible-body"><div class="collapsible-body-inner">
+      <div class="finding"><div class="finding-status warning"></div><div class="finding-content"><h4>"hakuna tv" (3,600/mo) and "hakuna iptv" (880/mo) are both sizeable, separate keywords</h4><p>These are correctly split into two pages (good — different exact-match terms), but the sitemap also lists <code>de-hakuna-iptv-2026</code> and <code>de-hakuna-iptv-erfahrungen</code>, adding two more pages to this theme.</p><div class="finding-rec">Keep <code>hakuna-tv</code> and <code>hakuna-iptv</code> as separate pillars (both are legitimate, high-volume, distinct queries); merge <code>hakuna-iptv-2026</code> into <code>hakuna-iptv</code>; keep <code>hakuna-iptv-erfahrungen</code> separate since "reviews" is a distinct search intent.</div></div><span class="badge badge-medium">Medium</span></div>
+      <div class="finding"><div class="finding-status warning"></div><div class="finding-content"><h4>Meta description under 120 characters (hakuna-iptv)</h4><p>116 characters — under-uses the SERP snippet space.</p><div class="finding-rec">Expand toward 150-160 characters.</div></div><span class="badge badge-low">Low</span></div>
+    </div></div>
+  </div>
+  </div>
+
+</div>
+</div>
+
+<!-- ==================== TAB 3: SITE-WIDE ISSUES ==================== -->
+<div id="tab-sitewide" class="tab-content">
+<div class="container">
+
+  <div class="section-title">Site-Wide Issues</div>
+  <div class="section-subtitle">Cross-cutting concerns that affect multiple pages</div>
+
+  <div class="card">
+    <div class="card-title" style="margin-bottom: 16px;">Duplicate Content &amp; Keyword Cannibalization</div>
+    <div class="finding"><div class="finding-status fail"></div><div class="finding-content"><h4>"iptv line" theme: 10 pages</h4><p><code>iptv-line</code>, <code>iptv-line-2026</code>, <code>iptv-lines-ueberblick</code>, <code>iptv-testline</code>, <code>iptv-test-line</code>, <code>iptv-testline-ratgeber</code>, <code>iptv-line-test</code>, <code>iptv-line-test-anleitung</code>, <code>iptv-line-kaufen-2026</code>, <code>iptv-lines-kaufen-ratgeber</code> — all explaining what an IPTV line is / how to test or buy one.</p><div class="finding-rec">Consolidate to 1-2 pages max: one explainer pillar, one "kaufen" (buying) page.</div></div><span class="badge badge-critical">Critical</span></div>
+    <div class="finding"><div class="finding-status fail"></div><div class="finding-content"><h4>"german/germany iptv" theme: 5 pages</h4><p><code>german-iptv</code>, <code>german-iptv-2026</code>, <code>iptvgermany</code>, <code>germany-iptv-anbieter</code>, <code>iptv-germany-guide</code>.</p><div class="finding-rec">Consolidate to 1 pillar page targeting "iptvgermany"/"deutsch iptv".</div></div><span class="badge badge-critical">Critical</span></div>
+    <div class="finding"><div class="finding-status fail"></div><div class="finding-content"><h4>"4k/premium iptv" theme: 5 pages</h4><p><code>4k-iptv</code>, <code>iptv-4k-2026</code>, <code>iptv-premium-4k-2026</code>, <code>iptv-premium-4k-ratgeber</code>, <code>premium-iptv</code>, <code>iptv-premium-2026</code>.</p><div class="finding-rec">Consolidate to 1 pillar covering both "4k iptv" and "iptv premium 4k" from your keyword list.</div></div><span class="badge badge-high">High</span></div>
+    <div class="finding"><div class="finding-status warning"></div><div class="finding-content"><h4>"iptv abo" theme: 2 pages</h4><p><code>iptv-abo</code> and <code>iptv-abo-2026</code> — your highest-commercial-value keyword (KD59) split in two.</p><div class="finding-rec">Merge into one page with a "current pricing" section.</div></div><span class="badge badge-high">High</span></div>
+    <div class="finding"><div class="finding-status pass"></div><div class="finding-content"><h4>Titles and meta descriptions are not literal duplicates</h4><p>Every sampled page has a unique title and description — the cannibalization is topical/semantic, not a copy-paste duplicate-content issue.</p></div><span class="badge badge-pass">Pass</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title" style="margin-bottom: 16px;">Consistency Issues</div>
+    <div class="finding"><div class="finding-status fail"></div><div class="finding-content"><h4>Brand name ("6PTV") vs. domain/target keyword ("6iptv") mismatch</h4><p>The site brands itself "6PTV" in every title, og:site_name, and JSON-LD publisher field, but the domain is <code>6iptv.store</code> and your top priority keyword is "6iptv" — the homepage never uses the actual keyword you want to rank for.</p><div class="finding-rec">At minimum, ensure the homepage and top-of-funnel pages use "6iptv" literally, even if "6PTV" remains the stylized brand mark elsewhere.</div></div><span class="badge badge-critical">Critical</span></div>
+    <div class="finding"><div class="finding-status warning"></div><div class="finding-content"><h4>"iptv6" and "6 iptv" variants: zero content</h4><p>Neither exact form appears in any sampled page, title, or slug, despite being explicitly named as a priority.</p><div class="finding-rec">Work "iptv6" and "6 iptv" naturally into the new homepage copy and/or a dedicated FAQ section addressing "is it 6iptv, iptv6, or 6 iptv?".</div></div><span class="badge badge-high">High</span></div>
+    <div class="finding"><div class="finding-status warning"></div><div class="finding-content"><h4>Blog post titles systemically exceed 60 characters</h4><p>10 of 12 sampled posts (83%) have titles over 60 characters. Root cause: <code>scripts/prerender.ts:247</code> appends <code>" — 6PTV"</code> unconditionally to every post title with no length check, and post titles are themselves already long, descriptive phrases.</p><div class="finding-rec">Only append the brand suffix when the combined length stays ≤60 characters; otherwise drop it (canonical + og:site_name already carry the brand).</div></div><span class="badge badge-high">High</span></div>
+    <div class="finding"><div class="finding-status warning"></div><div class="finding-content"><h4>Future-dated content</h4><p><code>datePublished</code> in Article schema is set to 2026-09-16 on at least one sampled post, and the live sitemap's <code>&lt;lastmod&gt;</code> also shows 2026-09-16, two days ahead of today (2026-09-14).</p><div class="finding-rec">Check the build/deploy environment's clock — future-dated content can look off to both users and crawlers.</div></div><span class="badge badge-low">Low</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title" style="margin-bottom: 16px;">Robots.txt &amp; Sitemap</div>
+    <div class="finding"><div class="finding-status pass"></div><div class="finding-content"><h4>robots.txt is valid and permissive</h4><p><code>User-agent: * / Allow: /</code>, nothing blocked, and it correctly references all 4 sitemaps (index + pages + blog-de + blog-en).</p></div><span class="badge badge-pass">Pass</span></div>
+    <div class="finding"><div class="finding-status pass"></div><div class="finding-content"><h4>Sitemap index is valid, split by content type</h4><p><code>sitemap.xml</code> → <code>sitemap-pages.xml</code> (3 URLs) + <code>sitemap-blog-de.xml</code> (324 URLs) + <code>sitemap-blog-en.xml</code> (35 URLs), auto-regenerated at build time.</p></div><span class="badge badge-pass">Pass</span></div>
+    <div class="finding"><div class="finding-status warning"></div><div class="finding-content"><h4>lastmod dates are ahead of today's date</h4><p>Same future-date issue noted above, visible directly in the sitemap.</p><div class="finding-rec">See consistency finding above.</div></div><span class="badge badge-low">Low</span></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title" style="margin-bottom: 16px;">Security &amp; Server Headers</div>
+    <div class="finding"><div class="finding-status pass"></div><div class="finding-content"><h4>HTTPS + HSTS enforced</h4><p><code>Strict-Transport-Security: max-age=63072000</code> present on every response.</p></div><span class="badge badge-pass">Pass</span></div>
+    <div class="finding"><div class="finding-status pass"></div><div class="finding-content"><h4>Brotli compression enabled</h4><p>Responses compress with <code>Content-Encoding: br</code> via Vercel.</p></div><span class="badge badge-pass">Pass</span></div>
+    <div class="finding"><div class="finding-status fail"></div><div class="finding-content"><h4>Missing Content-Security-Policy, X-Content-Type-Options, X-Frame-Options, Referrer-Policy</h4><p>Only HSTS is set among the standard security headers checked.</p><div class="finding-rec">Add a <code>headers</code> block in <code>vercel.json</code> for these four headers.</div></div><span class="badge badge-medium">Medium</span></div>
+  </div>
+
+</div>
+</div>
+
+<!-- ==================== TAB 4: TECHNICAL ==================== -->
+<div id="tab-technical" class="tab-content">
+<div class="container">
+
+  <div class="section-title">Technical SEO</div>
+  <div class="section-subtitle">Infrastructure, performance indicators, and technical implementation</div>
+
+  <div class="card">
+    <div class="card-title" style="margin-bottom: 20px;">Implementation Checklist</div>
+    <div class="checklist-item"><div class="check-icon pass">&#10003;</div><div class="check-text">HTTPS enforced with HSTS (max-age 2 years)</div></div>
+    <div class="checklist-item"><div class="check-icon pass">&#10003;</div><div class="check-text">Viewport meta present on every sampled page</div></div>
+    <div class="checklist-item"><div class="check-icon pass">&#10003;</div><div class="check-text">robots.txt valid, unrestricted, references all sitemaps</div></div>
+    <div class="checklist-item"><div class="check-icon pass">&#10003;</div><div class="check-text">Sitemap index + 3 sub-sitemaps valid, auto-regenerated at build</div></div>
+    <div class="checklist-item"><div class="check-icon pass">&#10003;</div><div class="check-text">Structured data (JSON-LD) on 100% of sampled pages — Organization/WebSite (home), Blog (index), Article+BreadcrumbList (posts), WebPage+BreadcrumbList (agb)</div></div>
+    <div class="checklist-item"><div class="check-icon pass">&#10003;</div><div class="check-text">Canonical tags present and correct on every sampled page</div></div>
+    <div class="checklist-item"><div class="check-icon pass">&#10003;</div><div class="check-text">Brotli compression enabled</div></div>
+    <div class="checklist-item"><div class="check-icon fail">&#10007;</div><div class="check-text muted">Homepage body not prerendered (client-side rendered only)</div></div>
+    <div class="checklist-item"><div class="check-icon fail">&#10007;</div><div class="check-text muted">Content-Security-Policy header not set</div></div>
+    <div class="checklist-item"><div class="check-icon fail">&#10007;</div><div class="check-text muted">X-Content-Type-Options header not set</div></div>
+    <div class="checklist-item"><div class="check-icon fail">&#10007;</div><div class="check-text muted">X-Frame-Options header not set</div></div>
+    <div class="checklist-item"><div class="check-icon fail">&#10007;</div><div class="check-text muted">Referrer-Policy header not set</div></div>
+    <div class="checklist-item"><div class="check-icon warn">!</div><div class="check-text muted">No <code>loading="lazy"</code> on hero images (single image per post, low impact but free to add)</div></div>
+    <div class="checklist-item"><div class="check-icon warn">!</div><div class="check-text muted">No <code>preconnect</code>/<code>dns-prefetch</code> hint for images.unsplash.com, the external image host every post depends on</div></div>
+    <div class="checklist-item"><div class="check-icon warn">!</div><div class="check-text muted">No hreflang tags between the 324 German and 35 English blog posts</div></div>
+  </div>
+
+  <div class="section-title" style="font-size: 18px; margin-top: 32px;">Schema Markup Strategy</div>
+  <div class="section-subtitle">Current structured data is a genuine strength — kept as-is, no changes recommended</div>
+  <div class="card" style="overflow-x: auto; padding: 0;">
+    <table class="page-table">
+      <thead><tr><th>Page Type</th><th>Schema Present</th><th>Completeness</th></tr></thead>
+      <tbody>
+        <tr><td>Homepage</td><td>Organization, WebSite</td><td><span class="badge badge-pass">Complete</span></td></tr>
+        <tr><td>Blog index</td><td>Blog (with blogPost list)</td><td><span class="badge badge-pass">Complete</span></td></tr>
+        <tr><td>Blog posts</td><td>Article, BreadcrumbList</td><td><span class="badge badge-pass">Complete — headline, dates, author/publisher, image all present</span></td></tr>
+        <tr><td>/agb</td><td>WebPage, BreadcrumbList</td><td><span class="badge badge-pass">Complete</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-title" style="font-size: 18px; margin-top: 32px;">Performance Indicators</div>
+  <div class="section-subtitle">Resource and image patterns observed across sampled pages</div>
+  <div class="finding"><div class="finding-status warning"></div><div class="finding-content"><h4>Hero/OG images are hotlinked from images.unsplash.com</h4><p>Every sampled blog post uses a generic Unsplash stock photo as both hero and og:image, rather than owned product screenshots.</p><div class="finding-rec">Self-host branded imagery (device screenshots, UI captures) for stronger E-E-A-T and to remove the external dependency; add a preconnect hint if Unsplash stays in use short-term.</div></div><span class="badge badge-medium">Medium</span></div>
+  <div class="finding"><div class="finding-status pass"></div><div class="finding-content"><h4>Images ship explicit width/height</h4><p><code>width="1200" height="675"</code> is set on the hero image, which prevents layout shift (good for Core Web Vitals / CLS).</p></div><span class="badge badge-pass">Pass</span></div>
+  <div class="finding"><div class="finding-status pass"></div><div class="finding-content"><h4>JS/CSS bundled and versioned</h4><p>Single hashed <code>index-*.js</code> and <code>index-*.css</code> bundle per Vite's build output — standard, cacheable asset naming.</p></div><span class="badge badge-pass">Pass</span></div>
+
+</div>
+</div>
+
+<!-- ==================== TAB 5: CONTENT STRATEGY ==================== -->
+<div id="tab-content" class="tab-content">
+<div class="container">
+
+  <div class="section-title">Content Strategy</div>
+  <div class="section-subtitle">Mapped against the keyword list you provided</div>
+
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-value">1</div><div class="stat-label">Thin/Empty Pages (homepage)</div></div>
+    <div class="stat-card"><div class="stat-value">12/12</div><div class="stat-label">Sampled Posts &gt;300 Words</div></div>
+    <div class="stat-card"><div class="stat-value">~20</div><div class="stat-label">Pages in Cannibalizing Clusters</div></div>
+    <div class="stat-card"><div class="stat-value">0</div><div class="stat-label">Comparison Tables Found</div></div>
+  </div>
+
+  <div class="section-title" style="font-size: 18px;">Keyword Map — Your List vs. Site Coverage</div>
+  <div class="section-subtitle">Based on the keyword research you supplied (intent, KD, monthly volume)</div>
+  <div class="card" style="overflow-x: auto; padding: 0;">
+    <table class="page-table">
+      <thead><tr><th>Keyword</th><th>Intent</th><th>KD</th><th>Vol/mo</th><th>Site Coverage</th><th>Cannibalization Risk</th></tr></thead>
+      <tbody>
+        <tr><td><span class="keyword-primary" style="color:var(--accent); font-weight:600;">6iptv</span></td><td>Transactional, Navigational</td><td>44</td><td>1,000</td><td><span class="badge badge-fail">No dedicated page — homepage doesn't target it</span></td><td><span class="badge badge-low">None</span></td></tr>
+        <tr><td>hakuna tv</td><td>Navigational</td><td>35</td><td>3,600</td><td><span class="badge badge-pass">de-hakuna-tv</span></td><td><span class="badge badge-low">Low</span></td></tr>
+        <tr><td>hakuna iptv</td><td>Navigational</td><td>45</td><td>880</td><td><span class="badge badge-pass">de-hakuna-iptv (+2026, +erfahrungen)</span></td><td><span class="badge badge-medium">Medium</span></td></tr>
+        <tr><td>iptv on fire tv stick</td><td>Informational</td><td>51</td><td>720</td><td><span class="badge badge-pass">de-iptv-auf-fire-tv-stick, de-6iptv-fire-tv</span></td><td><span class="badge badge-medium">Medium</span></td></tr>
+        <tr><td>deutsch iptv</td><td>Commercial</td><td>53</td><td>590</td><td><span class="badge badge-warning">de-deutsch-iptv + de-deutsch-iptv-2026</span></td><td><span class="badge badge-high">High</span></td></tr>
+        <tr><td>iptv abo</td><td>Commercial</td><td>59</td><td>590</td><td><span class="badge badge-warning">de-iptv-abo + de-iptv-abo-2026</span></td><td><span class="badge badge-high">High</span></td></tr>
+        <tr><td>iptv line</td><td>Informational, Commercial</td><td>50</td><td>590</td><td><span class="badge badge-fail">10 pages in this cluster</span></td><td><span class="badge badge-critical">Critical</span></td></tr>
+        <tr><td>iptv premium 4k</td><td>Informational</td><td>50</td><td>590</td><td><span class="badge badge-warning">de-iptv-premium-4k-2026, -ratgeber</span></td><td><span class="badge badge-high">High</span></td></tr>
+        <tr><td>4k iptv</td><td>Informational</td><td>53</td><td>480</td><td><span class="badge badge-warning">de-4k-iptv, de-iptv-4k-2026</span></td><td><span class="badge badge-high">High</span></td></tr>
+        <tr><td>6iptv legal</td><td>Informational</td><td>50</td><td>480</td><td><span class="badge badge-pass">de-6iptv-legal</span></td><td><span class="badge badge-low">None</span></td></tr>
+        <tr><td>iptv line kaufen</td><td>Commercial</td><td>53</td><td>480</td><td><span class="badge badge-warning">de-iptv-line-kaufen-2026 (part of line cluster)</span></td><td><span class="badge badge-critical">Critical</span></td></tr>
+        <tr><td>iptvgermany</td><td>Commercial</td><td>44</td><td>480</td><td><span class="badge badge-warning">de-iptvgermany + 4 related pages</span></td><td><span class="badge badge-high">High</span></td></tr>
+        <tr><td style="color:var(--text-muted)">iptv6 / "6 iptv"</td><td>—</td><td>—</td><td>—</td><td><span class="badge badge-fail">Zero content anywhere</span></td><td><span class="badge badge-low">N/A — gap, not overlap</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-title" style="font-size: 18px; margin-top: 32px;">Recommended Content Clusters</div>
+  <div class="section-subtitle">Consolidate the current sprawl into one pillar + supporting-angle structure per topic</div>
+
+  <div class="cluster">
+    <div class="cluster-title">6iptv brand &amp; bare-keyword (needs a new pillar)</div>
+    <div class="cluster-desc">The modifier pages are well differentiated by intent — keep them. What's missing is a true pillar for the bare "6iptv" query itself, which should live on the homepage.</div>
+    <div class="cluster-pages">
+      <span class="cluster-page pillar">/ (needs to become the pillar)</span>
+      <span class="cluster-page">de-6iptv-kaufen</span>
+      <span class="cluster-page">de-6iptv-kosten</span>
+      <span class="cluster-page">de-6iptv-test</span>
+      <span class="cluster-page">de-6iptv-erfahrungen</span>
+      <span class="cluster-page">de-6iptv-legal</span>
+      <span class="cluster-page">de-6iptv-support</span>
+      <span class="cluster-page">de-6iptv-sender</span>
+      <span class="cluster-page">de-6iptv-streams</span>
+      <span class="cluster-page">de-6iptv-forum</span>
+    </div>
+  </div>
+
+  <div class="cluster">
+    <div class="cluster-title">IPTV Line (M3U / Xtream) — consolidate 10 → 2</div>
+    <div class="cluster-desc">Merge into one explainer pillar and one "kaufen" (buying) page; redirect the rest.</div>
+    <div class="cluster-pages">
+      <span class="cluster-page pillar">de-iptv-line (pillar: explainer)</span>
+      <span class="cluster-page pillar">de-iptv-line-kaufen-2026 (pillar: buying guide)</span>
+      <span class="cluster-page">de-iptv-line-2026 → merge</span>
+      <span class="cluster-page">de-iptv-lines-ueberblick → merge</span>
+      <span class="cluster-page">de-iptv-testline → merge</span>
+      <span class="cluster-page">de-iptv-test-line → merge</span>
+      <span class="cluster-page">de-iptv-testline-ratgeber → merge</span>
+      <span class="cluster-page">de-iptv-line-test → merge</span>
+      <span class="cluster-page">de-iptv-line-test-anleitung → merge</span>
+      <span class="cluster-page">de-iptv-lines-kaufen-ratgeber → merge</span>
+    </div>
+  </div>
+
+  <div class="cluster">
+    <div class="cluster-title">German/Germany IPTV providers — consolidate 5 → 1</div>
+    <div class="cluster-desc">One pillar targeting both "iptvgermany" and "deutsch iptv" from your list.</div>
+    <div class="cluster-pages">
+      <span class="cluster-page pillar">de-iptvgermany (pillar)</span>
+      <span class="cluster-page">de-german-iptv → merge</span>
+      <span class="cluster-page">de-german-iptv-2026 → merge</span>
+      <span class="cluster-page">de-germany-iptv-anbieter → merge</span>
+      <span class="cluster-page">de-iptv-germany-guide → merge</span>
+    </div>
+  </div>
+
+  <div class="cluster">
+    <div class="cluster-title">4K / Premium IPTV — consolidate 5-6 → 1</div>
+    <div class="cluster-desc">One pillar covering both "4k iptv" and "iptv premium 4k" from your list.</div>
+    <div class="cluster-pages">
+      <span class="cluster-page pillar">de-iptv-premium-4k-2026 (pillar)</span>
+      <span class="cluster-page">de-4k-iptv → merge</span>
+      <span class="cluster-page">de-iptv-4k-2026 → merge</span>
+      <span class="cluster-page">de-iptv-premium-4k-ratgeber → merge</span>
+      <span class="cluster-page">de-premium-iptv → merge</span>
+      <span class="cluster-page">de-iptv-premium-2026 → merge</span>
+    </div>
+  </div>
+
+  <div class="cluster">
+    <div class="cluster-title">IPTV Abo (subscription plans) — consolidate 2 → 1</div>
+    <div class="cluster-desc">Your highest-difficulty, highest-commercial keyword deserves one strong page, not two thin ones.</div>
+    <div class="cluster-pages">
+      <span class="cluster-page pillar">de-iptv-abo (pillar)</span>
+      <span class="cluster-page">de-iptv-abo-2026 → merge as a "current pricing" section</span>
+    </div>
+  </div>
+
+  <div class="section-title" style="font-size: 18px; margin-top: 32px;">Content Gap Recommendations</div>
+  <div class="action-item"><div class="action-number">1</div><div class="action-content"><div class="action-title">Build the "6iptv" pillar on the homepage itself</div><div class="action-desc">The bare brand+intent query belongs on "/", not a blog post — see Priority #1/#2 in Executive Summary.</div></div><span class="badge badge-critical">Critical</span></div>
+  <div class="action-item"><div class="action-number">2</div><div class="action-content"><div class="action-title">Add a short "iptv6 / 6 iptv / 6iptv" clarification section</div><div class="action-desc">A brief FAQ block addressing the naming variants captures long-tail searchers typing any of the three forms, and reinforces the exact-match "6iptv" signal.</div></div><span class="badge badge-high">High</span></div>
+  <div class="action-item"><div class="action-number">3</div><div class="action-content"><div class="action-title">Add comparison tables to Commercial-intent pages</div><div class="action-desc">Zero <code>&lt;table&gt;</code> elements found across sampled pages. "iptv abo" and "iptv line kaufen" are both Commercial intent and would benefit from a plan/pricing comparison table — strong featured-snippet format.</div></div><span class="badge badge-medium">Medium</span></div>
+
+</div>
+</div>
+
+<!-- ==================== TAB 6: INTERNAL LINKING ==================== -->
+<div id="tab-linking" class="tab-content">
+<div class="container">
+
+  <div class="section-title">Internal Linking Analysis</div>
+  <div class="section-subtitle">Based on the 15 sampled pages (full 362-URL crawl not performed — see note below)</div>
+
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-value">90</div><div class="stat-label">Content Links (12 sampled posts)</div></div>
+    <div class="stat-card"><div class="stat-value">0</div><div class="stat-label">Orphan Pages (among sampled)</div></div>
+    <div class="stat-card"><div class="stat-value">1</div><div class="stat-label">Dead-End Pages (homepage)</div></div>
+    <div class="stat-card"><div class="stat-value">7.5</div><div class="stat-label">Avg Links/Post</div></div>
+  </div>
+
+  <div class="section-title" style="font-size: 18px;">Link Equity Distribution</div>
+  <div class="card" style="overflow-x: auto; padding: 0;">
+    <table class="page-table">
+      <thead><tr><th>Page</th><th>Incoming (sampled evidence)</th><th>Outgoing Internal</th><th>External</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td><span class="page-url">/</span></td><td>N/A (root — always entered directly)</td><td>0</td><td>0</td><td><span class="badge badge-fail">Dead end</span></td></tr>
+        <tr><td><span class="page-url">/blog</span></td><td>~360 (every post links back)</td><td>359</td><td>0</td><td><span class="badge badge-pass">Hub</span></td></tr>
+        <tr><td><span class="page-url">/agb</span></td><td>Not observed in sampled posts' links</td><td>2 (home, blog via breadcrumb)</td><td>0</td><td><span class="badge badge-warning">Low incoming</span></td></tr>
+        <tr><td><span class="page-url">/blog/de-6iptv-kaufen</span></td><td>1+ (from /blog + sibling posts)</td><td>7</td><td>0</td><td><span class="badge badge-pass">Healthy</span></td></tr>
+        <tr><td><span class="page-url">/blog/de-iptv-abo</span></td><td>1+ (from /blog + sibling posts)</td><td>8</td><td>0</td><td><span class="badge badge-pass">Healthy</span></td></tr>
+        <tr><td><span class="page-url">/blog/de-iptv-line</span></td><td>1+ (from /blog + sibling posts)</td><td>7</td><td>0</td><td><span class="badge badge-pass">Healthy</span></td></tr>
+        <tr><td colspan="5" style="color:var(--text-muted); font-size:12px;">…and 9 more sampled posts, all following the same pattern: linked from /blog + 7-8 sibling posts, 0 external links.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:12px; color:var(--text-muted); margin-top:8px;">Note: this reflects the 15-page sample, not a full crawl of all ~362 indexed URLs. The pattern (7-8 sibling links per post, 0 external citations, homepage disconnected) is consistent enough across the sample to treat as sitewide.</p>
+
+  <div class="section-title" style="font-size: 18px; margin-top: 32px;">Orphan &amp; Dead-End Pages</div>
+  <div class="finding"><div class="finding-status fail"></div><div class="finding-content"><h4>Homepage is a dead end in static HTML</h4><p>With zero prerendered links, "/" cannot pass any link equity forward without JS execution — every other page on the site links outward (7-8 links each), making the homepage the one structural weak point.</p><div class="finding-rec">Fixed by the homepage prerender work in Priority #1.</div></div><span class="badge badge-critical">Critical</span></div>
+  <div class="finding"><div class="finding-status pass"></div><div class="finding-content"><h4>No orphan pages found among sampled content</h4><p>All 12 sampled blog posts are linked from /blog and from several sibling posts.</p></div><span class="badge badge-pass">Pass</span></div>
+
+  <div class="section-title" style="font-size: 18px; margin-top: 32px;">Suggested Internal Links</div>
+  <div class="action-item"><div class="action-number">1</div><div class="action-content"><div class="action-title">Link the new homepage pillar to your 6-8 highest-value posts</div><div class="action-desc">Once the homepage has real body content, link directly to de-iptv-abo, de-iptv-line, de-iptvgermany, de-6iptv-kaufen and the other consolidated pillars.</div></div><span class="badge badge-high">Medium</span></div>
+  <div class="action-item"><div class="action-number">2</div><div class="action-content"><div class="action-title">Add zero external citations found — consider 1-2 authoritative outbound links per pillar</div><div class="action-desc">None of the sampled posts link to any external source (device manufacturer docs, DVB-T2/Xtream Codes standards pages, etc.). A couple of well-placed citations on the pillar pages would strengthen E-E-A-T signals.</div></div><span class="badge badge-low">Low</span></div>
+
+</div>
+</div>
+
+<!-- ==================== TAB 7: ACTION PLAN ==================== -->
+<div id="tab-actions" class="tab-content">
+<div class="container">
+
+  <div class="section-title">Prioritized Action Plan</div>
+  <div class="section-subtitle">Every recommendation ranked by impact, grouped by effort level</div>
+
+  <div class="section-title" style="font-size: 18px; color: var(--green);">Quick Wins <span style="font-size: 14px; color: var(--text-muted); font-weight: 400;">&mdash; less than 1 hour each</span></div>
+  <div style="margin-bottom: 24px;">
+    <div class="action-item"><div class="action-number">1</div><div class="action-content"><div class="action-title">Shorten the homepage meta description to ≤160 characters</div><div class="action-desc">Currently 163 characters; trim while keeping "6iptv".</div></div><span class="badge badge-low">Low</span></div>
+    <div class="action-item"><div class="action-number">2</div><div class="action-content"><div class="action-title">Add twitter:title/description/image to the homepage</div><div class="action-desc">Only twitter:card is currently set; every other page ships the full set.</div></div><span class="badge badge-low">Low</span></div>
+    <div class="action-item"><div class="action-number">3</div><div class="action-content"><div class="action-title">Cap blog post titles at ~60 characters</div><div class="action-desc">In <code>scripts/prerender.ts:247</code>, only append " — 6PTV" when the combined length stays ≤60 chars.</div></div><span class="badge badge-medium">Medium</span></div>
+    <div class="action-item"><div class="action-number">4</div><div class="action-content"><div class="action-title">Fix future-dated datePublished/lastmod values</div><div class="action-desc">Check build environment clock — content is dated 2 days ahead of today.</div></div><span class="badge badge-low">Low</span></div>
+    <div class="action-item"><div class="action-number">5</div><div class="action-content"><div class="action-title">Add a preconnect hint for images.unsplash.com</div><div class="action-desc">Speeds up hero image loading while the external dependency remains.</div></div><span class="badge badge-low">Low</span></div>
+  </div>
+
+  <div class="section-title" style="font-size: 18px; color: var(--orange);">High Impact <span style="font-size: 14px; color: var(--text-muted); font-weight: 400;">&mdash; 1-4 hours each</span></div>
+  <div style="margin-bottom: 24px;">
+    <div class="action-item"><div class="action-number">1</div><div class="action-content"><div class="action-title">Prerender real homepage body content</div><div class="action-desc">Extend <code>scripts/prerender.ts</code>'s homepage block to write H1, intro copy targeting "6iptv", and links to /blog + top posts.</div></div><span class="badge badge-critical">Critical</span></div>
+    <div class="action-item"><div class="action-number">2</div><div class="action-content"><div class="action-title">Rewrite homepage title/H1/meta around "6iptv"</div><div class="action-desc">Currently targets "6PTV" only.</div></div><span class="badge badge-critical">Critical</span></div>
+    <div class="action-item"><div class="action-number">3</div><div class="action-content"><div class="action-title">Consolidate the "iptv line" cluster (10 → 2 pages)</div><div class="action-desc">301-redirect or canonicalize; merge unique content into the pillar(s).</div></div><span class="badge badge-critical">Critical</span></div>
+    <div class="action-item"><div class="action-number">4</div><div class="action-content"><div class="action-title">Consolidate the "german/germany iptv" cluster (5 → 1)</div><div class="action-desc">Same treatment as above.</div></div><span class="badge badge-high">High</span></div>
+    <div class="action-item"><div class="action-number">5</div><div class="action-content"><div class="action-title">Consolidate the "4k/premium iptv" cluster (5-6 → 1)</div><div class="action-desc">Same treatment as above.</div></div><span class="badge badge-high">High</span></div>
+    <div class="action-item"><div class="action-number">6</div><div class="action-content"><div class="action-title">Merge iptv-abo + iptv-abo-2026 into one page</div><div class="action-desc">Add a "current pricing" section instead of a duplicate URL.</div></div><span class="badge badge-high">High</span></div>
+    <div class="action-item"><div class="action-number">7</div><div class="action-content"><div class="action-title">Add comparison tables to Commercial-intent pages</div><div class="action-desc">Zero found across sampled pages; start with iptv-abo and iptv-line-kaufen.</div></div><span class="badge badge-medium">Medium</span></div>
+    <div class="action-item"><div class="action-number">8</div><div class="action-content"><div class="action-title">Add hreflang between DE and EN post pairs</div><div class="action-desc">35 English posts currently have zero cross-language signals to their German counterparts.</div></div><span class="badge badge-medium">Medium</span></div>
+  </div>
+
+  <div class="section-title" style="font-size: 18px; color: var(--purple);">Strategic Initiatives <span style="font-size: 14px; color: var(--text-muted); font-weight: 400;">&mdash; ongoing</span></div>
+  <div style="margin-bottom: 24px;">
+    <div class="action-item"><div class="action-number">1</div><div class="action-content"><div class="action-title">Write genuinely new content for "iptv6" / "6 iptv"</div><div class="action-desc">Zero pages target either exact form despite being a stated priority.</div></div><span class="badge badge-high">High</span></div>
+    <div class="action-item"><div class="action-number">2</div><div class="action-content"><div class="action-title">Add security headers (CSP, X-Content-Type-Options, X-Frame-Options, Referrer-Policy)</div><div class="action-desc">Via a <code>headers</code> block in <code>vercel.json</code>.</div></div><span class="badge badge-medium">Medium</span></div>
+    <div class="action-item"><div class="action-number">3</div><div class="action-content"><div class="action-title">Establish a pre-publish keyword-collision check</div><div class="action-desc">324 DE posts already exist and the blog is clearly growing fast (16 <code>deBlogPostsNN.ts</code> files) — without a check, new clusters like "iptv line" will keep recurring.</div></div><span class="badge badge-high">High</span></div>
+    <div class="action-item"><div class="action-number">4</div><div class="action-content"><div class="action-title">Replace generic Unsplash stock photos with owned product imagery</div><div class="action-desc">Every sampled post uses the same type of generic stock photo; branded screenshots would strengthen trust/E-E-A-T and remove the external dependency.</div></div><span class="badge badge-medium">Medium</span></div>
+  </div>
+
+  <div class="section-title" style="font-size: 18px; margin-top: 32px;">Full Implementation Checklist</div>
+  <div class="card">
+    <div class="checklist-item"><div class="check-icon fail">&#10007;</div><div class="check-text">Prerender homepage body content (H1, copy, links)</div></div>
+    <div class="checklist-item"><div class="check-icon fail">&#10007;</div><div class="check-text">Retarget homepage title/H1/meta to "6iptv"</div></div>
+    <div class="checklist-item"><div class="check-icon fail">&#10007;</div><div class="check-text">Consolidate "iptv line" cluster (10 → 2 pages)</div></div>
+    <div class="checklist-item"><div class="check-icon fail">&#10007;</div><div class="check-text">Consolidate "german/germany iptv" cluster (5 → 1 page)</div></div>
+    <div class="checklist-item"><div class="check-icon fail">&#10007;</div><div class="check-text">Consolidate "4k/premium iptv" cluster (5-6 → 1 page)</div></div>
+    <div class="checklist-item"><div class="check-icon fail">&#10007;</div><div class="check-text">Merge "iptv abo" + "iptv abo 2026" into one page</div></div>
+    <div class="checklist-item"><div class="check-icon fail">&#10007;</div><div class="check-text">Add "iptv6"/"6 iptv" content (homepage FAQ section)</div></div>
+    <div class="checklist-item"><div class="check-icon fail">&#10007;</div><div class="check-text">Cap blog post titles at ~60 characters (prerender.ts:247)</div></div>
+    <div class="checklist-item"><div class="check-icon fail">&#10007;</div><div class="check-text">Shorten homepage + /blog meta descriptions to ≤160 chars</div></div>
+    <div class="checklist-item"><div class="check-icon fail">&#10007;</div><div class="check-text">Complete homepage Twitter Card tags</div></div>
+    <div class="checklist-item"><div class="check-icon fail">&#10007;</div><div class="check-text">Add comparison tables to Commercial-intent pages</div></div>
+    <div class="checklist-item"><div class="check-icon fail">&#10007;</div><div class="check-text">Add security headers (CSP, X-Content-Type-Options, X-Frame-Options, Referrer-Policy)</div></div>
+    <div class="checklist-item"><div class="check-icon fail">&#10007;</div><div class="check-text">Add hreflang between DE/EN post pairs</div></div>
+    <div class="checklist-item"><div class="check-icon fail">&#10007;</div><div class="check-text">Restructure /blog index (categorize/paginate 359 flat H2s)</div></div>
+    <div class="checklist-item"><div class="check-icon fail">&#10007;</div><div class="check-text">Fix future-dated datePublished/lastmod values</div></div>
+    <div class="checklist-item"><div class="check-icon fail">&#10007;</div><div class="check-text">Break each blog post's single H2 section into 4-6 H2s</div></div>
+    <div class="checklist-item"><div class="check-icon fail">&#10007;</div><div class="check-text">Replace stock Unsplash imagery with owned product photography</div></div>
+    <div class="checklist-item"><div class="check-icon fail">&#10007;</div><div class="check-text">Establish pre-publish keyword-collision check for future posts</div></div>
+  </div>
+
+  <div class="card" style="margin-top: 24px; border-color: var(--yellow-border); background: var(--yellow-bg);">
+    <div style="color: var(--yellow); font-size: 13px; line-height: 1.7;">
+      <strong>Limitations of this audit:</strong> Based on static HTML analysis of 15 pages (sampled from ~362 indexed URLs) plus source-code inspection of <code>scripts/prerender.ts</code>. It cannot measure real Core Web Vitals/page speed, actual Search Console indexing status, backlink profile, or true search rankings — pair these findings with Search Console and PageSpeed Insights data before prioritizing execution order.
+    </div>
+  </div>
+
+</div>
+</div>
+
+<script>
+function switchTab(tabId) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + tabId).classList.add('active');
+  event.target.closest('.tab-btn').classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+document.querySelectorAll('.collapsible-header').forEach(header => {
+  header.addEventListener('click', () => {
+    header.closest('.collapsible').classList.toggle('open');
+  });
+});
+</script>
+
+</body>
+</html>

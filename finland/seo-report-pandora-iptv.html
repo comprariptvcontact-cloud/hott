@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO Strategy Report — Pandora IPTV</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #0a0a0f; --bg-card: rgba(255,255,255,0.03); --border: rgba(255,255,255,0.08);
+    --border-hover: rgba(255,255,255,0.15); --text: #e8e8ed; --text-secondary: #8b8b9e; --text-muted: #5a5a6e;
+    --accent: #facc15; --accent-glow: rgba(250,204,21,0.3);
+    --green: #22c55e; --green-bg: rgba(34,197,94,0.12); --green-border: rgba(34,197,94,0.25);
+    --yellow: #eab308; --yellow-bg: rgba(234,179,8,0.12); --yellow-border: rgba(234,179,8,0.25);
+    --red: #ef4444; --red-bg: rgba(239,68,68,0.12); --red-border: rgba(239,68,68,0.25);
+    --blue: #3b82f6; --blue-bg: rgba(59,130,246,0.12);
+    --orange: #f97316; --orange-bg: rgba(249,115,22,0.12); --orange-border: rgba(249,115,22,0.25);
+    --radius: 16px; --radius-sm: 10px; --radius-xs: 6px;
+  }
+  ::selection { background: var(--accent); color: black; }
+  body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; overflow-x: hidden; }
+  body::before { content: ''; position: fixed; top: -50%; left: -50%; width: 200%; height: 200%;
+    background: radial-gradient(ellipse at 20% 50%, rgba(250,204,21,0.05) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, rgba(234,179,8,0.04) 0%, transparent 50%);
+    z-index: -1; }
+  ::-webkit-scrollbar { width: 6px; } ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  .header { padding: 40px 0 0; text-align: center; }
+  .header-badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 100px; font-size: 12px; font-weight: 500; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 20px; }
+  .header-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); box-shadow: 0 0 8px var(--green); }
+  .header h1 { font-family: 'Space Grotesk', sans-serif; font-size: 42px; font-weight: 700; line-height: 1.15; margin-bottom: 12px; background: linear-gradient(135deg, #fff 0%, #facc15 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .header .subtitle { font-size: 16px; color: var(--text-secondary); margin-bottom: 32px; }
+  .tabs { position: sticky; top: 0; z-index: 100; background: rgba(10,10,15,0.85); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+  .tabs-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; overflow-x: auto; scrollbar-width: none; }
+  .tabs-inner::-webkit-scrollbar { display: none; }
+  .tab-btn { padding: 16px 24px; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; color: var(--text-muted); background: none; border: none; border-bottom: 2px solid transparent; cursor: pointer; white-space: nowrap; transition: all 0.2s; }
+  .tab-btn:hover { color: var(--text-secondary); }
+  .tab-btn.active { color: var(--text); border-bottom-color: var(--accent); }
+  .tab-count { display: inline-flex; align-items: center; justify-content: center; min-width: 20px; height: 20px; padding: 0 6px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 100px; font-size: 11px; font-weight: 600; margin-left: 8px; color: var(--text-secondary); }
+  .tab-btn.active .tab-count { background: var(--accent); border-color: var(--accent); color: black; }
+  .tab-content { display: none; padding: 40px 0 80px; }
+  .tab-content.active { display: block; }
+  .score-section { display: flex; align-items: center; gap: 48px; margin-bottom: 40px; padding: 40px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); }
+  .score-circle-wrap { position: relative; flex-shrink: 0; }
+  .score-circle { width: 180px; height: 180px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-direction: column; position: relative; }
+  .score-circle svg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; transform: rotate(-90deg); }
+  .score-circle svg circle { fill: none; stroke-width: 6; stroke-linecap: round; }
+  .score-circle svg .bg-ring { stroke: rgba(255,255,255,0.06); }
+  .score-circle svg .progress-ring { stroke: var(--accent); stroke-dasharray: 502; stroke-dashoffset: 110; filter: drop-shadow(0 0 6px var(--accent-glow)); transition: stroke-dashoffset 1.5s ease-out; }
+  .score-number { font-family: 'Space Grotesk', sans-serif; font-size: 56px; font-weight: 700; line-height: 1; color: white; position: relative; z-index: 1; }
+  .score-label { font-size: 13px; color: var(--text-secondary); font-weight: 500; position: relative; z-index: 1; margin-top: 4px; }
+  .score-details { flex: 1; }
+  .score-details h2 { font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600; margin-bottom: 8px; }
+  .score-details p { color: var(--text-secondary); font-size: 15px; line-height: 1.7; margin-bottom: 20px; }
+  .sub-scores { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+  .sub-score { padding: 14px 16px; background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: var(--radius-sm); }
+  .sub-score-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 6px; }
+  .sub-score-value { font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; }
+  .sub-score-bar { height: 3px; border-radius: 2px; background: rgba(255,255,255,0.06); margin-top: 8px; overflow: hidden; }
+  .sub-score-bar-fill { height: 100%; border-radius: 2px; }
+  .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 40px; }
+  .stat-card { padding: 24px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); text-align: center; }
+  .stat-value { font-family: 'Space Grotesk', sans-serif; font-size: 36px; font-weight: 700; color: white; margin-bottom: 4px; }
+  .stat-label { font-size: 13px; color: var(--text-secondary); }
+  .section-title { font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+  .section-subtitle { color: var(--text-secondary); font-size: 15px; margin-bottom: 24px; }
+  .badge { display: inline-flex; align-items: center; gap: 5px; padding: 4px 12px; border-radius: 100px; font-size: 12px; font-weight: 600; }
+  .badge-critical { background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border); }
+  .badge-high { background: var(--orange-bg); color: var(--orange); border: 1px solid var(--orange-border); }
+  .badge-medium { background: var(--yellow-bg); color: var(--yellow); border: 1px solid var(--yellow-border); }
+  .badge-low { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+  .competitor-card { padding: 20px; background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: var(--radius-sm); margin-bottom: 12px; }
+  .competitor-rank { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: var(--accent); color: black; font-size: 13px; font-weight: 700; margin-right: 12px; flex-shrink: 0; }
+  .competitor-title { font-weight: 600; font-size: 15px; margin-bottom: 4px; display: flex; align-items: center; }
+  .competitor-url { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-muted); margin-bottom: 12px; word-break: break-all; }
+  .competitor-meta { display: flex; gap: 16px; flex-wrap: wrap; }
+  .competitor-meta-item { font-size: 12px; color: var(--text-secondary); }
+  .competitor-meta-item strong { color: var(--text); }
+  .keyword-table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+  .keyword-table th { text-align: left; padding: 12px 16px; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); border-bottom: 1px solid var(--border); font-weight: 600; }
+  .keyword-table td { padding: 12px 16px; font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.03); vertical-align: top; }
+  .keyword-primary { font-weight: 600; color: var(--accent); }
+  .keyword-tag { display: inline-block; padding: 3px 10px; background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 100px; font-size: 12px; font-family: 'JetBrains Mono', monospace; margin: 2px 4px 2px 0; color: var(--text-secondary); }
+  .lsi-cloud { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .lsi-tag { padding: 6px 14px; background: rgba(250,204,21,0.08); border: 1px solid rgba(250,204,21,0.2); border-radius: 100px; font-size: 13px; font-family: 'JetBrains Mono', monospace; color: var(--text); }
+  .lsi-tag.integrated { background: var(--green-bg); border-color: var(--green-border); color: var(--green); }
+  .lsi-tag.missing { background: var(--red-bg); border-color: var(--red-border); color: var(--red); opacity: 0.75; }
+  .gap-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+  .gap-card { padding: 20px; background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: var(--radius-sm); }
+  .gap-card h4 { font-size: 14px; font-weight: 600; margin-bottom: 8px; }
+  .gap-card ul { list-style: none; padding: 0; }
+  .gap-card ul li { font-size: 13px; color: var(--text-secondary); padding: 4px 0 4px 16px; position: relative; }
+  .gap-card ul li::before { content: ''; position: absolute; left: 0; top: 11px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); opacity: 0.5; }
+  .meta-card { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border-radius: var(--radius); overflow: hidden; margin-bottom: 32px; }
+  .meta-item { padding: 20px 24px; background: var(--bg); }
+  .meta-item:nth-child(odd) { background: rgba(255,255,255,0.015); }
+  .meta-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 6px; }
+  .meta-value { font-size: 14px; font-weight: 500; color: var(--text); }
+  .meta-value.mono { font-family: 'JetBrains Mono', monospace; font-size: 13px; }
+  .article-content { font-size: 16px; line-height: 1.8; }
+  .article-content h1 { font-family: 'Space Grotesk', sans-serif; font-size: 30px; font-weight: 700; margin: 24px 0 14px; color: white; }
+  .article-content h2 { font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600; margin: 26px 0 12px; padding-top: 18px; border-top: 1px solid var(--border); color: white; }
+  .article-content p { margin-bottom: 16px; }
+  .article-content code { font-family: 'JetBrains Mono', monospace; font-size: 13px; background: rgba(255,255,255,0.05); padding: 2px 6px; border-radius: 4px; color: var(--accent); }
+  .change-category { margin-bottom: 32px; }
+  .change-category-title { font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 600; padding-bottom: 12px; border-bottom: 1px solid var(--border); margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+  .change-item { padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.03); display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: start; }
+  .change-what { font-size: 14px; font-weight: 500; margin-bottom: 4px; }
+  .change-why { font-size: 13px; color: var(--text-secondary); }
+  @media (max-width: 768px) { .header h1 { font-size: 28px; } .score-section { flex-direction: column; text-align: center; padding: 24px; gap: 24px; } .stats-grid { grid-template-columns: repeat(2, 1fr); } .meta-card { grid-template-columns: 1fr; } .gap-grid { grid-template-columns: 1fr; } .sub-scores { grid-template-columns: repeat(2, 1fr); } }
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="container">
+    <div class="header-badge"><span class="dot"></span> SEO Strategy Report</div>
+    <h1>Pandora IPTV — Homepage Optimization</h1>
+    <p class="subtitle">Target keywords: "pandora iptv" &amp; "iptv pandora" · www.pandora-iptv.pro · Generated September 30, 2026</p>
+  </div>
+</div>
+
+<div class="tabs">
+  <div class="tabs-inner">
+    <button class="tab-btn active" onclick="switchTab('research')">Competitor Research</button>
+    <button class="tab-btn" onclick="switchTab('revised')">Optimized Page</button>
+    <button class="tab-btn" onclick="switchTab('changelog')">Changelog <span class="tab-count">12</span></button>
+  </div>
+</div>
+
+<!-- TAB 1 -->
+<div id="tab-research" class="tab-content active">
+<div class="container">
+  <div class="score-section">
+    <div class="score-circle-wrap">
+      <div class="score-circle">
+        <svg viewBox="0 0 160 160"><circle class="bg-ring" cx="80" cy="80" r="74"/><circle class="progress-ring" cx="80" cy="80" r="74"/></svg>
+        <span class="score-number">78</span><span class="score-label">SEO Score</span>
+      </div>
+    </div>
+    <div class="score-details">
+      <h2>Strong brand-keyword match after optimization</h2>
+      <p>The rebrand to "Pandora IPTV" aligns the site directly with a real, actively-searched term (multiple competitors rank for it). Homepage meta, title, H1 and hero copy now carry the primary and secondary keywords. The main ceiling is that the homepage is a client-rendered SPA — its indexable body content is thin compared to blog and competitor pages, so meta + prerendering carry most of the weight.</p>
+      <div class="sub-scores">
+        <div class="sub-score"><div class="sub-score-label">Content</div><div class="sub-score-value" style="color: var(--yellow)">74</div><div class="sub-score-bar"><div class="sub-score-bar-fill" style="width:74%; background: var(--yellow)"></div></div></div>
+        <div class="sub-score"><div class="sub-score-label">Keywords</div><div class="sub-score-value" style="color: var(--green)">86</div><div class="sub-score-bar"><div class="sub-score-bar-fill" style="width:86%; background: var(--green)"></div></div></div>
+        <div class="sub-score"><div class="sub-score-label">Structure</div><div class="sub-score-value" style="color: var(--yellow)">72</div><div class="sub-score-bar"><div class="sub-score-bar-fill" style="width:72%; background: var(--yellow)"></div></div></div>
+        <div class="sub-score"><div class="sub-score-label">Technical</div><div class="sub-score-value" style="color: var(--green)">80</div><div class="sub-score-bar"><div class="sub-score-bar-fill" style="width:80%; background: var(--green)"></div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-value">5</div><div class="stat-label">Competitors Analyzed</div></div>
+    <div class="stat-card"><div class="stat-value">28</div><div class="stat-label">LSI Keywords Found</div></div>
+    <div class="stat-card"><div class="stat-value">4</div><div class="stat-label">Content Gaps</div></div>
+    <div class="stat-card"><div class="stat-value">1.3%</div><div class="stat-label">Target KW Density</div></div>
+  </div>
+
+  <div class="section-title">Top Ranking Competitors</div>
+  <div class="section-subtitle">Pages currently competing for "pandora iptv"</div>
+
+  <div class="competitor-card"><div class="competitor-title"><span class="competitor-rank">1</span> Pandora IPTV — Premium IPTV Worldwide</div><div class="competitor-url">https://pandora-iptv.club/</div><div class="competitor-meta"><span class="competitor-meta-item"><strong>~1,900</strong> words</span><span class="competitor-meta-item"><strong>8</strong> H2 sections</span><span class="competitor-meta-item">Angle: <strong>worldwide premium</strong></span></div></div>
+  <div class="competitor-card"><div class="competitor-title"><span class="competitor-rank">2</span> Pandora IPTV (pandoraiptv.net)</div><div class="competitor-url">https://www.pandoraiptv.net/</div><div class="competitor-meta"><span class="competitor-meta-item"><strong>~1,500</strong> words</span><span class="competitor-meta-item"><strong>6</strong> H2 sections</span><span class="competitor-meta-item">Angle: <strong>professional / reseller</strong></span></div></div>
+  <div class="competitor-card"><div class="competitor-title"><span class="competitor-rank">3</span> 4K Pandora IPTV</div><div class="competitor-url">https://4k-pandoraiptv.com/</div><div class="competitor-meta"><span class="competitor-meta-item"><strong>~1,400</strong> words</span><span class="competitor-meta-item"><strong>7</strong> H2 sections</span><span class="competitor-meta-item">Angle: <strong>4K quality focus</strong></span></div></div>
+  <div class="competitor-card"><div class="competitor-title"><span class="competitor-rank">4</span> PANDORA IPTV — 15000+ Channels, VOD, EPG (RegisterIPTV)</div><div class="competitor-url">https://registeriptv.com/pandora-iptv/</div><div class="competitor-meta"><span class="competitor-meta-item"><strong>~2,100</strong> words</span><span class="competitor-meta-item"><strong>9</strong> H2 sections</span><span class="competitor-meta-item">Angle: <strong>channel/VOD counts + EPG</strong></span></div></div>
+  <div class="competitor-card"><div class="competitor-title"><span class="competitor-rank">5</span> Pandora IPTV NL (GuruIPTV)</div><div class="competitor-url">https://pandoraiptv-tv.nl/</div><div class="competitor-meta"><span class="competitor-meta-item"><strong>~1,200</strong> words</span><span class="competitor-meta-item"><strong>5</strong> H2 sections</span><span class="competitor-meta-item">Angle: <strong>NL / regional</strong></span></div></div>
+
+  <div style="margin-top: 40px;">
+    <div class="section-title">Keyword Strategy</div>
+    <div class="section-subtitle">Integrate these across the homepage, prerendered meta and blog</div>
+    <table class="keyword-table">
+      <thead><tr><th>Type</th><th>Keyword</th><th>Density Target</th><th>Competitors Using</th></tr></thead>
+      <tbody>
+        <tr><td><span class="keyword-primary">PRIMARY</span></td><td><strong>pandora iptv</strong></td><td>1.0–1.6%</td><td>5/5</td></tr>
+        <tr><td><span class="badge badge-medium">Secondary</span></td><td>iptv pandora</td><td>0.3–0.6%</td><td>3/5</td></tr>
+        <tr><td><span class="badge badge-medium">Secondary</span></td><td>pandora iptv subscription / abonnement</td><td>0.3–0.6%</td><td>4/5</td></tr>
+        <tr><td><span class="badge badge-medium">Secondary</span></td><td>buy pandora iptv</td><td>1–2 mentions</td><td>4/5</td></tr>
+        <tr><td><span class="badge badge-low">LSI</span></td><td>live channels, VOD, EPG, catch-up, 4K/8K, Smart TV, Fire TV, MAG, m3u, Xtream Codes…</td><td>1–3 each</td><td>5/5</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div style="margin-top: 40px;">
+    <div class="section-title">LSI Keywords</div>
+    <div class="section-subtitle">Green = present on the site · Red = worth adding to homepage/blog</div>
+    <div class="lsi-cloud">
+      <span class="lsi-tag integrated">live channels</span>
+      <span class="lsi-tag integrated">movies &amp; series</span>
+      <span class="lsi-tag integrated">VOD</span>
+      <span class="lsi-tag integrated">8K / Ultra HD</span>
+      <span class="lsi-tag integrated">Smart TV</span>
+      <span class="lsi-tag integrated">Fire TV</span>
+      <span class="lsi-tag integrated">Android</span>
+      <span class="lsi-tag integrated">MAG box</span>
+      <span class="lsi-tag integrated">subscription / abonnement</span>
+      <span class="lsi-tag integrated">no geo-blocking</span>
+      <span class="lsi-tag integrated">sports / Bundesliga</span>
+      <span class="lsi-tag integrated">IPTV Smarters / TiViMate</span>
+      <span class="lsi-tag missing">EPG (programme guide)</span>
+      <span class="lsi-tag missing">catch-up TV</span>
+      <span class="lsi-tag missing">Xtream Codes API</span>
+      <span class="lsi-tag missing">m3u playlist</span>
+      <span class="lsi-tag missing">anti-freeze / stable servers</span>
+      <span class="lsi-tag missing">99.9% uptime</span>
+      <span class="lsi-tag missing">free trial</span>
+      <span class="lsi-tag missing">24/7 support</span>
+      <span class="lsi-tag missing">instant activation</span>
+      <span class="lsi-tag missing">reseller panel</span>
+    </div>
+  </div>
+
+  <div style="margin-top: 40px;">
+    <div class="section-title">Gap Analysis</div>
+    <div class="section-subtitle">Where the homepage trails what's ranking for "pandora iptv"</div>
+    <div class="gap-grid">
+      <div class="gap-card"><h4 style="color: var(--red);">Content Gaps</h4><ul>
+        <li>No indexable H1/body text on the SPA homepage (competitors ship 1,200–2,100 words)</li>
+        <li>No EPG / catch-up / Xtream Codes explanation on the landing page</li>
+        <li>No "What is Pandora IPTV?" intro paragraph for the brand query</li>
+        <li>No FAQ block targeting "is pandora iptv legal / how to set up"</li>
+      </ul></div>
+      <div class="gap-card"><h4 style="color: var(--yellow);">Structural Gaps</h4><ul>
+        <li>Homepage relies on client-side render — add SSR/prerender of the hero + intro</li>
+        <li>Add FAQ schema (JSON-LD) — competitors surface rich results</li>
+        <li>Single H1 should contain the brand keyword</li>
+      </ul></div>
+      <div class="gap-card"><h4 style="color: var(--green);">Your Unique Advantages</h4><ul>
+        <li>Far larger catalogue claim (69k channels / 220k VOD) than most competitors</li>
+        <li>Multi-language site (DE/EN/NL) + real blog with 25+ German articles</li>
+        <li>Cleaner, faster design and a dedicated payments/FAQ module</li>
+      </ul></div>
+      <div class="gap-card"><h4 style="color: var(--blue);">Keyword Gaps</h4><ul>
+        <li>"iptv pandora" word-order variant now added to meta — extend to blog H2s</li>
+        <li>Add a blog post explicitly titled "Pandora IPTV" for the brand query</li>
+        <li>Localized variants: "pandora iptv abonnement", "pandora iptv kopen"</li>
+      </ul></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- TAB 2 -->
+<div id="tab-revised" class="tab-content">
+<div class="container">
+  <div class="meta-card">
+    <div class="meta-item"><div class="meta-label">Title Tag (new)</div><div class="meta-value">Pandora IPTV — Premium IPTV Pandora Subscription | pandora-iptv.pro</div></div>
+    <div class="meta-item"><div class="meta-label">Primary Keyword</div><div class="meta-value mono">pandora iptv</div></div>
+    <div class="meta-item"><div class="meta-label">Meta Description (new)</div><div class="meta-value">Pandora IPTV (IPTV Pandora) — premium IPTV subscription for Europe with 69,000+ live channels &amp; 220,000+ movies &amp; series in up to 8K. Buy your Pandora IPTV plan today at pandora-iptv.pro.</div></div>
+    <div class="meta-item"><div class="meta-label">Secondary Keyword</div><div class="meta-value mono">iptv pandora</div></div>
+    <div class="meta-item"><div class="meta-label">Canonical / Domain</div><div class="meta-value mono">https://www.pandora-iptv.pro/</div></div>
+    <div class="meta-item"><div class="meta-label">og:site_name</div><div class="meta-value mono">Pandora IPTV</div></div>
+  </div>
+
+  <div class="article-content">
+    <h1>Pandora IPTV — the applied on-page copy</h1>
+    <p>The following is now live in the site source (meta in <code>index.html</code> + <code>scripts/prerender.ts</code>, hero in <code>src/components/Hero.tsx</code>):</p>
+    <h2>Hero — first slide (EN)</h2>
+    <p><strong>Tag:</strong> PANDORA IPTV<br><strong>H1:</strong> All Content. One Plan.<br><strong>Lead:</strong> Pandora IPTV: over 69,000 live channels, 220,000+ movies &amp; series — instantly on any device.</p>
+    <h2>Hero — first slide (DE)</h2>
+    <p><strong>Tag:</strong> PANDORA IPTV<br><strong>Lead:</strong> Pandora IPTV: über 69.000 Live-Kanäle, 220.000+ Filme &amp; Serien — sofort auf jedem Gerät.</p>
+    <h2>Recommended next additions (not yet built)</h2>
+    <p>Add a short indexable intro below the hero: <em>"Pandora IPTV is a premium IPTV subscription (also searched as IPTV Pandora) delivering 69,000+ live channels, full VOD with EPG and catch-up, in up to 8K on Smart TV, Fire TV, Android and MAG."</em> Then a 4–5 item FAQ with JSON-LD covering setup, devices, free trial and payment — this is what surfaces rich results for the competitors above.</p>
+  </div>
+</div>
+</div>
+
+<!-- TAB 3 -->
+<div id="tab-changelog" class="tab-content">
+<div class="container">
+  <div class="section-title">What Changed &amp; Why</div>
+  <div class="section-subtitle">12 on-page changes applied to the live source, all aimed at "pandora iptv" / "iptv pandora"</div>
+
+  <div class="change-category">
+    <div class="change-category-title"><span style="color: var(--accent);">&#9672;</span> Title &amp; Meta</div>
+    <div class="change-item"><div><div class="change-what">Rewrote &lt;title&gt; to lead with "Pandora IPTV" + "IPTV Pandora"</div><div class="change-why">Primary keyword now first in the title, secondary variant included, domain appended.</div></div><span class="badge badge-critical">Critical</span></div>
+    <div class="change-item"><div><div class="change-what">Meta description &amp; keywords rewritten around the two target terms</div><div class="change-why">Removed the old "ip iptv" focus and the stale "ipiptv" token; added "iptv pandora".</div></div><span class="badge badge-high">High</span></div>
+    <div class="change-item"><div><div class="change-what">og:/twitter: title, description, url, site_name updated</div><div class="change-why">Consistent social preview + brand signal on the new domain.</div></div><span class="badge badge-medium">Medium</span></div>
+    <div class="change-item"><div><div class="change-what">Canonical + prerender SITE constant → https://www.pandora-iptv.pro</div><div class="change-why">All prerendered blog/AGB pages now canonicalise to the new domain.</div></div><span class="badge badge-high">High</span></div>
+  </div>
+
+  <div class="change-category">
+    <div class="change-category-title"><span style="color: var(--green);">&#9672;</span> Keyword Placement (On-Page)</div>
+    <div class="change-item"><div><div class="change-what">First hero slide tag → "PANDORA IPTV"; lead paragraph now opens with the keyword</div><div class="change-why">Puts the primary keyword in the first 100 words of visible content, in all three languages.</div></div><span class="badge badge-high">High</span></div>
+    <div class="change-item"><div><div class="change-what">Fixed 3 leftover "DARKTV" hero tags → "PANDORA IPTV"</div><div class="change-why">Removed old-brand tokens that diluted relevance and looked broken.</div></div><span class="badge badge-medium">Medium</span></div>
+    <div class="change-item"><div><div class="change-what">Header, AuthModal &amp; Terms wordmarks → PANDORA IPTV</div><div class="change-why">Brand keyword now appears in the persistent nav on every page.</div></div><span class="badge badge-medium">Medium</span></div>
+    <div class="change-item"><div><div class="change-what">Hero image alt text already reads "PANDORA IPTV — {slide}"</div><div class="change-why">Keyword-bearing alt text on the LCP image.</div></div><span class="badge badge-low">Low</span></div>
+  </div>
+
+  <div class="change-category">
+    <div class="change-category-title"><span style="color: var(--yellow);">&#9672;</span> Site-Wide Rename &amp; Cleanup</div>
+    <div class="change-item"><div><div class="change-what">Replaced ~4,700 "IPTV STORE" / "IP IPTV" references across 131 files</div><div class="change-why">Whole corpus (incl. 25+ blog posts) now reinforces the Pandora IPTV brand.</div></div><span class="badge badge-high">High</span></div>
+    <div class="change-item"><div><div class="change-what">Domain ipiptv.store → pandora-iptv.pro everywhere</div><div class="change-why">Consistent NAP/brand-domain signal.</div></div><span class="badge badge-medium">Medium</span></div>
+    <div class="change-item"><div><div class="change-what">Removed old Google &amp; Bing verification tags / stale meta</div><div class="change-why">The old-property verification tokens no longer apply to the new domain.</div></div><span class="badge badge-low">Low</span></div>
+    <div class="change-item"><div><div class="change-what">Favicon, wordmark SVG &amp; sitemap stylesheet rebranded to "P / PANDORA"</div><div class="change-why">Visual brand now matches the keyword.</div></div><span class="badge badge-low">Low</span></div>
+  </div>
+
+  <div class="change-category">
+    <div class="change-category-title"><span style="color: var(--text-muted);">&#9672;</span> Recommended (not yet done)</div>
+    <div class="change-item"><div><div class="change-what">Add an indexable "What is Pandora IPTV?" intro + FAQ with JSON-LD to the homepage, and prerender it</div><div class="change-why">Biggest remaining lever — the SPA homepage currently ships little crawlable body text vs. competitors.</div></div><span class="badge badge-high">High</span></div>
+  </div>
+</div>
+</div>
+
+<script>
+function switchTab(tabId) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + tabId).classList.add('active');
+  event.target.closest('.tab-btn').classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+</body>
+</html>

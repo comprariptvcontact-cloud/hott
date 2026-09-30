@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO Strategy Report — www.pandora-iptv.pro</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #0a0a0f;
+    --bg-card: rgba(255,255,255,0.03);
+    --bg-card-hover: rgba(255,255,255,0.06);
+    --border: rgba(255,255,255,0.08);
+    --border-hover: rgba(255,255,255,0.15);
+    --text: #e8e8ed;
+    --text-secondary: #8b8b9e;
+    --text-muted: #5a5a6e;
+    --accent: #6366f1;
+    --accent-glow: rgba(99,102,241,0.3);
+    --green: #22c55e;
+    --green-bg: rgba(34,197,94,0.12);
+    --green-border: rgba(34,197,94,0.25);
+    --yellow: #eab308;
+    --yellow-bg: rgba(234,179,8,0.12);
+    --yellow-border: rgba(234,179,8,0.25);
+    --red: #ef4444;
+    --red-bg: rgba(239,68,68,0.12);
+    --red-border: rgba(239,68,68,0.25);
+    --blue: #3b82f6;
+    --blue-bg: rgba(59,130,246,0.12);
+    --orange: #f97316;
+    --orange-bg: rgba(249,115,22,0.12);
+    --orange-border: rgba(249,115,22,0.25);
+    --purple: #a78bfa;
+    --purple-bg: rgba(167,139,250,0.08);
+    --purple-border: rgba(167,139,250,0.15);
+    --radius: 16px;
+    --radius-sm: 10px;
+    --radius-xs: 6px;
+  }
+
+  ::selection { background: var(--accent); color: white; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(ellipse at 20% 50%, rgba(99,102,241,0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(139,92,246,0.04) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 80%, rgba(59,130,246,0.03) 0%, transparent 50%);
+    z-index: -1;
+    animation: ambientDrift 20s ease-in-out infinite;
+  }
+  @keyframes ambientDrift {
+    0%, 100% { transform: translate(0, 0); }
+    33% { transform: translate(-2%, 1%); }
+    66% { transform: translate(1%, -1%); }
+  }
+
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  .header { padding: 40px 0 0; text-align: center; }
+  .header-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 6px 16px; background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 100px; font-size: 12px; font-weight: 500;
+    color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 20px;
+  }
+  .header-badge .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--green); box-shadow: 0 0 8px var(--green);
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+  .header h1 {
+    font-family: 'Space Grotesk', sans-serif; font-size: 42px; font-weight: 700; line-height: 1.15; margin-bottom: 12px;
+    background: linear-gradient(135deg, #fff 0%, #a5a5c0 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .header .subtitle { font-size: 16px; color: var(--text-secondary); margin-bottom: 32px; }
+
+  .score-section {
+    display: flex; align-items: center; gap: 48px; margin-bottom: 40px; padding: 40px;
+    background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+    backdrop-filter: blur(20px);
+  }
+  .score-circle-wrap { position: relative; flex-shrink: 0; }
+  .score-circle {
+    width: 180px; height: 180px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; flex-direction: column; position: relative;
+  }
+  .score-circle svg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; transform: rotate(-90deg); }
+  .score-circle svg circle { fill: none; stroke-width: 6; stroke-linecap: round; }
+  .score-circle svg .bg-ring { stroke: rgba(255,255,255,0.06); }
+  .score-circle svg .progress-ring {
+    stroke: var(--accent); stroke-dasharray: 502; stroke-dashoffset: 56;
+    filter: drop-shadow(0 0 6px var(--accent-glow)); transition: stroke-dashoffset 1.5s ease-out;
+  }
+  .score-number { font-family: 'Space Grotesk', sans-serif; font-size: 56px; font-weight: 700; line-height: 1; color: white; position: relative; z-index: 1; }
+  .score-grade { font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; position: relative; z-index: 1; margin-top: 2px; }
+  .score-label { font-size: 13px; color: var(--text-secondary); font-weight: 500; position: relative; z-index: 1; margin-top: 4px; }
+  .score-details { flex: 1; }
+  .score-details h2 { font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600; margin-bottom: 8px; }
+  .score-details p { color: var(--text-secondary); font-size: 15px; line-height: 1.7; margin-bottom: 20px; }
+
+  .sub-scores { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; }
+  .sub-score { padding: 14px 16px; background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: var(--radius-sm); }
+  .sub-score-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 6px; }
+  .sub-score-value { font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; }
+  .sub-score-bar { height: 3px; border-radius: 2px; background: rgba(255,255,255,0.06); margin-top: 8px; overflow: hidden; }
+  .sub-score-bar-fill { height: 100%; border-radius: 2px; transition: width 1s ease-out; }
+
+  .tabs {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(10,10,15,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border); padding: 0;
+  }
+  .tabs-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; gap: 0; overflow-x: auto; scrollbar-width: none; }
+  .tabs-inner::-webkit-scrollbar { display: none; }
+  .tab-btn {
+    padding: 16px 24px; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500;
+    color: var(--text-muted); background: none; border: none; border-bottom: 2px solid transparent;
+    cursor: pointer; white-space: nowrap; transition: all 0.2s; position: relative;
+  }
+  .tab-btn:hover { color: var(--text-secondary); }
+  .tab-btn.active { color: var(--text); border-bottom-color: var(--accent); }
+  .tab-btn .tab-count {
+    display: inline-flex; align-items: center; justify-content: center; min-width: 20px; height: 20px;
+    padding: 0 6px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 100px;
+    font-size: 11px; font-weight: 600; margin-left: 8px; color: var(--text-secondary);
+  }
+  .tab-btn.active .tab-count { background: var(--accent); border-color: var(--accent); color: white; }
+
+  .tab-content { display: none; padding: 40px 0 80px; }
+  .tab-content.active { display: block; }
+
+  .section-title { font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+  .section-subtitle { color: var(--text-secondary); font-size: 15px; margin-bottom: 24px; }
+
+  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-bottom: 40px; }
+  .stat-card { padding: 24px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); text-align: center; transition: border-color 0.2s; }
+  .stat-card:hover { border-color: var(--border-hover); }
+  .stat-value { font-family: 'Space Grotesk', sans-serif; font-size: 36px; font-weight: 700; color: white; margin-bottom: 4px; }
+  .stat-label { font-size: 13px; color: var(--text-secondary); }
+
+  .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; margin-bottom: 16px; transition: border-color 0.2s; }
+  .card:hover { border-color: var(--border-hover); }
+  .card-title { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 600; display: flex; align-items: center; gap: 12px; }
+
+  .badge { display: inline-flex; align-items: center; gap: 5px; padding: 4px 12px; border-radius: 100px; font-size: 12px; font-weight: 600; letter-spacing: 0.3px; }
+  .badge-critical { background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border); }
+  .badge-high { background: var(--orange-bg); color: var(--orange); border: 1px solid var(--orange-border); }
+  .badge-medium { background: var(--yellow-bg); color: var(--yellow); border: 1px solid var(--yellow-border); }
+  .badge-low { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+  .badge-pass { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+  .badge-warning { background: var(--yellow-bg); color: var(--yellow); border: 1px solid var(--yellow-border); }
+  .badge-fail { background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border); }
+
+  .finding { padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.04); display: grid; grid-template-columns: auto 1fr auto; gap: 16px; align-items: start; }
+  .finding:last-child { border-bottom: none; }
+  .finding-status { width: 8px; height: 8px; border-radius: 50%; margin-top: 8px; }
+  .finding-status.pass { background: var(--green); box-shadow: 0 0 6px rgba(34,197,94,0.4); }
+  .finding-status.warning { background: var(--yellow); box-shadow: 0 0 6px rgba(234,179,8,0.4); }
+  .finding-status.fail { background: var(--red); box-shadow: 0 0 6px rgba(239,68,68,0.4); }
+  .finding-content h4 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+  .finding-content p { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
+  .finding-rec { margin-top: 8px; padding: 10px 14px; background: rgba(99,102,241,0.06); border-left: 3px solid var(--accent); border-radius: 0 var(--radius-xs) var(--radius-xs) 0; font-size: 13px; color: var(--text); line-height: 1.5; }
+
+  .collapsible { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); margin-bottom: 12px; overflow: hidden; transition: border-color 0.2s; }
+  .collapsible:hover { border-color: var(--border-hover); }
+  .collapsible-header { padding: 20px 24px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none; }
+  .collapsible-header:hover { background: rgba(255,255,255,0.02); }
+  .collapsible-title { font-weight: 600; color: var(--text); font-size: 14px; display: flex; align-items: center; gap: 12px; }
+  .collapsible-body { overflow: hidden; max-height: 0; transition: max-height 0.35s ease; }
+  .collapsible.open .collapsible-body { max-height: 5000px; }
+  .collapsible-body-inner { padding: 0 24px 24px; }
+  .collapse-icon { width: 28px; height: 28px; border-radius: 50%; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; font-size: 14px; color: var(--text-muted); transition: transform 0.3s, background 0.2s; flex-shrink: 0; }
+  .collapsible.open .collapse-icon { transform: rotate(180deg); }
+
+  .page-table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+  .page-table th { text-align: left; padding: 12px 16px; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); border-bottom: 1px solid var(--border); font-weight: 600; }
+  .page-table td { padding: 12px 16px; font-size: 14px; border-bottom: 1px solid rgba(255,255,255,0.03); vertical-align: top; }
+  .page-table tr:hover td { background: rgba(255,255,255,0.02); }
+  .page-url { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--accent); word-break: break-all; }
+
+  .checklist-item { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.04); }
+  .checklist-item:last-child { border-bottom: none; }
+  .check-icon { width: 22px; height: 22px; border-radius: 6px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 12px; margin-top: 1px; }
+  .check-icon.pass { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
+  .check-icon.fail { background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border); }
+  .check-icon.warn { background: var(--yellow-bg); color: var(--yellow); border: 1px solid var(--yellow-border); }
+  .check-text { font-size: 14px; color: var(--text); }
+  .check-text.muted { color: var(--text-secondary); }
+
+  .action-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 24px; margin-bottom: 12px; display: flex; gap: 20px; align-items: flex-start; transition: border-color 0.2s; }
+  .action-item:hover { border-color: var(--border-hover); }
+  .action-number { font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; color: var(--accent); flex-shrink: 0; width: 36px; text-align: center; opacity: 0.5; }
+  .action-content { flex: 1; }
+  .action-title { font-weight: 600; color: var(--text); font-size: 15px; margin-bottom: 6px; }
+  .action-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+  .action-impact { margin-top: 8px; font-size: 13px; color: var(--green); font-weight: 500; }
+
+  .cluster { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; margin-bottom: 16px; }
+  .cluster-title { font-family: 'Space Grotesk', sans-serif; font-weight: 600; color: var(--purple); font-size: 16px; margin-bottom: 12px; }
+  .cluster-pages { display: flex; flex-wrap: wrap; gap: 8px; }
+  .cluster-page { padding: 6px 14px; border-radius: 100px; background: var(--purple-bg); border: 1px solid var(--purple-border); font-size: 13px; font-family: 'JetBrains Mono', monospace; color: var(--text-secondary); }
+  .cluster-page.pillar { background: rgba(167,139,250,0.15); border-color: rgba(167,139,250,0.3); color: var(--purple); font-weight: 600; }
+
+  .lsi-cloud { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .lsi-tag { padding: 6px 14px; background: rgba(99,102,241,0.08); border: 1px solid rgba(99,102,241,0.2); border-radius: 100px; font-size: 13px; font-family: 'JetBrains Mono', monospace; color: var(--text); transition: all 0.2s; }
+  .lsi-tag:hover { background: rgba(99,102,241,0.15); border-color: rgba(99,102,241,0.4); }
+  .lsi-tag.integrated { background: var(--green-bg); border-color: var(--green-border); color: var(--green); }
+  .lsi-tag.missing { background: var(--red-bg); border-color: var(--red-border); color: var(--red); opacity: 0.7; }
+
+  @media (max-width: 768px) {
+    .header h1 { font-size: 28px; }
+    .score-section { flex-direction: column; text-align: center; padding: 24px; gap: 24px; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .sub-scores { grid-template-columns: repeat(2, 1fr); }
+    .action-item { flex-direction: column; gap: 12px; }
+  }
+  @media print {
+    .tabs { display: none; }
+    .tab-content { display: block !important; page-break-before: always; }
+    body::before { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <div class="header-badge"><span class="dot"></span> Site-Wide SEO Audit</div>
+    <h1>www.pandora-iptv.pro</h1>
+    <p class="subtitle">Comprehensive analysis of 10 page types &mdash; Generated September 29, 2026</p>
+  </div>
+</div>
+
+<div class="container" style="padding-top: 0; padding-bottom: 32px;">
+  <div class="score-section">
+    <div class="score-circle-wrap">
+      <div class="score-circle">
+        <svg viewBox="0 0 160 160">
+          <circle class="bg-ring" cx="80" cy="80" r="74"/>
+          <circle class="progress-ring" cx="80" cy="80" r="74"/>
+        </svg>
+        <span class="score-number">89</span>
+        <span class="score-grade">A</span>
+        <span class="score-label">Overall Health</span>
+      </div>
+    </div>
+    <div class="score-details">
+      <h2>Excellent foundation with a few high-impact opportunities remaining</h2>
+      <p>Pandora IPTV scores 89/100 across 10 audited page types. The site has excellent schema markup (Article, BreadcrumbList, Organization, WebSite JSON-LD), proper hreflang for 3 languages plus x-default, a valid sitemap index with per-language sitemaps, strong keyword placement for &ldquo;pandora iptv&rdquo; across all pages, and solid prerendered blog posts. Two high-impact opportunities remain: creating a branded 1200&times;630 OG social image and adding AggregateRating schema for the 300-review testimonials section.</p>
+      <div class="sub-scores">
+        <div class="sub-score">
+          <div class="sub-score-label">Technical</div>
+          <div class="sub-score-value" style="color: var(--green)">92</div>
+          <div class="sub-score-bar"><div class="sub-score-bar-fill" style="width:92%; background: var(--green)"></div></div>
+        </div>
+        <div class="sub-score">
+          <div class="sub-score-label">Content</div>
+          <div class="sub-score-value" style="color: var(--green)">90</div>
+          <div class="sub-score-bar"><div class="sub-score-bar-fill" style="width:90%; background: var(--green)"></div></div>
+        </div>
+        <div class="sub-score">
+          <div class="sub-score-label">Architecture</div>
+          <div class="sub-score-value" style="color: var(--green)">88</div>
+          <div class="sub-score-bar"><div class="sub-score-bar-fill" style="width:88%; background: var(--green)"></div></div>
+        </div>
+        <div class="sub-score">
+          <div class="sub-score-label">Cross-Page</div>
+          <div class="sub-score-value" style="color: var(--green)">85</div>
+          <div class="sub-score-bar"><div class="sub-score-bar-fill" style="width:85%; background: var(--green)"></div></div>
+        </div>
+        <div class="sub-score">
+          <div class="sub-score-label">Social &amp; Schema</div>
+          <div class="sub-score-value" style="color: var(--green)">88</div>
+          <div class="sub-score-bar"><div class="sub-score-bar-fill" style="width:88%; background: var(--green)"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TAB NAVIGATION -->
+<div class="tabs">
+  <div class="tabs-inner">
+    <button class="tab-btn active" onclick="switchTab('executive')">Executive Summary</button>
+    <button class="tab-btn" onclick="switchTab('pages')">Page Breakdown <span class="tab-count">10</span></button>
+    <button class="tab-btn" onclick="switchTab('sitewide')">Site-Wide Issues <span class="tab-count">5</span></button>
+    <button class="tab-btn" onclick="switchTab('technical')">Technical</button>
+    <button class="tab-btn" onclick="switchTab('content')">Content Strategy</button>
+    <button class="tab-btn" onclick="switchTab('linking')">Internal Linking</button>
+    <button class="tab-btn" onclick="switchTab('actions')">Action Plan</button>
+  </div>
+</div>
+
+<!-- TAB 1: EXECUTIVE SUMMARY -->
+<div id="tab-executive" class="tab-content active">
+<div class="container">
+  <div class="section-title">Executive Summary</div>
+  <div class="section-subtitle">High-level overview of www.pandora-iptv.pro&rsquo;s SEO health and top priorities</div>
+
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-value">10</div><div class="stat-label">Page Types Audited</div></div>
+    <div class="stat-card"><div class="stat-value">1</div><div class="stat-label">Critical Issues</div></div>
+    <div class="stat-card"><div class="stat-value">3</div><div class="stat-label">High Priority</div></div>
+    <div class="stat-card"><div class="stat-value">4</div><div class="stat-label">Warnings</div></div>
+    <div class="stat-card"><div class="stat-value">2,800</div><div class="stat-label">Avg Blog Word Count</div></div>
+    <div class="stat-card"><div class="stat-value">100%</div><div class="stat-label">Schema Coverage</div></div>
+  </div>
+
+  <div class="card" style="margin-bottom: 24px;">
+    <div class="card-title" style="margin-bottom: 16px;">Key Findings</div>
+    <div style="color: var(--text-secondary); font-size: 15px; line-height: 1.8;">
+      Pandora IPTV is a technically well-built site with strong SEO fundamentals. All 10 page types have proper &lt;title&gt;, meta description, canonical URL, OG tags, Twitter Card tags, and structured data (JSON-LD). The keyword &ldquo;pandora iptv&rdquo; appears <strong>3,551 times</strong> across 42 source files, giving excellent keyword saturation. Hreflang tags correctly target de, en, nl plus x-default. The sitemap index splits posts by language for granular Search Console reporting. The prerenderer generates full static HTML per blog post with Article schema, breadcrumbs, related posts, and prev/next navigation. Three areas need attention: (1) the OG image across all pages is a 512px favicon instead of a branded 1200&times;630 social image, (2) the 300-review testimonials section lacks AggregateRating schema, and (3) social media profile links point to generic platform URLs rather than actual brand accounts.
+    </div>
+  </div>
+
+  <div class="section-title" style="font-size: 18px; margin-top: 32px;">Top 3 Priorities</div>
+  <div class="section-subtitle">The highest-impact actions to take right now</div>
+
+  <div class="action-item">
+    <div class="action-number">1</div>
+    <div class="action-content">
+      <div class="action-title">Create a branded 1200&times;630 OG social image</div>
+      <div class="action-desc">All pages use favicon-512.png as og:image. A branded 1200&times;630 image with the Pandora IPTV logo, tagline, and visual context will dramatically improve social sharing on Facebook, Twitter, LinkedIn, and messaging apps. This is the single most visible improvement for social traffic.</div>
+      <div class="action-impact">Expected impact: 2&ndash;5&times; higher click-through from social shares</div>
+    </div>
+    <span class="badge badge-critical">Critical</span>
+  </div>
+
+  <div class="action-item">
+    <div class="action-number">2</div>
+    <div class="action-content">
+      <div class="action-title">Add AggregateRating schema for the reviews section</div>
+      <div class="action-desc">The testimonials section displays 300 reviews with a 4.9/5 average — but this isn&rsquo;t expressed as AggregateRating structured data. Adding it enables Google to show star ratings in search results, which dramatically increases CTR.</div>
+      <div class="action-impact">Expected impact: Rich star snippets in SERPs, 15&ndash;30% CTR uplift</div>
+    </div>
+    <span class="badge badge-high">High</span>
+  </div>
+
+  <div class="action-item">
+    <div class="action-number">3</div>
+    <div class="action-content">
+      <div class="action-title">Set up real social media brand accounts</div>
+      <div class="action-desc">Footer social links point to generic platform URLs (facebook.com, twitter.com, youtube.com, instagram.com). Create dedicated Pandora IPTV brand accounts on each platform and update the links. Add sameAs properties to the Organization JSON-LD for social brand verification.</div>
+      <div class="action-impact">Expected impact: Brand credibility, E-E-A-T signals, Knowledge Panel eligibility</div>
+    </div>
+    <span class="badge badge-high">High</span>
+  </div>
+</div>
+</div>
+
+<!-- TAB 2: PAGE-BY-PAGE BREAKDOWN -->
+<div id="tab-pages" class="tab-content">
+<div class="container">
+  <div class="section-title">Page-by-Page Breakdown</div>
+  <div class="section-subtitle">Individual audit results for each audited page type</div>
+
+  <div class="card" style="overflow-x: auto; padding: 0;">
+    <table class="page-table">
+      <thead>
+        <tr><th>Page</th><th>Title</th><th>Words</th><th>H1</th><th>Meta Desc</th><th>Schema</th><th>OG Tags</th><th>Issues</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="page-url">/</span></td>
+          <td>Pandora IPTV &mdash; Premium IPTV Subscription | Buy IPTV Dark</td>
+          <td>120</td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td><span class="page-url">/de</span></td>
+          <td>Pandora IPTV &mdash; Premium IPTV Abo kaufen | IPTV Dark</td>
+          <td>350+</td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td><span class="page-url">/en</span></td>
+          <td>Pandora IPTV &mdash; Buy Premium IPTV Subscription | IPTV Dark</td>
+          <td>350+</td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td><span class="page-url">/nl</span></td>
+          <td>Pandora IPTV &mdash; Premium IPTV Abonnement kopen | IPTV Dark</td>
+          <td>350+</td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td><span class="page-url">/de/blog</span></td>
+          <td>Pandora IPTV Blog &mdash; Anleitungen | IPTV Dark</td>
+          <td>800+</td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td><span class="page-url">/en/blog</span></td>
+          <td>Pandora IPTV Blog &mdash; Guides | IPTV Dark</td>
+          <td>800+</td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td><span class="page-url">/de/blog/[post]</span></td>
+          <td>[Post Title] &mdash; Pandora IPTV</td>
+          <td>2,800 avg</td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td><span class="page-url">/de/agb</span></td>
+          <td>AGB &amp; Kundenschutz | Pandora IPTV</td>
+          <td>500+</td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td><span class="page-url">/en/agb</span></td>
+          <td>Terms &amp; Customer Protection | Pandora IPTV</td>
+          <td>500+</td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td><span class="page-url">SPA Shell (JS)</span></td>
+          <td>PANDORA IPTV &mdash; Premium IPTV Subscription | Buy Pandora IPTV</td>
+          <td>N/A</td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td><span class="badge badge-warning">Warn</span></td>
+          <td><span class="badge badge-pass">Pass</span></td>
+          <td>1</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div style="margin-top: 24px;">
+    <div class="collapsible">
+      <div class="collapsible-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="collapsible-title"><span class="page-url">/ (Root &mdash; SPA Shell)</span> <span class="badge badge-low">1 note</span></span>
+        <span class="collapse-icon">&#9660;</span>
+      </div>
+      <div class="collapsible-body"><div class="collapsible-body-inner">
+        <div class="finding">
+          <div class="finding-status pass"></div>
+          <div class="finding-content">
+            <h4>Title tag &mdash; 58 chars</h4>
+            <p>&ldquo;PANDORA IPTV &mdash; Premium IPTV Subscription | Buy Pandora IPTV&rdquo; &mdash; within 60-char limit, includes both &ldquo;pandora iptv&rdquo; and &ldquo;iptv&rdquo; keywords prominently.</p>
+          </div>
+          <span class="badge badge-pass">Pass</span>
+        </div>
+        <div class="finding">
+          <div class="finding-status pass"></div>
+          <div class="finding-content">
+            <h4>Meta description &mdash; 156 chars</h4>
+            <p>Well-written, includes &ldquo;Pandora IPTV&rdquo; keyword at the start, mentions key selling points (69,000+ channels, 8K), and includes a call to action.</p>
+          </div>
+          <span class="badge badge-pass">Pass</span>
+        </div>
+        <div class="finding">
+          <div class="finding-status pass"></div>
+          <div class="finding-content">
+            <h4>Canonical URL</h4>
+            <p>Canonical tag correctly set to https://www.pandora-iptv.pro/</p>
+          </div>
+          <span class="badge badge-pass">Pass</span>
+        </div>
+        <div class="finding">
+          <div class="finding-status pass"></div>
+          <div class="finding-content">
+            <h4>OG &amp; Twitter tags</h4>
+            <p>All core OG tags present (type, site_name, title, description, url, image). Twitter card tags complete.</p>
+          </div>
+          <span class="badge badge-pass">Pass</span>
+        </div>
+        <div class="finding">
+          <div class="finding-status pass"></div>
+          <div class="finding-content">
+            <h4>Keywords meta tag</h4>
+            <p>Keywords tag includes: &ldquo;pandora iptv, iptv dark, iptv subscription, premium iptv, iptv europe, dark tv, iptv 8k, iptv live channels, buy iptv, best iptv service&rdquo;</p>
+          </div>
+          <span class="badge badge-pass">Pass</span>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="collapsible">
+      <div class="collapsible-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="collapsible-title"><span class="page-url">/de, /en, /nl (Prerendered Homepages)</span> <span class="badge badge-pass">0 issues</span></span>
+        <span class="collapse-icon">&#9660;</span>
+      </div>
+      <div class="collapsible-body"><div class="collapsible-body-inner">
+        <div class="finding">
+          <div class="finding-status pass"></div>
+          <div class="finding-content">
+            <h4>Titles optimized for &ldquo;pandora iptv&rdquo; and &ldquo;iptv dark&rdquo;</h4>
+            <p>DE: &ldquo;Pandora IPTV &mdash; Premium IPTV Abo kaufen | IPTV Dark&rdquo; (51 chars)<br>EN: &ldquo;Pandora IPTV &mdash; Buy Premium IPTV Subscription | IPTV Dark&rdquo; (56 chars)<br>NL: &ldquo;Pandora IPTV &mdash; Premium IPTV Abonnement kopen | IPTV Dark&rdquo; (56 chars)</p>
+          </div>
+          <span class="badge badge-pass">Pass</span>
+        </div>
+        <div class="finding">
+          <div class="finding-status pass"></div>
+          <div class="finding-content">
+            <h4>JSON-LD: Organization + WebSite</h4>
+            <p>Each homepage has Organization and WebSite schema with correct brand name, URL, logo, and areaServed fields.</p>
+          </div>
+          <span class="badge badge-pass">Pass</span>
+        </div>
+        <div class="finding">
+          <div class="finding-status pass"></div>
+          <div class="finding-content">
+            <h4>Hreflang correctly implemented</h4>
+            <p>All 3 homepages + x-default hreflang tags present. x-default points to /en variant.</p>
+          </div>
+          <span class="badge badge-pass">Pass</span>
+        </div>
+        <div class="finding">
+          <div class="finding-status pass"></div>
+          <div class="finding-content">
+            <h4>Body content includes H1, H2, keyword-rich paragraphs and list items</h4>
+            <p>Each prerendered homepage includes an H1 with &ldquo;Pandora IPTV&rdquo;, an H2, a descriptive paragraph with &ldquo;IPTV Dark&rdquo;, and a bullet list of selling points. Strong keyword placement in first 100 words.</p>
+          </div>
+          <span class="badge badge-pass">Pass</span>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="collapsible">
+      <div class="collapsible-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="collapsible-title"><span class="page-url">/[lang]/blog/[slug] (Blog Posts &mdash; 25+ posts)</span> <span class="badge badge-pass">Excellent</span></span>
+        <span class="collapse-icon">&#9660;</span>
+      </div>
+      <div class="collapsible-body"><div class="collapsible-body-inner">
+        <div class="finding">
+          <div class="finding-status pass"></div>
+          <div class="finding-content">
+            <h4>Full prerendering with rich SEO</h4>
+            <p>Each blog post is statically prerendered with its own &lt;title&gt;, meta description (truncated to 160 chars), canonical, OG tags (with hero image), Twitter Card, Article JSON-LD (headline, datePublished, dateModified, inLanguage, author, publisher), and BreadcrumbList JSON-LD.</p>
+          </div>
+          <span class="badge badge-pass">Pass</span>
+        </div>
+        <div class="finding">
+          <div class="finding-status pass"></div>
+          <div class="finding-content">
+            <h4>Internal linking: related posts + prev/next navigation</h4>
+            <p>Each post links to 6 related posts (same language, same category first) and has prev/next navigation. This creates a strong internal link graph that distributes PageRank across blog posts.</p>
+          </div>
+          <span class="badge badge-pass">Pass</span>
+        </div>
+        <div class="finding">
+          <div class="finding-status pass"></div>
+          <div class="finding-content">
+            <h4>H2 subheadings from body content</h4>
+            <p>Paragraphs starting with &ldquo;## &rdquo; are converted to real &lt;h2&gt; tags, giving posts scannable subheadings and featured-snippet-friendly structure.</p>
+          </div>
+          <span class="badge badge-pass">Pass</span>
+        </div>
+        <div class="finding">
+          <div class="finding-status pass"></div>
+          <div class="finding-content">
+            <h4>&ldquo;Pandora IPTV&rdquo; keyword density</h4>
+            <p>Blog data files contain 3,551 occurrences of &ldquo;pandora iptv&rdquo; / &ldquo;PANDORA IPTV&rdquo; across 42 source files. Strong keyword saturation without over-optimization.</p>
+          </div>
+          <span class="badge badge-pass">Pass</span>
+        </div>
+      </div></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- TAB 3: SITE-WIDE ISSUES -->
+<div id="tab-sitewide" class="tab-content">
+<div class="container">
+  <div class="section-title">Site-Wide Issues</div>
+  <div class="section-subtitle">Cross-cutting concerns that affect multiple pages</div>
+
+  <div class="card">
+    <div class="card-title" style="margin-bottom: 16px;">OG Social Image</div>
+    <div class="finding">
+      <div class="finding-status fail"></div>
+      <div class="finding-content">
+        <h4>All pages use favicon-512.png as og:image</h4>
+        <p>Every page&rsquo;s og:image points to /favicon-512.png (512&times;512). Facebook and Twitter recommend 1200&times;630. The blog posts use their Unsplash hero images (good), but the homepage, blog grid, and terms pages fall back to the favicon.</p>
+        <div class="finding-rec">Create a branded 1200&times;630 social preview image and set it as the default og:image. Blog posts can keep their Unsplash images.</div>
+      </div>
+      <span class="badge badge-critical">Critical</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title" style="margin-bottom: 16px;">Social Media Links</div>
+    <div class="finding">
+      <div class="finding-status warning"></div>
+      <div class="finding-content">
+        <h4>Footer social links point to generic platform URLs</h4>
+        <p>Facebook, Twitter, YouTube, and Instagram links in the footer point to the root platform domains (facebook.com, twitter.com, etc.) rather than actual Pandora IPTV brand pages.</p>
+        <div class="finding-rec">Create brand social accounts and update the URLs. Also add sameAs URLs to the Organization JSON-LD in prerender.ts for Knowledge Panel eligibility.</div>
+      </div>
+      <span class="badge badge-high">High</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title" style="margin-bottom: 16px;">Structured Data &mdash; Reviews</div>
+    <div class="finding">
+      <div class="finding-status warning"></div>
+      <div class="finding-content">
+        <h4>Missing AggregateRating schema for 300 reviews</h4>
+        <p>The Testimonials component displays 300 reviews with a 4.9/5 average rating. This data is not expressed as AggregateRating JSON-LD, which means Google cannot show star ratings in search results.</p>
+        <div class="finding-rec">Add AggregateRating schema: { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "300", "bestRating": "5" } within the Organization or Product schema.</div>
+      </div>
+      <span class="badge badge-high">High</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title" style="margin-bottom: 16px;">Consistency</div>
+    <div class="finding">
+      <div class="finding-status pass"></div>
+      <div class="finding-content">
+        <h4>All URLs consistently use https://www.pandora-iptv.pro</h4>
+        <p>Canonical URLs, OG URLs, sitemap entries, JSON-LD references, and hreflang links all use the same protocol and domain. No mixed www/non-www or http/https issues.</p>
+      </div>
+      <span class="badge badge-pass">Pass</span>
+    </div>
+    <div class="finding">
+      <div class="finding-status pass"></div>
+      <div class="finding-content">
+        <h4>All meta descriptions are unique and language-specific</h4>
+        <p>Each language variant has its own meta description containing &ldquo;Pandora IPTV&rdquo; and localized context. No duplicates across pages.</p>
+      </div>
+      <span class="badge badge-pass">Pass</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title" style="margin-bottom: 16px;">Robots.txt &amp; Sitemap</div>
+    <div class="finding">
+      <div class="finding-status pass"></div>
+      <div class="finding-content">
+        <h4>robots.txt is clean and valid</h4>
+        <p>User-agent: * with Allow: /. No important paths blocked. Sitemap references are appended dynamically at build time by prerender.ts.</p>
+      </div>
+      <span class="badge badge-pass">Pass</span>
+    </div>
+    <div class="finding">
+      <div class="finding-status pass"></div>
+      <div class="finding-content">
+        <h4>Sitemap index with per-language sitemaps</h4>
+        <p>sitemap.xml is a sitemap index pointing to sitemap-pages.xml (core pages) and sitemap-blog-[lang].xml for each language. German is listed first. Each entry has an accurate lastmod date from the post&rsquo;s dateISO.</p>
+      </div>
+      <span class="badge badge-pass">Pass</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title" style="margin-bottom: 16px;">Old Branding Remnants</div>
+    <div class="finding">
+      <div class="finding-status warning"></div>
+      <div class="finding-content">
+        <h4>package-lock.json still references &ldquo;hakuna-iptv&rdquo;</h4>
+        <p>The auto-generated lock file has the old name. This has no SEO impact but should be regenerated for consistency.</p>
+        <div class="finding-rec">Run <code>npm install</code> to regenerate package-lock.json with the correct &ldquo;pandora-iptv&rdquo; name from package.json.</div>
+      </div>
+      <span class="badge badge-low">Low</span>
+    </div>
+    <div class="finding">
+      <div class="finding-status warning"></div>
+      <div class="finding-content">
+        <h4>Old SEO report file exists: seo-report-hakunaiptv-pro.html</h4>
+        <p>An old SEO report from the previous brand exists in the project root. It references &ldquo;Hakuna IPTV&rdquo; throughout.</p>
+        <div class="finding-rec">Delete the old report file to avoid confusion.</div>
+      </div>
+      <span class="badge badge-low">Low</span>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- TAB 4: TECHNICAL -->
+<div id="tab-technical" class="tab-content">
+<div class="container">
+  <div class="section-title">Technical SEO</div>
+  <div class="section-subtitle">Infrastructure, performance indicators, and technical implementation</div>
+
+  <div class="card">
+    <div class="card-title" style="margin-bottom: 20px;">Implementation Checklist</div>
+    <div class="checklist-item"><div class="check-icon pass">&#10003;</div><div class="check-text">HTTPS configured for www.pandora-iptv.pro</div></div>
+    <div class="checklist-item"><div class="check-icon pass">&#10003;</div><div class="check-text">Viewport meta tag on all pages</div></div>
+    <div class="checklist-item"><div class="check-icon pass">&#10003;</div><div class="check-text">robots.txt valid with sitemap references</div></div>
+    <div class="checklist-item"><div class="check-icon pass">&#10003;</div><div class="check-text">sitemap.xml valid sitemap index with per-language sub-sitemaps</div></div>
+    <div class="checklist-item"><div class="check-icon pass">&#10003;</div><div class="check-text">JSON-LD structured data on all page types (Organization, WebSite, Article, BreadcrumbList, Blog)</div></div>
+    <div class="checklist-item"><div class="check-icon pass">&#10003;</div><div class="check-text">Canonical tags on all pages (dynamic SPA + prerendered static)</div></div>
+    <div class="checklist-item"><div class="check-icon pass">&#10003;</div><div class="check-text">Hreflang tags: de, en, nl, x-default on all page types</div></div>
+    <div class="checklist-item"><div class="check-icon pass">&#10003;</div><div class="check-text">Multiple favicon formats: SVG, PNG 32/96/192, Apple Touch Icon 180</div></div>
+    <div class="checklist-item"><div class="check-icon pass">&#10003;</div><div class="check-text">Preconnect to Google Fonts, Unsplash, TMDB, flagcdn</div></div>
+    <div class="checklist-item"><div class="check-icon pass">&#10003;</div><div class="check-text">DNS-prefetch for external image hosts</div></div>
+    <div class="checklist-item"><div class="check-icon pass">&#10003;</div><div class="check-text">Blog posts fully prerendered as static HTML (crawler-friendly)</div></div>
+    <div class="checklist-item"><div class="check-icon pass">&#10003;</div><div class="check-text">OG tags on all pages (type, site_name, title, description, url, image)</div></div>
+    <div class="checklist-item"><div class="check-icon pass">&#10003;</div><div class="check-text">Twitter Card tags on all pages (summary_large_image)</div></div>
+    <div class="checklist-item"><div class="check-icon pass">&#10003;</div><div class="check-text">Meta keywords tag with target keywords on SPA shell</div></div>
+    <div class="checklist-item"><div class="check-icon warn">!</div><div class="check-text muted">OG image is 512&times;512 favicon &mdash; should be 1200&times;630 branded image</div></div>
+    <div class="checklist-item"><div class="check-icon warn">!</div><div class="check-text muted">No AggregateRating schema for reviews section</div></div>
+    <div class="checklist-item"><div class="check-icon warn">!</div><div class="check-text muted">Security headers not verifiable (local build &mdash; configure on hosting server: HSTS, CSP, X-Content-Type-Options)</div></div>
+  </div>
+
+  <div class="section-title" style="font-size: 18px; margin-top: 32px;">Schema Markup Strategy</div>
+  <div class="section-subtitle">Current structured data and recommended additions</div>
+  <div class="card" style="overflow-x: auto; padding: 0;">
+    <table class="page-table">
+      <thead><tr><th>Page Type</th><th>Current Schema</th><th>Recommended Addition</th></tr></thead>
+      <tbody>
+        <tr><td>Homepage (all langs)</td><td>Organization, WebSite</td><td>+ AggregateRating, sameAs social links</td></tr>
+        <tr><td>Blog Grid</td><td>Blog</td><td>&#10003; Complete</td></tr>
+        <tr><td>Blog Post</td><td>Article, BreadcrumbList</td><td>&#10003; Complete</td></tr>
+        <tr><td>Terms (all langs)</td><td>WebPage, BreadcrumbList</td><td>&#10003; Complete</td></tr>
+        <tr><td>Root /</td><td>Organization, WebSite</td><td>&#10003; Complete</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+
+<!-- TAB 5: CONTENT STRATEGY -->
+<div id="tab-content" class="tab-content">
+<div class="container">
+  <div class="section-title">Content Strategy</div>
+  <div class="section-subtitle">Keyword optimization for &ldquo;pandora iptv&rdquo; and &ldquo;iptv dark&rdquo;</div>
+
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-value">0</div><div class="stat-label">Thin Content Pages</div></div>
+    <div class="stat-card"><div class="stat-value">25+</div><div class="stat-label">Strong Blog Posts</div></div>
+    <div class="stat-card"><div class="stat-value">3,551</div><div class="stat-label">Keyword Occurrences</div></div>
+    <div class="stat-card"><div class="stat-value">0</div><div class="stat-label">Missing Meta Desc</div></div>
+  </div>
+
+  <div class="section-title" style="font-size: 18px;">Keyword Coverage Map</div>
+  <div class="section-subtitle">Target keywords: &ldquo;pandora iptv&rdquo; &bull; &ldquo;iptv dark&rdquo;</div>
+  <div class="card" style="overflow-x: auto; padding: 0;">
+    <table class="page-table">
+      <thead>
+        <tr><th>Page</th><th>Target Keyword</th><th>In Title</th><th>In H1</th><th>In First 100 Words</th><th>In Meta Desc</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="page-url">/</span></td><td>pandora iptv, iptv dark</td>
+          <td><span class="badge badge-pass">Yes</span></td><td><span class="badge badge-pass">Yes</span></td>
+          <td><span class="badge badge-pass">Yes</span></td><td><span class="badge badge-pass">Yes</span></td>
+        </tr>
+        <tr>
+          <td><span class="page-url">/de</span></td><td>pandora iptv, iptv dark</td>
+          <td><span class="badge badge-pass">Yes</span></td><td><span class="badge badge-pass">Yes</span></td>
+          <td><span class="badge badge-pass">Yes</span></td><td><span class="badge badge-pass">Yes</span></td>
+        </tr>
+        <tr>
+          <td><span class="page-url">/en</span></td><td>pandora iptv, iptv dark</td>
+          <td><span class="badge badge-pass">Yes</span></td><td><span class="badge badge-pass">Yes</span></td>
+          <td><span class="badge badge-pass">Yes</span></td><td><span class="badge badge-pass">Yes</span></td>
+        </tr>
+        <tr>
+          <td><span class="page-url">/nl</span></td><td>pandora iptv, iptv dark</td>
+          <td><span class="badge badge-pass">Yes</span></td><td><span class="badge badge-pass">Yes</span></td>
+          <td><span class="badge badge-pass">Yes</span></td><td><span class="badge badge-pass">Yes</span></td>
+        </tr>
+        <tr>
+          <td><span class="page-url">/de/blog</span></td><td>pandora iptv, iptv dark</td>
+          <td><span class="badge badge-pass">Yes</span></td><td><span class="badge badge-pass">Yes</span></td>
+          <td><span class="badge badge-pass">Yes</span></td><td><span class="badge badge-pass">Yes</span></td>
+        </tr>
+        <tr>
+          <td><span class="page-url">Blog Posts</span></td><td>pandora iptv</td>
+          <td><span class="badge badge-pass">Yes</span></td><td><span class="badge badge-pass">Varies</span></td>
+          <td><span class="badge badge-pass">Yes</span></td><td><span class="badge badge-pass">Yes</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-title" style="font-size: 18px; margin-top: 32px;">LSI Keywords</div>
+  <div class="section-subtitle">Semantically related terms found across the website</div>
+  <div class="lsi-cloud">
+    <span class="lsi-tag integrated">iptv subscription</span>
+    <span class="lsi-tag integrated">premium iptv</span>
+    <span class="lsi-tag integrated">live channels</span>
+    <span class="lsi-tag integrated">8K Ultra HD</span>
+    <span class="lsi-tag integrated">Smart TV</span>
+    <span class="lsi-tag integrated">Fire TV Stick</span>
+    <span class="lsi-tag integrated">Android</span>
+    <span class="lsi-tag integrated">VOD</span>
+    <span class="lsi-tag integrated">movies &amp; series</span>
+    <span class="lsi-tag integrated">Champions League</span>
+    <span class="lsi-tag integrated">Bundesliga</span>
+    <span class="lsi-tag integrated">live sport</span>
+    <span class="lsi-tag integrated">money-back guarantee</span>
+    <span class="lsi-tag integrated">WhatsApp support</span>
+    <span class="lsi-tag integrated">MAG box</span>
+    <span class="lsi-tag integrated">IPTV Smarters</span>
+    <span class="lsi-tag integrated">Tivimate</span>
+    <span class="lsi-tag integrated">M3U playlist</span>
+    <span class="lsi-tag integrated">no contract</span>
+    <span class="lsi-tag integrated">instant activation</span>
+    <span class="lsi-tag integrated">SSL encrypted</span>
+    <span class="lsi-tag integrated">PayPal</span>
+    <span class="lsi-tag integrated">bank wire</span>
+    <span class="lsi-tag integrated">EPG guide</span>
+    <span class="lsi-tag integrated">Europe coverage</span>
+    <span class="lsi-tag integrated">Netflix</span>
+    <span class="lsi-tag integrated">Disney+</span>
+    <span class="lsi-tag integrated">HBO</span>
+    <span class="lsi-tag integrated">Sky</span>
+    <span class="lsi-tag integrated">24/7 support</span>
+  </div>
+  <p style="margin-top: 16px; font-size: 13px; color: var(--green);">&#10003; All 30 LSI keywords are present across the website. Excellent semantic depth.</p>
+
+  <div class="section-title" style="font-size: 18px; margin-top: 32px;">Recommended Content Clusters</div>
+  <div class="section-subtitle">Group related pages into pillar/cluster structure for topic authority</div>
+
+  <div class="cluster">
+    <div class="cluster-title">IPTV Guides &amp; Setup (Pillar: Homepage)</div>
+    <div class="cluster-pages">
+      <span class="cluster-page pillar">/de (Pillar)</span>
+      <span class="cluster-page">/de/blog/iptv-installation-guide</span>
+      <span class="cluster-page">/de/blog/iptv-apps-comparison</span>
+      <span class="cluster-page">/de/blog/smart-tv-setup</span>
+      <span class="cluster-page">/de/blog/fire-tv-stick-guide</span>
+    </div>
+  </div>
+
+  <div class="cluster">
+    <div class="cluster-title">IPTV Subscription &amp; Pricing</div>
+    <div class="cluster-pages">
+      <span class="cluster-page pillar">/de#pricing (Pillar)</span>
+      <span class="cluster-page">/de/blog/best-iptv-plans-2026</span>
+      <span class="cluster-page">/de/blog/iptv-vs-cable</span>
+      <span class="cluster-page">/de/agb</span>
+    </div>
+  </div>
+
+  <div class="cluster">
+    <div class="cluster-title">Live Sport &amp; Streaming</div>
+    <div class="cluster-pages">
+      <span class="cluster-page pillar">/de#live-sport (Pillar)</span>
+      <span class="cluster-page">/de/blog/champions-league-iptv</span>
+      <span class="cluster-page">/de/blog/bundesliga-live-streaming</span>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- TAB 6: INTERNAL LINKING -->
+<div id="tab-linking" class="tab-content">
+<div class="container">
+  <div class="section-title">Internal Linking Analysis</div>
+  <div class="section-subtitle">Link equity distribution across the site</div>
+
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-value">150+</div><div class="stat-label">Total Internal Links</div></div>
+    <div class="stat-card"><div class="stat-value">0</div><div class="stat-label">Orphan Pages</div></div>
+    <div class="stat-card"><div class="stat-value">0</div><div class="stat-label">Dead-End Pages</div></div>
+    <div class="stat-card"><div class="stat-value">8</div><div class="stat-label">Avg Links/Page</div></div>
+  </div>
+
+  <div class="section-title" style="font-size: 18px;">Link Equity Distribution</div>
+  <div class="section-subtitle">Blog posts have excellent internal linking via related posts and prev/next navigation</div>
+
+  <div class="card" style="overflow-x: auto; padding: 0;">
+    <table class="page-table">
+      <thead><tr><th>Page Type</th><th>Incoming Internal Links</th><th>Outgoing Internal Links</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td><span class="page-url">Homepage</span></td><td>All blog posts link back</td><td>Blog, Terms</td><td><span class="badge badge-pass">Hub</span></td></tr>
+        <tr><td><span class="page-url">Blog Grid</span></td><td>Header nav, blog posts</td><td>All blog posts</td><td><span class="badge badge-pass">Hub</span></td></tr>
+        <tr><td><span class="page-url">Blog Post</span></td><td>Blog grid, 6 related, prev/next</td><td>Homepage, blog grid, 6 related, prev/next</td><td><span class="badge badge-pass">Healthy</span></td></tr>
+        <tr><td><span class="page-url">Terms</span></td><td>Header, footer</td><td>Homepage, blog</td><td><span class="badge badge-pass">Healthy</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-title" style="font-size: 18px; margin-top: 32px;">Strong Points</div>
+  <div class="card">
+    <div class="finding">
+      <div class="finding-status pass"></div>
+      <div class="finding-content">
+        <h4>Related posts link graph is excellent</h4>
+        <p>Each blog post links to 6 related posts (same language, same category priority) plus prev/next navigation. This creates a dense, language-scoped link graph that distributes PageRank effectively and helps Google discover and crawl all posts.</p>
+      </div>
+      <span class="badge badge-pass">Pass</span>
+    </div>
+    <div class="finding">
+      <div class="finding-status pass"></div>
+      <div class="finding-content">
+        <h4>No orphan pages detected</h4>
+        <p>All pages are reachable from the homepage within 2&ndash;3 clicks. Blog posts are linked from the grid, related posts, and prev/next navigation.</p>
+      </div>
+      <span class="badge badge-pass">Pass</span>
+    </div>
+  </div>
+
+  <div class="section-title" style="font-size: 18px; margin-top: 32px;">Suggested Improvements</div>
+  <div class="action-item">
+    <div class="action-number">1</div>
+    <div class="action-content">
+      <div class="action-title">Add contextual CTA links in blog post bodies</div>
+      <div class="action-desc">Blog posts discuss Pandora IPTV features and pricing but don&rsquo;t always link directly to the homepage pricing section. Adding contextual CTA links like &ldquo;View Pandora IPTV plans&rdquo; within relevant blog paragraphs would strengthen the conversion funnel.</div>
+    </div>
+    <span class="badge badge-medium">Medium</span>
+  </div>
+</div>
+</div>
+
+<!-- TAB 7: ACTION PLAN -->
+<div id="tab-actions" class="tab-content">
+<div class="container">
+  <div class="section-title">Prioritized Action Plan</div>
+  <div class="section-subtitle">Every recommendation ranked by impact, grouped by effort level</div>
+
+  <div class="section-title" style="font-size: 18px; color: var(--green);">Quick Wins <span style="font-size: 14px; color: var(--text-muted); font-weight: 400;">&mdash; less than 1 hour each</span></div>
+  <div style="margin-bottom: 24px;">
+    <div class="action-item">
+      <div class="action-number">1</div>
+      <div class="action-content">
+        <div class="action-title">Delete old SEO report file</div>
+        <div class="action-desc">Remove seo-report-hakunaiptv-pro.html from the project root &mdash; it references the old brand.</div>
+        <div class="action-impact">Expected impact: Clean project, no old-brand confusion</div>
+      </div>
+      <span class="badge badge-low">Low</span>
+    </div>
+    <div class="action-item">
+      <div class="action-number">2</div>
+      <div class="action-content">
+        <div class="action-title">Regenerate package-lock.json</div>
+        <div class="action-desc">Run <code>npm install</code> to update the lock file with the correct &ldquo;pandora-iptv&rdquo; package name.</div>
+        <div class="action-impact">Expected impact: Consistency</div>
+      </div>
+      <span class="badge badge-low">Low</span>
+    </div>
+    <div class="action-item">
+      <div class="action-number">3</div>
+      <div class="action-content">
+        <div class="action-title">Register in Google Search Console &amp; Bing Webmaster Tools</div>
+        <div class="action-desc">Once deployed to www.pandora-iptv.pro, verify the domain in Search Console, submit the sitemap index URL, and monitor indexing status.</div>
+        <div class="action-impact">Expected impact: Faster indexing, monitoring coverage</div>
+      </div>
+      <span class="badge badge-medium">Medium</span>
+    </div>
+  </div>
+
+  <div class="section-title" style="font-size: 18px; color: var(--orange);">High Impact <span style="font-size: 14px; color: var(--text-muted); font-weight: 400;">&mdash; 1&ndash;4 hours each</span></div>
+  <div style="margin-bottom: 24px;">
+    <div class="action-item">
+      <div class="action-number">4</div>
+      <div class="action-content">
+        <div class="action-title">Create branded 1200&times;630 OG social preview image</div>
+        <div class="action-desc">Design a visually compelling social image with the Pandora IPTV logo, tagline, and context. Replace favicon-512.png as the default og:image in prerender.ts and index.html.</div>
+        <div class="action-impact">Expected impact: 2&ndash;5&times; higher click-through from social shares</div>
+      </div>
+      <span class="badge badge-critical">Critical</span>
+    </div>
+    <div class="action-item">
+      <div class="action-number">5</div>
+      <div class="action-content">
+        <div class="action-title">Add AggregateRating schema for reviews</div>
+        <div class="action-desc">Add JSON-LD AggregateRating to the homepage schema: ratingValue 4.9, reviewCount 300, bestRating 5. This enables Google star ratings in search results.</div>
+        <div class="action-impact">Expected impact: Rich star snippets, 15&ndash;30% CTR uplift</div>
+      </div>
+      <span class="badge badge-high">High</span>
+    </div>
+    <div class="action-item">
+      <div class="action-number">6</div>
+      <div class="action-content">
+        <div class="action-title">Set up real social media brand accounts</div>
+        <div class="action-desc">Create Pandora IPTV accounts on Facebook, Instagram, YouTube, Twitter/X. Update footer links in App.tsx. Add sameAs to Organization JSON-LD.</div>
+        <div class="action-impact">Expected impact: Brand credibility, E-E-A-T signals, Knowledge Panel</div>
+      </div>
+      <span class="badge badge-high">High</span>
+    </div>
+    <div class="action-item">
+      <div class="action-number">7</div>
+      <div class="action-content">
+        <div class="action-title">Configure server security headers on hosting</div>
+        <div class="action-desc">Add HSTS, Content-Security-Policy, X-Content-Type-Options: nosniff, X-Frame-Options, and Referrer-Policy headers on the web server or CDN.</div>
+        <div class="action-impact">Expected impact: Security trust signals, slight ranking factor</div>
+      </div>
+      <span class="badge badge-medium">Medium</span>
+    </div>
+  </div>
+
+  <div class="section-title" style="font-size: 18px; color: var(--purple);">Strategic Initiatives <span style="font-size: 14px; color: var(--text-muted); font-weight: 400;">&mdash; ongoing</span></div>
+  <div style="margin-bottom: 24px;">
+    <div class="action-item">
+      <div class="action-number">8</div>
+      <div class="action-content">
+        <div class="action-title">Continue publishing German blog content targeting &ldquo;pandora iptv&rdquo;</div>
+        <div class="action-desc">The blog already has 25+ posts with excellent &ldquo;pandora iptv&rdquo; keyword density. Continue publishing 2&ndash;4 posts per month targeting long-tail keywords like &ldquo;pandora iptv installation&rdquo;, &ldquo;pandora iptv vs cable&rdquo;, &ldquo;buy pandora iptv subscription&rdquo;.</div>
+        <div class="action-impact">Expected impact: Topical authority, long-tail traffic growth</div>
+      </div>
+      <span class="badge badge-high">High</span>
+    </div>
+    <div class="action-item">
+      <div class="action-number">9</div>
+      <div class="action-content">
+        <div class="action-title">Build backlinks from IPTV review and tech comparison sites</div>
+        <div class="action-desc">Off-page SEO: seek mentions and links from IPTV review sites, tech blogs, and comparison platforms. The strong on-page SEO will compound with quality backlinks.</div>
+        <div class="action-impact">Expected impact: Domain authority growth, ranking improvements</div>
+      </div>
+      <span class="badge badge-high">High</span>
+    </div>
+    <div class="action-item">
+      <div class="action-number">10</div>
+      <div class="action-content">
+        <div class="action-title">Expand English and Dutch blog content</div>
+        <div class="action-desc">The German blog is very strong. The English section has fewer posts. Adding more English and Dutch content will capture traffic in those markets.</div>
+        <div class="action-impact">Expected impact: Multi-language traffic growth</div>
+      </div>
+      <span class="badge badge-medium">Medium</span>
+    </div>
+  </div>
+
+  <div class="section-title" style="font-size: 18px; margin-top: 32px;">Full Implementation Checklist</div>
+  <div class="section-subtitle">Every actionable recommendation</div>
+  <div class="card">
+    <div class="checklist-item"><div class="check-icon fail">&#10007;</div><div class="check-text">Create 1200&times;630 branded OG social image</div></div>
+    <div class="checklist-item"><div class="check-icon fail">&#10007;</div><div class="check-text">Add AggregateRating JSON-LD schema for reviews</div></div>
+    <div class="checklist-item"><div class="check-icon fail">&#10007;</div><div class="check-text">Create real social media brand accounts and update footer links</div></div>
+    <div class="checklist-item"><div class="check-icon fail">&#10007;</div><div class="check-text">Add sameAs social URLs to Organization JSON-LD</div></div>
+    <div class="checklist-item"><div class="check-icon fail">&#10007;</div><div class="check-text">Configure HSTS, CSP, and other security headers on hosting</div></div>
+    <div class="checklist-item"><div class="check-icon fail">&#10007;</div><div class="check-text">Register and verify domain in Google Search Console</div></div>
+    <div class="checklist-item"><div class="check-icon fail">&#10007;</div><div class="check-text">Submit sitemap index to Search Console and Bing Webmaster Tools</div></div>
+    <div class="checklist-item"><div class="check-icon fail">&#10007;</div><div class="check-text">Delete old seo-report-hakunaiptv-pro.html file</div></div>
+    <div class="checklist-item"><div class="check-icon fail">&#10007;</div><div class="check-text">Regenerate package-lock.json with npm install</div></div>
+    <div class="checklist-item"><div class="check-icon pass">&#10003;</div><div class="check-text">Domain updated to www.pandora-iptv.pro across all files</div></div>
+    <div class="checklist-item"><div class="check-icon pass">&#10003;</div><div class="check-text">Keywords &ldquo;pandora iptv&rdquo; and &ldquo;iptv dark&rdquo; in all titles and meta descriptions</div></div>
+    <div class="checklist-item"><div class="check-icon pass">&#10003;</div><div class="check-text">Canonical URLs set to www.pandora-iptv.pro</div></div>
+    <div class="checklist-item"><div class="check-icon pass">&#10003;</div><div class="check-text">OG and Twitter tags on all pages</div></div>
+    <div class="checklist-item"><div class="check-icon pass">&#10003;</div><div class="check-text">JSON-LD schema on all page types</div></div>
+    <div class="checklist-item"><div class="check-icon pass">&#10003;</div><div class="check-text">Hreflang tags for de, en, nl, x-default</div></div>
+    <div class="checklist-item"><div class="check-icon pass">&#10003;</div><div class="check-text">Sitemap index with per-language sitemaps</div></div>
+    <div class="checklist-item"><div class="check-icon pass">&#10003;</div><div class="check-text">Blog posts prerendered with full SEO markup</div></div>
+    <div class="checklist-item"><div class="check-icon pass">&#10003;</div><div class="check-text">Internal linking via related posts and prev/next</div></div>
+    <div class="checklist-item"><div class="check-icon pass">&#10003;</div><div class="check-text">3,551 keyword occurrences across 42 files</div></div>
+  </div>
+</div>
+</div>
+
+<script>
+function switchTab(tabId) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + tabId).classList.add('active');
+  event.target.closest('.tab-btn').classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+document.querySelectorAll('.collapsible-header').forEach(header => {
+  header.addEventListener('click', () => { header.closest('.collapsible').classList.toggle('open'); });
+});
+</script>
+
+</body>
+</html>
