@@ -8,7 +8,7 @@
  * lands on an even split.
  *
  *   - title / excerpt / body are translated naturally (not literally),
- *   - the `[NERO IPTV](${SITE})` and `[Instagram @NERO IPTV](${INSTA})` markdown links are
+ *   - the `[IPTV MATE](${SITE})` and `[Instagram @IPTV MATE](${INSTA})` markdown links are
  *     preserved exactly, including their count,
  *   - the slug prefix nl-/es-/fi-/sv-/no-/fr- becomes de- or en-, with a numeric
  *     suffix only where that would collide with an existing post,
@@ -36,8 +36,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
 const DATA = resolve(ROOT, "src", "data");
 
-const SITE = "https://www.neroiptv.pro";
-const INSTA = "https://www.instagram.com/nero-iptv/";
+const SITE = "https://www.iptvmate.eu";
+const INSTA = "https://www.instagram.com/iptv-mate/";
 
 /** Everything that is neither German nor English gets rewritten. */
 const SOURCE_LANGS = ["nl", "es", "fi", "sv", "no", "fr"];
@@ -176,8 +176,8 @@ if (!apiKey) {
 const ai = new GoogleGenAI({ apiKey });
 
 // ---- translation -----------------------------------------------------------
-const BRAND_LINK = `[NERO IPTV](${SITE})`;
-const INSTA_LINK = `[Instagram @NERO IPTV](${INSTA})`;
+const BRAND_LINK = `[IPTV MATE](${SITE})`;
+const INSTA_LINK = `[Instagram @IPTV MATE](${INSTA})`;
 
 const countOf = (s: string, needle: string) => s.split(needle).length - 1;
 

@@ -23,7 +23,7 @@ import { getBlogText } from "./blogI18n";
 import { getTerms } from "./termsText";
 import type { LangCode } from "./i18n";
 
-const SITE_ORIGIN = "https://www.neroiptv.pro";
+const SITE_ORIGIN = "https://www.iptvmate.eu";
 
 const INDEXABLE = "index, follow, max-image-preview:large, max-snippet:-1";
 const NOT_INDEXABLE = "noindex, follow";
@@ -95,11 +95,10 @@ function GeoRedirect() {
       .then(r => r.json())
       .then((data: { country: string }) => {
         const c = (data.country || "").toUpperCase();
-        if (c === "NL" || c === "BE" || c === "SR") window.location.replace("/nl");
-        else if (c === "DE" || c === "AT" || c === "CH" || c === "LI" || c === "LU") window.location.replace("/de");
-        else window.location.replace("/en");
+        if (c === "DE" || c === "AT" || c === "CH" || c === "LI" || c === "LU") window.location.replace("/de");
+        else window.location.replace("/nl");
       })
-      .catch(() => window.location.replace("/en"));
+      .catch(() => window.location.replace("/nl"));
   }, []);
 
   return (
@@ -180,7 +179,7 @@ function AppInner({ view, urlLang }: { view: View; urlLang: HomeLang | null }) {
 
     if (view.type === "not-found") {
       setMetaByName("robots", NOT_INDEXABLE);
-      document.title = `${getBlogText(lang).notFoundTitle} — NERO IPTV`;
+      document.title = `${getBlogText(lang).notFoundTitle} — IPTV MATE`;
       setMetaByName("description", getBlogText(lang).notFoundDesc);
       link?.remove();
       return;
@@ -190,7 +189,7 @@ function AppInner({ view, urlLang }: { view: View; urlLang: HomeLang | null }) {
 
     if (view.type === "terms") {
       const tt = getTerms(lang);
-      document.title = `${tt.title1} ${tt.title2} — NERO IPTV`;
+      document.title = `${tt.title1} ${tt.title2} — IPTV MATE`;
       setMetaByName("description", tt.intro);
     }
 
@@ -289,7 +288,7 @@ function AppInner({ view, urlLang }: { view: View; urlLang: HomeLang | null }) {
               {getBlogText(lang).notFoundDesc}
             </p>
             <a href={langPrefix} className="inline-flex items-center gap-2 text-[#facc15] font-bold hover:underline">
-              NERO IPTV
+              IPTV MATE
             </a>
           </section>
         )}

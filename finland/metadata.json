@@ -1,6 +1,6 @@
 {
-  "name": "NERO IPTV",
-  "description": "Nederlandstalig verkoopplatform voor Nero IPTV premium abonnementen: live-zenders, een uitgebreide film- en seriecatalogus, abonnementen, klantbeoordelingen en een interactieve betaalmodule.",
+  "name": "IPTV MATE",
+  "description": "Nederlandstalig verkoopplatform voor IPTV Mate premium abonnementen: live-zenders, een uitgebreide film- en seriecatalogus, abonnementen, klantbeoordelingen en een interactieve betaalmodule.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

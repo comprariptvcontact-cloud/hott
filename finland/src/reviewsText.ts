@@ -17,7 +17,7 @@ const REVIEWS: Record<UiLang, ReviewCopy[]> = {
     {
       role: 'Voetbalfan',
       highlight: 'Bundesliga, Champions League, F1 — glashelder en zonder haperen!',
-      text: 'Ik kijk elke Bundesliga-speelronde en alle Champions League-avonden in vlekkeloze kwaliteit. Geen buffering, geen bevriezing. NERO IPTV levert elke stream in topkwaliteit zonder geoblocking of VPN. Ik ga nooit meer terug naar mijn oude tv-pakket.',
+      text: 'Ik kijk elke Bundesliga-speelronde en alle Champions League-avonden in vlekkeloze kwaliteit. Geen buffering, geen bevriezing. IPTV MATE levert elke stream in topkwaliteit zonder geoblocking of VPN. Ik ga nooit meer terug naar mijn oude tv-pakket.',
     },
     {
       role: 'Serieliefhebber',
@@ -37,12 +37,12 @@ const REVIEWS: Record<UiLang, ReviewCopy[]> = {
     {
       role: 'Sportfan',
       highlight: 'Bundesliga, Premier League, F1 en MMA — allemaal op één plek!',
-      text: 'Als sportliefhebber wil ik alles kunnen zien: Champions League, Premier League, Formule 1 en UFC. NERO IPTV levert alle streams in eersteklas kwaliteit zonder geoblocking of VPN. Onverslaanbaar.',
+      text: 'Als sportliefhebber wil ik alles kunnen zien: Champions League, Premier League, Formule 1 en UFC. IPTV MATE levert alle streams in eersteklas kwaliteit zonder geoblocking of VPN. Onverslaanbaar.',
     },
     {
       role: 'Student',
       highlight: 'Beste prijs-kwaliteit — ik bespaar ruim €60 per maand',
-      text: 'Ik betaalde apart voor Netflix, Disney+, RTL+ en Sky Sport — samen ruim €60 per maand. Nu heb ik alles met één NERO IPTV-abonnement voor een fractie van die prijs. Beste beslissing ooit.',
+      text: 'Ik betaalde apart voor Netflix, Disney+, RTL+ en Sky Sport — samen ruim €60 per maand. Nu heb ik alles met één IPTV MATE-abonnement voor een fractie van die prijs. Beste beslissing ooit.',
     },
     {
       role: 'Verpleegkundige',
@@ -64,7 +64,7 @@ const REVIEWS: Record<UiLang, ReviewCopy[]> = {
     {
       role: 'Football fan',
       highlight: 'Bundesliga, Champions League, F1 — crystal clear and never stuttering!',
-      text: 'I watch every Bundesliga matchday and all the Champions League nights in flawless quality. No buffering, no freezing. NERO IPTV delivers every stream in top quality without geo-blocking or a VPN. I am never going back to my old TV package.',
+      text: 'I watch every Bundesliga matchday and all the Champions League nights in flawless quality. No buffering, no freezing. IPTV MATE delivers every stream in top quality without geo-blocking or a VPN. I am never going back to my old TV package.',
     },
     {
       role: 'Series lover',
@@ -84,12 +84,12 @@ const REVIEWS: Record<UiLang, ReviewCopy[]> = {
     {
       role: 'Sports fan',
       highlight: 'Bundesliga, Premier League, F1 and MMA — all in one place!',
-      text: 'As a sports lover I want to see everything: Champions League, Premier League, Formula 1 and UFC. NERO IPTV delivers every stream in first-class quality without geo-blocking or a VPN. Unbeatable.',
+      text: 'As a sports lover I want to see everything: Champions League, Premier League, Formula 1 and UFC. IPTV MATE delivers every stream in first-class quality without geo-blocking or a VPN. Unbeatable.',
     },
     {
       role: 'Student',
       highlight: 'Best value for money — I save well over €60 a month',
-      text: 'I was paying separately for Netflix, Disney+, RTL+ and Sky Sport — over €60 a month combined. Now I have everything in one NERO IPTV subscription for a fraction of that. Best decision ever.',
+      text: 'I was paying separately for Netflix, Disney+, RTL+ and Sky Sport — over €60 a month combined. Now I have everything in one IPTV MATE subscription for a fraction of that. Best decision ever.',
     },
     {
       role: 'Nurse',
@@ -111,7 +111,7 @@ const REVIEWS: Record<UiLang, ReviewCopy[]> = {
     {
       role: 'Fan de football',
       highlight: "Bundesliga, Ligue des champions, F1 — d'une netteté parfaite et sans coupure !",
-      text: "Je regarde chaque journée de Bundesliga et toutes les soirées de Ligue des champions dans une qualité irréprochable. Aucune mise en mémoire tampon, aucun gel. NERO IPTV diffuse chaque flux en très haute qualité, sans blocage géographique ni VPN. Je ne reviendrai jamais à mon ancien bouquet.",
+      text: "Je regarde chaque journée de Bundesliga et toutes les soirées de Ligue des champions dans une qualité irréprochable. Aucune mise en mémoire tampon, aucun gel. IPTV MATE diffuse chaque flux en très haute qualité, sans blocage géographique ni VPN. Je ne reviendrai jamais à mon ancien bouquet.",
     },
     {
       role: 'Passionnée de séries',
@@ -131,12 +131,12 @@ const REVIEWS: Record<UiLang, ReviewCopy[]> = {
     {
       role: 'Fan de sport',
       highlight: 'Bundesliga, Premier League, F1 et MMA — tout au même endroit !',
-      text: "Passionnée de sport, je veux tout pouvoir voir : Ligue des champions, Premier League, Formule 1 et UFC. NERO IPTV diffuse tous les flux dans une qualité de premier ordre, sans blocage géographique ni VPN. Imbattable.",
+      text: "Passionnée de sport, je veux tout pouvoir voir : Ligue des champions, Premier League, Formule 1 et UFC. IPTV MATE diffuse tous les flux dans une qualité de premier ordre, sans blocage géographique ni VPN. Imbattable.",
     },
     {
       role: 'Étudiant',
       highlight: "Meilleur rapport qualité-prix — j'économise plus de 60 € par mois",
-      text: "Je payais séparément Netflix, Disney+, RTL+ et Sky Sport — plus de 60 € par mois au total. Maintenant j'ai tout avec un seul abonnement NERO IPTV pour une fraction de ce prix. La meilleure décision de ma vie.",
+      text: "Je payais séparément Netflix, Disney+, RTL+ et Sky Sport — plus de 60 € par mois au total. Maintenant j'ai tout avec un seul abonnement IPTV MATE pour une fraction de ce prix. La meilleure décision de ma vie.",
     },
     {
       role: 'Infirmière',
@@ -158,7 +158,7 @@ const REVIEWS: Record<UiLang, ReviewCopy[]> = {
     {
       role: 'Fußballfan',
       highlight: 'Bundesliga, Champions League, F1 — gestochen scharf und ohne Ruckeln!',
-      text: 'Ich schaue jeden Bundesliga-Spieltag und alle Champions-League-Abende in makelloser Qualität. Kein Puffern, kein Einfrieren. NERO IPTV liefert jeden Stream in Topqualität, ohne Geoblocking und ohne VPN. Zu meinem alten TV-Paket gehe ich nie zurück.',
+      text: 'Ich schaue jeden Bundesliga-Spieltag und alle Champions-League-Abende in makelloser Qualität. Kein Puffern, kein Einfrieren. IPTV MATE liefert jeden Stream in Topqualität, ohne Geoblocking und ohne VPN. Zu meinem alten TV-Paket gehe ich nie zurück.',
     },
     {
       role: 'Serienliebhaberin',
@@ -178,12 +178,12 @@ const REVIEWS: Record<UiLang, ReviewCopy[]> = {
     {
       role: 'Sportfan',
       highlight: 'Bundesliga, Premier League, F1 und MMA — alles an einem Ort!',
-      text: 'Als Sportliebhaberin will ich alles sehen können: Champions League, Premier League, Formel 1 und UFC. NERO IPTV liefert alle Streams in erstklassiger Qualität, ohne Geoblocking und ohne VPN. Unschlagbar.',
+      text: 'Als Sportliebhaberin will ich alles sehen können: Champions League, Premier League, Formel 1 und UFC. IPTV MATE liefert alle Streams in erstklassiger Qualität, ohne Geoblocking und ohne VPN. Unschlagbar.',
     },
     {
       role: 'Student',
       highlight: 'Bestes Preis-Leistungs-Verhältnis — ich spare über 60 € im Monat',
-      text: 'Ich habe getrennt für Netflix, Disney+, RTL+ und Sky Sport bezahlt — zusammen über 60 € im Monat. Jetzt habe ich alles in einem NERO IPTV-Abo zu einem Bruchteil des Preises. Die beste Entscheidung überhaupt.',
+      text: 'Ich habe getrennt für Netflix, Disney+, RTL+ und Sky Sport bezahlt — zusammen über 60 € im Monat. Jetzt habe ich alles in einem IPTV MATE-Abo zu einem Bruchteil des Preises. Die beste Entscheidung überhaupt.',
     },
     {
       role: 'Krankenpflegerin',
@@ -205,7 +205,7 @@ const REVIEWS: Record<UiLang, ReviewCopy[]> = {
     {
       role: 'Aficionado al fútbol',
       highlight: 'Bundesliga, Champions League, F1: nítido y sin cortes.',
-      text: 'Veo cada jornada de la Bundesliga y todas las noches de Champions con una calidad impecable. Sin almacenamiento en búfer ni congelaciones. NERO IPTV ofrece cada emisión en máxima calidad, sin bloqueo geográfico ni VPN. No pienso volver a mi antiguo paquete de televisión.',
+      text: 'Veo cada jornada de la Bundesliga y todas las noches de Champions con una calidad impecable. Sin almacenamiento en búfer ni congelaciones. IPTV MATE ofrece cada emisión en máxima calidad, sin bloqueo geográfico ni VPN. No pienso volver a mi antiguo paquete de televisión.',
     },
     {
       role: 'Amante de las series',
@@ -225,12 +225,12 @@ const REVIEWS: Record<UiLang, ReviewCopy[]> = {
     {
       role: 'Aficionada al deporte',
       highlight: 'Bundesliga, Premier League, F1 y MMA: todo en un mismo sitio.',
-      text: 'Como amante del deporte quiero poder verlo todo: Champions League, Premier League, Fórmula 1 y UFC. NERO IPTV ofrece todas las emisiones con una calidad de primera, sin bloqueo geográfico ni VPN. Insuperable.',
+      text: 'Como amante del deporte quiero poder verlo todo: Champions League, Premier League, Fórmula 1 y UFC. IPTV MATE ofrece todas las emisiones con una calidad de primera, sin bloqueo geográfico ni VPN. Insuperable.',
     },
     {
       role: 'Estudiante',
       highlight: 'La mejor relación calidad-precio: ahorro más de 60 € al mes.',
-      text: 'Pagaba por separado Netflix, Disney+, RTL+ y Sky Sport: más de 60 € al mes en total. Ahora lo tengo todo con una sola suscripción a NERO IPTV por una fracción de ese precio. La mejor decisión que he tomado.',
+      text: 'Pagaba por separado Netflix, Disney+, RTL+ y Sky Sport: más de 60 € al mes en total. Ahora lo tengo todo con una sola suscripción a IPTV MATE por una fracción de ese precio. La mejor decisión que he tomado.',
     },
     {
       role: 'Enfermera',
@@ -252,7 +252,7 @@ const REVIEWS: Record<UiLang, ReviewCopy[]> = {
     {
       role: 'Fotbollsfan',
       highlight: 'Bundesliga, Champions League, F1 — knivskarpt och utan hack!',
-      text: 'Jag ser varje Bundesliga-omgång och alla Champions League-kvällar i felfri kvalitet. Ingen buffring, inga frysningar. NERO IPTV levererar varje sändning i toppkvalitet utan geoblockering eller VPN. Jag går aldrig tillbaka till mitt gamla tv-paket.',
+      text: 'Jag ser varje Bundesliga-omgång och alla Champions League-kvällar i felfri kvalitet. Ingen buffring, inga frysningar. IPTV MATE levererar varje sändning i toppkvalitet utan geoblockering eller VPN. Jag går aldrig tillbaka till mitt gamla tv-paket.',
     },
     {
       role: 'Serieälskare',
@@ -272,12 +272,12 @@ const REVIEWS: Record<UiLang, ReviewCopy[]> = {
     {
       role: 'Sportfan',
       highlight: 'Bundesliga, Premier League, F1 och MMA — allt på ett ställe!',
-      text: 'Som sportälskare vill jag kunna se allt: Champions League, Premier League, Formel 1 och UFC. NERO IPTV levererar alla sändningar i förstklassig kvalitet utan geoblockering eller VPN. Oslagbart.',
+      text: 'Som sportälskare vill jag kunna se allt: Champions League, Premier League, Formel 1 och UFC. IPTV MATE levererar alla sändningar i förstklassig kvalitet utan geoblockering eller VPN. Oslagbart.',
     },
     {
       role: 'Student',
       highlight: 'Bäst prisvärt — jag sparar över 60 € i månaden',
-      text: 'Jag betalade separat för Netflix, Disney+, RTL+ och Sky Sport — tillsammans över 60 € i månaden. Nu har jag allt i ett enda NERO IPTV-abonnemang för en bråkdel av priset. Bästa beslutet någonsin.',
+      text: 'Jag betalade separat för Netflix, Disney+, RTL+ och Sky Sport — tillsammans över 60 € i månaden. Nu har jag allt i ett enda IPTV MATE-abonnemang för en bråkdel av priset. Bästa beslutet någonsin.',
     },
     {
       role: 'Sjuksköterska',
@@ -299,7 +299,7 @@ const REVIEWS: Record<UiLang, ReviewCopy[]> = {
     {
       role: 'Fotballfan',
       highlight: 'Bundesliga, Champions League, F1 — knivskarpt og uten hakking!',
-      text: 'Jeg ser hver Bundesliga-runde og alle Champions League-kvelder i feilfri kvalitet. Ingen bufring, ingen frysing. NERO IPTV leverer hver sending i toppkvalitet uten geoblokkering eller VPN. Jeg går aldri tilbake til den gamle tv-pakken min.',
+      text: 'Jeg ser hver Bundesliga-runde og alle Champions League-kvelder i feilfri kvalitet. Ingen bufring, ingen frysing. IPTV MATE leverer hver sending i toppkvalitet uten geoblokkering eller VPN. Jeg går aldri tilbake til den gamle tv-pakken min.',
     },
     {
       role: 'Serieelsker',
@@ -319,12 +319,12 @@ const REVIEWS: Record<UiLang, ReviewCopy[]> = {
     {
       role: 'Sportsfan',
       highlight: 'Bundesliga, Premier League, F1 og MMA — alt på ett sted!',
-      text: 'Som sportselsker vil jeg kunne se alt: Champions League, Premier League, Formel 1 og UFC. NERO IPTV leverer alle sendinger i førsteklasses kvalitet uten geoblokkering eller VPN. Uslåelig.',
+      text: 'Som sportselsker vil jeg kunne se alt: Champions League, Premier League, Formel 1 og UFC. IPTV MATE leverer alle sendinger i førsteklasses kvalitet uten geoblokkering eller VPN. Uslåelig.',
     },
     {
       role: 'Student',
       highlight: 'Best verdi for pengene — jeg sparer godt over 60 € i måneden',
-      text: 'Jeg betalte separat for Netflix, Disney+, RTL+ og Sky Sport — til sammen over 60 € i måneden. Nå har jeg alt i ett NERO IPTV-abonnement for en brøkdel av prisen. Den beste avgjørelsen jeg har tatt.',
+      text: 'Jeg betalte separat for Netflix, Disney+, RTL+ og Sky Sport — til sammen over 60 € i måneden. Nå har jeg alt i ett IPTV MATE-abonnement for en brøkdel av prisen. Den beste avgjørelsen jeg har tatt.',
     },
     {
       role: 'Sykepleier',
@@ -346,7 +346,7 @@ const REVIEWS: Record<UiLang, ReviewCopy[]> = {
     {
       role: 'Fodboldfan',
       highlight: 'Bundesliga, Champions League, F1 — knivskarpt og uden hak!',
-      text: 'Jeg ser hver Bundesliga-runde og alle Champions League-aftener i fejlfri kvalitet. Ingen buffering, ingen frysning. NERO IPTV leverer hver udsendelse i topkvalitet uden geoblokering eller VPN. Jeg vender aldrig tilbage til min gamle tv-pakke.',
+      text: 'Jeg ser hver Bundesliga-runde og alle Champions League-aftener i fejlfri kvalitet. Ingen buffering, ingen frysning. IPTV MATE leverer hver udsendelse i topkvalitet uden geoblokering eller VPN. Jeg vender aldrig tilbage til min gamle tv-pakke.',
     },
     {
       role: 'Serieelsker',
@@ -366,12 +366,12 @@ const REVIEWS: Record<UiLang, ReviewCopy[]> = {
     {
       role: 'Sportsfan',
       highlight: 'Bundesliga, Premier League, F1 og MMA — alt sammen ét sted!',
-      text: 'Som sportselsker vil jeg kunne se det hele: Champions League, Premier League, Formel 1 og UFC. NERO IPTV leverer alle udsendelser i førsteklasses kvalitet uden geoblokering eller VPN. Uovertruffent.',
+      text: 'Som sportselsker vil jeg kunne se det hele: Champions League, Premier League, Formel 1 og UFC. IPTV MATE leverer alle udsendelser i førsteklasses kvalitet uden geoblokering eller VPN. Uovertruffent.',
     },
     {
       role: 'Studerende',
       highlight: 'Bedste værdi for pengene — jeg sparer over 60 € om måneden',
-      text: 'Jeg betalte separat for Netflix, Disney+, RTL+ og Sky Sport — tilsammen over 60 € om måneden. Nu har jeg det hele i ét NERO IPTV-abonnement for en brøkdel af prisen. Den bedste beslutning nogensinde.',
+      text: 'Jeg betalte separat for Netflix, Disney+, RTL+ og Sky Sport — tilsammen over 60 € om måneden. Nu har jeg det hele i ét IPTV MATE-abonnement for en brøkdel af prisen. Den bedste beslutning nogensinde.',
     },
     {
       role: 'Sygeplejerske',
@@ -393,7 +393,7 @@ const REVIEWS: Record<UiLang, ReviewCopy[]> = {
     {
       role: 'Jalkapallofani',
       highlight: 'Bundesliiga, Mestarien liiga, F1 — kristallinkirkasta ja nykimättä!',
-      text: 'Katson jokaisen Bundesliiga-kierroksen ja kaikki Mestarien liigan illat moitteettomalla laadulla. Ei puskurointia, ei jumittumista. NERO IPTV toimittaa jokaisen lähetyksen huippulaadulla ilman aluerajoituksia tai VPN:ää. En palaa enää koskaan vanhaan tv-pakettiini.',
+      text: 'Katson jokaisen Bundesliiga-kierroksen ja kaikki Mestarien liigan illat moitteettomalla laadulla. Ei puskurointia, ei jumittumista. IPTV MATE toimittaa jokaisen lähetyksen huippulaadulla ilman aluerajoituksia tai VPN:ää. En palaa enää koskaan vanhaan tv-pakettiini.',
     },
     {
       role: 'Sarjojen ystävä',
@@ -413,12 +413,12 @@ const REVIEWS: Record<UiLang, ReviewCopy[]> = {
     {
       role: 'Urheilufani',
       highlight: 'Bundesliiga, Valioliiga, F1 ja MMA — kaikki yhdessä paikassa!',
-      text: 'Urheilun ystävänä haluan nähdä kaiken: Mestarien liigan, Valioliigan, Formula 1:n ja UFC:n. NERO IPTV toimittaa kaikki lähetykset ensiluokkaisella laadulla ilman aluerajoituksia tai VPN:ää. Lyömätöntä.',
+      text: 'Urheilun ystävänä haluan nähdä kaiken: Mestarien liigan, Valioliigan, Formula 1:n ja UFC:n. IPTV MATE toimittaa kaikki lähetykset ensiluokkaisella laadulla ilman aluerajoituksia tai VPN:ää. Lyömätöntä.',
     },
     {
       role: 'Opiskelija',
       highlight: 'Paras hinta-laatusuhde — säästän yli 60 € kuukaudessa',
-      text: 'Maksoin erikseen Netflixistä, Disney+:sta, RTL+:sta ja Sky Sportista — yhteensä yli 60 € kuukaudessa. Nyt saan kaiken yhdellä NERO IPTV -tilauksella murto-osalla siitä hinnasta. Paras päätös ikinä.',
+      text: 'Maksoin erikseen Netflixistä, Disney+:sta, RTL+:sta ja Sky Sportista — yhteensä yli 60 € kuukaudessa. Nyt saan kaiken yhdellä IPTV MATE -tilauksella murto-osalla siitä hinnasta. Paras päätös ikinä.',
     },
     {
       role: 'Sairaanhoitaja',
@@ -440,7 +440,7 @@ const REVIEWS: Record<UiLang, ReviewCopy[]> = {
     {
       role: 'مشجع كرة قدم',
       highlight: 'الدوري الألماني ودوري الأبطال والفورمولا 1 — صورة نقية بلا تقطيع!',
-      text: 'أشاهد كل جولة من الدوري الألماني وجميع أمسيات دوري الأبطال بجودة لا تشوبها شائبة. لا تخزين مؤقت ولا تجمّد للصورة. يقدّم NERO IPTV كل بث بأعلى جودة دون حظر جغرافي ودون VPN. لن أعود أبداً إلى باقتي التلفزيونية القديمة.',
+      text: 'أشاهد كل جولة من الدوري الألماني وجميع أمسيات دوري الأبطال بجودة لا تشوبها شائبة. لا تخزين مؤقت ولا تجمّد للصورة. يقدّم IPTV MATE كل بث بأعلى جودة دون حظر جغرافي ودون VPN. لن أعود أبداً إلى باقتي التلفزيونية القديمة.',
     },
     {
       role: 'محبّة للمسلسلات',
@@ -460,12 +460,12 @@ const REVIEWS: Record<UiLang, ReviewCopy[]> = {
     {
       role: 'مشجعة رياضية',
       highlight: 'الدوري الألماني والبريميرليغ والفورمولا 1 وفنون القتال المختلطة — كلها في مكان واحد!',
-      text: 'كمحبّة للرياضة أريد أن أشاهد كل شيء: دوري الأبطال والبريميرليغ والفورمولا 1 وUFC. يقدّم NERO IPTV كل البثوث بجودة من الطراز الأول دون حظر جغرافي ودون VPN. لا يُضاهى.',
+      text: 'كمحبّة للرياضة أريد أن أشاهد كل شيء: دوري الأبطال والبريميرليغ والفورمولا 1 وUFC. يقدّم IPTV MATE كل البثوث بجودة من الطراز الأول دون حظر جغرافي ودون VPN. لا يُضاهى.',
     },
     {
       role: 'طالب',
       highlight: 'أفضل قيمة مقابل السعر — أوفّر أكثر من 60 يورو شهرياً',
-      text: 'كنت أدفع بشكل منفصل لـ Netflix وDisney+ وRTL+ وSky Sport — أكثر من 60 يورو شهرياً مجتمعة. الآن أحصل على كل شيء باشتراك NERO IPTV واحد بجزء بسيط من ذلك السعر. أفضل قرار على الإطلاق.',
+      text: 'كنت أدفع بشكل منفصل لـ Netflix وDisney+ وRTL+ وSky Sport — أكثر من 60 يورو شهرياً مجتمعة. الآن أحصل على كل شيء باشتراك IPTV MATE واحد بجزء بسيط من ذلك السعر. أفضل قرار على الإطلاق.',
     },
     {
       role: 'ممرضة',

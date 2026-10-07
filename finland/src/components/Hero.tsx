@@ -25,32 +25,32 @@ const SLIDE_BG = [
 
 const heroSlides: Record<string, Slide[]> = {
   de: [
-    { tag: "NERO IPTV", title: "Alle Inhalte.", titleAccent: "Ein Abo.", desc: "Nero IPTV: über 69.000 Live-Kanäle, 220.000+ Filme & Serien — sofort auf jedem Gerät.", bg: SLIDE_BG[0] },
+    { tag: "IPTV MATE", title: "Alle Inhalte.", titleAccent: "Ein Abo.", desc: "IPTV Mate: über 69.000 Live-Kanäle, 220.000+ Filme & Serien — sofort auf jedem Gerät.", bg: SLIDE_BG[0] },
     { tag: "LIVE SPORT", title: "Bundesliga, Champions League,", titleAccent: "F1 & mehr.", desc: "Alle großen Ligen und Events live in Ultra HD — ohne Geoblocking.", bg: SLIDE_BG[1] },
     { tag: "FILME & SERIEN", title: "Blockbuster & Originals.", titleAccent: "8K Qualität.", desc: "Netflix, Disney+, HBO, Sky, Prime — alles in einem Abo vereint.", bg: SLIDE_BG[2] },
-    { tag: "NEU BEI NERO IPTV", title: "Thunderbolts*.", titleAccent: "Jetzt streamen.", desc: "Marvel-Action pur — exklusiv in deinem Nero IPTV Abo enthalten.", bg: SLIDE_BG[3] },
+    { tag: "NEU BEI IPTV MATE", title: "Thunderbolts*.", titleAccent: "Jetzt streamen.", desc: "Marvel-Action pur — exklusiv in deinem IPTV Mate Abo enthalten.", bg: SLIDE_BG[3] },
     { tag: "BLOCKBUSTER 2025", title: "Mission: Impossible.", titleAccent: "The Final Reckoning.", desc: "Tom Cruise kehrt zurück — das ultimative Action-Erlebnis in Ultra HD.", bg: SLIDE_BG[4] },
   ],
   en: [
-    { tag: "NERO IPTV", title: "All Content.", titleAccent: "One Plan.", desc: "Nero IPTV: over 69,000 live channels, 220,000+ movies & series — instantly on any device.", bg: SLIDE_BG[0] },
+    { tag: "IPTV MATE", title: "All Content.", titleAccent: "One Plan.", desc: "IPTV Mate: over 69,000 live channels, 220,000+ movies & series — instantly on any device.", bg: SLIDE_BG[0] },
     { tag: "LIVE SPORT", title: "Premier League, Champions League,", titleAccent: "F1 & more.", desc: "All major leagues and events live in Ultra HD — no geo-blocking.", bg: SLIDE_BG[1] },
     { tag: "MOVIES & SERIES", title: "Blockbusters & Originals.", titleAccent: "8K Quality.", desc: "Netflix, Disney+, HBO, Sky, Prime — all united in one plan.", bg: SLIDE_BG[2] },
-    { tag: "NEW ON NERO IPTV", title: "Thunderbolts*.", titleAccent: "Stream now.", desc: "Pure Marvel action — exclusively included in your Nero IPTV subscription.", bg: SLIDE_BG[3] },
+    { tag: "NEW ON IPTV MATE", title: "Thunderbolts*.", titleAccent: "Stream now.", desc: "Pure Marvel action — exclusively included in your IPTV Mate subscription.", bg: SLIDE_BG[3] },
     { tag: "BLOCKBUSTER 2025", title: "Mission: Impossible.", titleAccent: "The Final Reckoning.", desc: "Tom Cruise returns — the ultimate action experience in Ultra HD.", bg: SLIDE_BG[4] },
   ],
   nl: [
-    { tag: "NERO IPTV", title: "Alle content.", titleAccent: "Eén abonnement.", desc: "Nero IPTV: meer dan 69.000 live-zenders, 220.000+ films & series — direct op elk apparaat.", bg: SLIDE_BG[0] },
+    { tag: "IPTV MATE", title: "Alle content.", titleAccent: "Eén abonnement.", desc: "IPTV Mate: meer dan 69.000 live-zenders, 220.000+ films & series — direct op elk apparaat.", bg: SLIDE_BG[0] },
     { tag: "LIVE SPORT", title: "Eredivisie, Champions League,", titleAccent: "F1 & meer.", desc: "Alle grote competities en evenementen live in Ultra HD — zonder geoblocking.", bg: SLIDE_BG[1] },
     { tag: "FILMS & SERIES", title: "Blockbusters & Originals.", titleAccent: "8K Kwaliteit.", desc: "Netflix, Disney+, HBO, Sky, Prime — alles in één abonnement.", bg: SLIDE_BG[2] },
-    { tag: "NIEUW BIJ NERO IPTV", title: "Thunderbolts*.", titleAccent: "Nu streamen.", desc: "Pure Marvel-actie — exclusief inbegrepen in je Nero IPTV abonnement.", bg: SLIDE_BG[3] },
+    { tag: "NIEUW BIJ IPTV MATE", title: "Thunderbolts*.", titleAccent: "Nu streamen.", desc: "Pure Marvel-actie — exclusief inbegrepen in je IPTV Mate abonnement.", bg: SLIDE_BG[3] },
     { tag: "BLOCKBUSTER 2025", title: "Mission: Impossible.", titleAccent: "The Final Reckoning.", desc: "Tom Cruise keert terug — de ultieme actie-ervaring in Ultra HD.", bg: SLIDE_BG[4] },
   ],
 };
 
 const heroCategories: Record<string, string[]> = {
-  de: ["Aktuelles", "TV", "NERO IPTV+", "Sport", "Musik", "Kids", "Angebote", "Streaming"],
-  en: ["News", "TV", "NERO IPTV+", "Sports", "Music", "Kids", "Deals", "Streaming"],
-  nl: ["Nieuws", "TV", "NERO IPTV+", "Sport", "Muziek", "Kids", "Aanbiedingen", "Streaming"],
+  de: ["Aktuelles", "TV", "IPTV MATE+", "Sport", "Musik", "Kids", "Angebote", "Streaming"],
+  en: ["News", "TV", "IPTV MATE+", "Sports", "Music", "Kids", "Deals", "Streaming"],
+  nl: ["Nieuws", "TV", "IPTV MATE+", "Sport", "Muziek", "Kids", "Aanbiedingen", "Streaming"],
 };
 
 const heroCta: Record<string, string> = {
@@ -86,7 +86,7 @@ function HeroInner({ onPricingClick, onTrialClick }: HeroProps) {
           <img
             key={i}
             src={s.bg}
-            alt={`NERO IPTV — ${s.tag}`}
+            alt={`IPTV MATE — ${s.tag}`}
             loading={i === 0 ? "eager" : "lazy"}
             className="absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-700"
             style={{ opacity: i === slide ? 1 : 0 }}

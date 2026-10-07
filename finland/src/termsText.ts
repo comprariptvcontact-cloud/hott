@@ -27,7 +27,7 @@ const TERMS: Record<UiLang, TermsText> = {
     eyebrow: 'Klantbescherming',
     title1: 'Voorwaarden &',
     title2: 'klantbescherming',
-    intro: 'Wij zijn volledig transparant over wat u wel en niet van uw NERO IPTV-abonnement mag verwachten. Lees dit vóór uw bestelling — zo weet u precies waar u aan toe bent.',
+    intro: 'Wij zijn volledig transparant over wat u wel en niet van uw IPTV MATE-abonnement mag verwachten. Lees dit vóór uw bestelling — zo weet u precies waar u aan toe bent.',
     chips: ['15 dagen garantie', '24/7 support', 'Wekelijks onderhoud', 'Vaste prijzen'],
     summary: 'Kort samengevat: 15 dagen geld terug als het abonnement écht niet werkt (alle zenders én alle films), 24/7 support, permanente updates en wekelijks onderhoud. Bestellen en betalen gaat via WhatsApp; de app-speler is niet inbegrepen. Voor elke klant die u aanbrengt krijgt u gratis maanden.',
     sections: [
@@ -166,7 +166,7 @@ const TERMS: Record<UiLang, TermsText> = {
     eyebrow: 'Customer protection',
     title1: 'Terms &',
     title2: 'customer protection',
-    intro: 'We are completely transparent about what you may and may not expect from your NERO IPTV subscription. Read this before you order — that way you know exactly where you stand.',
+    intro: 'We are completely transparent about what you may and may not expect from your IPTV MATE subscription. Read this before you order — that way you know exactly where you stand.',
     chips: ['15-day guarantee', '24/7 support', 'Weekly maintenance', 'Fixed prices'],
     summary: 'In short: 15 days money back if the subscription genuinely does not work (all channels and all movies), 24/7 support, permanent updates and weekly maintenance. Ordering and paying happen over WhatsApp; the player app is not included. For every customer you refer you receive free months.',
     sections: [
@@ -305,7 +305,7 @@ const TERMS: Record<UiLang, TermsText> = {
     eyebrow: 'Protection du client',
     title1: 'Conditions &',
     title2: 'protection du client',
-    intro: "Nous sommes totalement transparents sur ce que vous pouvez et ne pouvez pas attendre de votre abonnement NERO IPTV. Lisez ceci avant de commander — vous saurez ainsi exactement à quoi vous en tenir.",
+    intro: "Nous sommes totalement transparents sur ce que vous pouvez et ne pouvez pas attendre de votre abonnement IPTV MATE. Lisez ceci avant de commander — vous saurez ainsi exactement à quoi vous en tenir.",
     chips: ['Garantie 15 jours', 'Support 24h/24', 'Maintenance hebdomadaire', 'Prix fixes'],
     summary: "En résumé : remboursement sous 15 jours si l'abonnement ne fonctionne réellement pas (toutes les chaînes et tous les films), support 24h/24 et 7j/7, mises à jour permanentes et maintenance hebdomadaire. La commande et le paiement se font via WhatsApp ; l'application de lecture n'est pas incluse. Pour chaque client que vous parrainez, vous recevez des mois offerts.",
     sections: [
@@ -444,7 +444,7 @@ const TERMS: Record<UiLang, TermsText> = {
     eyebrow: 'Kundenschutz',
     title1: 'AGB &',
     title2: 'Kundenschutz',
-    intro: 'Wir sind vollkommen transparent darüber, was Sie von Ihrem NERO IPTV-Abo erwarten dürfen und was nicht. Lesen Sie dies vor Ihrer Bestellung — so wissen Sie genau, woran Sie sind.',
+    intro: 'Wir sind vollkommen transparent darüber, was Sie von Ihrem IPTV MATE-Abo erwarten dürfen und was nicht. Lesen Sie dies vor Ihrer Bestellung — so wissen Sie genau, woran Sie sind.',
     chips: ['15 Tage Garantie', '24/7 Support', 'Wöchentliche Wartung', 'Feste Preise'],
     summary: 'Kurz gefasst: 15 Tage Geld zurück, wenn das Abo wirklich nicht funktioniert (alle Sender und alle Filme), 24/7 Support, permanente Updates und wöchentliche Wartung. Bestellung und Zahlung laufen über WhatsApp; die Player-App ist nicht enthalten. Für jeden Kunden, den Sie werben, erhalten Sie Gratismonate.',
     sections: [
@@ -583,7 +583,7 @@ const TERMS: Record<UiLang, TermsText> = {
     eyebrow: 'Protección del cliente',
     title1: 'Condiciones y',
     title2: 'protección del cliente',
-    intro: 'Somos totalmente transparentes sobre lo que puede y no puede esperar de su suscripción a NERO IPTV. Lea esto antes de hacer el pedido: así sabrá exactamente a qué atenerse.',
+    intro: 'Somos totalmente transparentes sobre lo que puede y no puede esperar de su suscripción a IPTV MATE. Lea esto antes de hacer el pedido: así sabrá exactamente a qué atenerse.',
     chips: ['Garantía de 15 días', 'Soporte 24/7', 'Mantenimiento semanal', 'Precios fijos'],
     summary: 'En resumen: devolución del dinero en 15 días si la suscripción realmente no funciona (todos los canales y todas las películas), soporte 24/7, actualizaciones permanentes y mantenimiento semanal. El pedido y el pago se realizan por WhatsApp; la aplicación reproductora no está incluida. Por cada cliente que nos recomiende recibirá meses gratis.',
     sections: [
@@ -722,7 +722,7 @@ const TERMS: Record<UiLang, TermsText> = {
     eyebrow: 'Kundskydd',
     title1: 'Villkor &',
     title2: 'kundskydd',
-    intro: 'Vi är helt transparenta med vad du kan och inte kan förvänta dig av ditt NERO IPTV-abonnemang. Läs detta innan du beställer — då vet du exakt vad som gäller.',
+    intro: 'Vi är helt transparenta med vad du kan och inte kan förvänta dig av ditt IPTV MATE-abonnemang. Läs detta innan du beställer — då vet du exakt vad som gäller.',
     chips: ['15 dagars garanti', 'Support dygnet runt', 'Veckovis underhåll', 'Fasta priser'],
     summary: 'Kort sagt: pengarna tillbaka inom 15 dagar om abonnemanget verkligen inte fungerar (alla kanaler och alla filmer), support dygnet runt, permanenta uppdateringar och veckovis underhåll. Beställning och betalning sker via WhatsApp; spelarappen ingår inte. För varje kund du värvar får du gratismånader.',
     sections: [
@@ -861,7 +861,7 @@ const TERMS: Record<UiLang, TermsText> = {
     eyebrow: 'Kundebeskyttelse',
     title1: 'Vilkår &',
     title2: 'kundebeskyttelse',
-    intro: 'Vi er helt åpne om hva du kan og ikke kan forvente av NERO IPTV-abonnementet ditt. Les dette før du bestiller — da vet du nøyaktig hva som gjelder.',
+    intro: 'Vi er helt åpne om hva du kan og ikke kan forvente av IPTV MATE-abonnementet ditt. Les dette før du bestiller — da vet du nøyaktig hva som gjelder.',
     chips: ['15 dagers garanti', 'Support døgnet rundt', 'Ukentlig vedlikehold', 'Faste priser'],
     summary: 'Kort fortalt: pengene tilbake innen 15 dager hvis abonnementet virkelig ikke fungerer (alle kanaler og alle filmer), support døgnet rundt, permanente oppdateringer og ukentlig vedlikehold. Bestilling og betaling skjer via WhatsApp; spilleren er ikke inkludert. For hver kunde du verver får du gratismåneder.',
     sections: [
@@ -1000,7 +1000,7 @@ const TERMS: Record<UiLang, TermsText> = {
     eyebrow: 'Kundebeskyttelse',
     title1: 'Vilkår &',
     title2: 'kundebeskyttelse',
-    intro: 'Vi er fuldstændig åbne om, hvad du kan og ikke kan forvente af dit NERO IPTV-abonnement. Læs dette, før du bestiller — så ved du præcis, hvad du går ind til.',
+    intro: 'Vi er fuldstændig åbne om, hvad du kan og ikke kan forvente af dit IPTV MATE-abonnement. Læs dette, før du bestiller — så ved du præcis, hvad du går ind til.',
     chips: ['15 dages garanti', 'Support døgnet rundt', 'Ugentlig vedligeholdelse', 'Faste priser'],
     summary: 'Kort fortalt: pengene tilbage inden for 15 dage, hvis abonnementet reelt ikke virker (alle kanaler og alle film), support døgnet rundt, permanente opdateringer og ugentlig vedligeholdelse. Bestilling og betaling foregår via WhatsApp; afspiller-appen er ikke inkluderet. For hver kunde, du henviser, får du gratis måneder.',
     sections: [
@@ -1139,7 +1139,7 @@ const TERMS: Record<UiLang, TermsText> = {
     eyebrow: 'Asiakassuoja',
     title1: 'Ehdot &',
     title2: 'asiakassuoja',
-    intro: 'Kerromme täysin avoimesti, mitä voit ja mitä et voi odottaa NERO IPTV -tilaukseltasi. Lue tämä ennen tilaamista — silloin tiedät tarkalleen, mistä on kyse.',
+    intro: 'Kerromme täysin avoimesti, mitä voit ja mitä et voi odottaa IPTV MATE -tilaukseltasi. Lue tämä ennen tilaamista — silloin tiedät tarkalleen, mistä on kyse.',
     chips: ['15 päivän takuu', 'Tuki ympäri vuorokauden', 'Viikoittainen huolto', 'Kiinteät hinnat'],
     summary: 'Lyhyesti: rahat takaisin 15 päivän kuluessa, jos tilaus ei todella toimi (kaikki kanavat ja kaikki elokuvat), tuki ympäri vuorokauden, jatkuvat päivitykset ja viikoittainen huolto. Tilaaminen ja maksaminen tapahtuvat WhatsAppissa; toisto-ohjelma ei sisälly. Jokaisesta suosittelemastasi asiakkaasta saat ilmaisia kuukausia.',
     sections: [
@@ -1278,7 +1278,7 @@ const TERMS: Record<UiLang, TermsText> = {
     eyebrow: 'حماية العميل',
     title1: 'الشروط و',
     title2: 'حماية العميل',
-    intro: 'نحن شفافون تماماً بشأن ما يمكنك وما لا يمكنك توقّعه من اشتراك NERO IPTV. اقرأ هذا قبل الطلب — لتعرف بالضبط ما الذي تحصل عليه.',
+    intro: 'نحن شفافون تماماً بشأن ما يمكنك وما لا يمكنك توقّعه من اشتراك IPTV MATE. اقرأ هذا قبل الطلب — لتعرف بالضبط ما الذي تحصل عليه.',
     chips: ['ضمان 15 يوماً', 'دعم على مدار الساعة', 'صيانة أسبوعية', 'أسعار ثابتة'],
     summary: 'باختصار: استرداد المال خلال 15 يوماً إذا كان الاشتراك لا يعمل فعلاً (كل القنوات وكل الأفلام)، ودعم على مدار الساعة، وتحديثات دائمة، وصيانة أسبوعية. يتم الطلب والدفع عبر واتساب؛ تطبيق المشغّل غير مشمول. وعن كل عميل تُحيله إلينا تحصل على أشهر مجانية.',
     sections: [

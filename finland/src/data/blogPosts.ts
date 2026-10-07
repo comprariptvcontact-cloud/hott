@@ -27,7 +27,7 @@ export function getPostText(post: BlogPost, lang: LangCode): BlogPostText {
   return post.content[effectiveLang] ?? post.content.en ?? Object.values(post.content)[0]!;
 }
 
-// A legacy BLOG_POSTS array predating the NERO IPTV / German-market pivot
+// A legacy BLOG_POSTS array predating the IPTV MATE / German-market pivot
 // (Finland-targeted copy, Finnish translations, old brand in slugs)
 // used to live here — removed. See the sibling deBlogPostsNN.ts /
 // enBlogPostsNN.ts files for current content.

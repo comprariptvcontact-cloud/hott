@@ -64,7 +64,7 @@ export default function BlogGrid() {
   const [featured, ...rest] = ALL_POSTS;
 
   useEffect(() => {
-    document.title = `${bt.pageTag} — NERO IPTV`;
+    document.title = `${bt.pageTag} — IPTV MATE`;
   }, [bt.pageTag]);
 
   return (

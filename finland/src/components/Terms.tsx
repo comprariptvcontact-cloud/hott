@@ -27,11 +27,11 @@ export default function Terms() {
         </div>
 
         <div className="relative z-10">
-          {/* NERO IPTV wordmark */}
+          {/* IPTV MATE wordmark */}
           <div className="inline-flex items-center px-6 py-3 rounded-2xl mb-6 select-none"
             style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)" }}>
-            <span className="text-[#facc15] font-black text-2xl tracking-tight uppercase">NERO</span>
-            <span className="text-white font-black text-2xl tracking-tight uppercase">&nbsp;IPTV</span>
+            <span className="text-[#facc15] font-black text-2xl tracking-tight uppercase">IPTV</span>
+            <span className="text-white font-black text-2xl tracking-tight uppercase">&nbsp;MATE</span>
           </div>
 
           <span className="serif-display italic font-light text-lg md:text-xl text-white/60 block mb-2">

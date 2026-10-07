@@ -6,17 +6,17 @@ interface VideoShowcaseProps {
 }
 
 const videoBadge: Record<string, string> = {
-  de: "HOL DIR NERO IPTV",
-  en: "GET NERO IPTV",
-  nl: "ONTDEK NERO IPTV",
-  fr: "DÉCOUVREZ NERO IPTV",
-  es: "OBTÉN NERO IPTV",
-  it: "SCOPRI NERO IPTV",
-  sv: "SKAFFA NERO IPTV",
-  no: "SKAFF DEG NERO IPTV",
-  da: "FÅ NERO IPTV",
-  fi: "HANKI NERO IPTV",
-  ar: "احصل على NERO IPTV",
+  de: "HOL DIR IPTV MATE",
+  en: "GET IPTV MATE",
+  nl: "ONTDEK IPTV MATE",
+  fr: "DÉCOUVREZ IPTV MATE",
+  es: "OBTÉN IPTV MATE",
+  it: "SCOPRI IPTV MATE",
+  sv: "SKAFFA IPTV MATE",
+  no: "SKAFF DEG IPTV MATE",
+  da: "FÅ IPTV MATE",
+  fi: "HANKI IPTV MATE",
+  ar: "احصل على IPTV MATE",
 };
 
 const videoSections: Record<string, { heading: string; headingItalic: string; subtitle: string }> = {

@@ -11,7 +11,7 @@
  * conversion is sent.
  *
  * TODO: create the conversion action in the Google Ads account for
- * www.neroiptv.pro and paste its "send_to" value here, e.g.
+ * www.iptvmate.eu and paste its "send_to" value here, e.g.
  *   export const ADS_CONVERSION_SEND_TO = "AW-0000000000/xxxxxxxxxxxxxxxxxx";
  */
 export const ADS_CONVERSION_SEND_TO = "";
