@@ -461,16 +461,6 @@ export const ALL_CHANNELS: ChannelItem[] = [
 export const SUBSCRIPTION_PLANS: PricingPlan[] = [
   // ── 1 Device ──────────────────────────────────────────────────────────────
   {
-    id: "p1a",
-    durationMonths: 1,
-    name: "Trial",
-    price: 12.99,
-    originalPrice: 24.99,
-    popular: false,
-    savings: "Om te testen",
-    devices: 1,
-  },
-  {
     id: "p1b",
     durationMonths: 3,
     name: "Starter",
@@ -513,16 +503,6 @@ export const SUBSCRIPTION_PLANS: PricingPlan[] = [
     devices: 1,
   },
   // ── 2 Devices ─────────────────────────────────────────────────────────────
-  {
-    id: "p2a",
-    durationMonths: 1,
-    name: "Duo Trial",
-    price: 19.99,
-    originalPrice: 39.99,
-    popular: false,
-    savings: "Om te testen",
-    devices: 2,
-  },
   {
     id: "p2b",
     durationMonths: 3,

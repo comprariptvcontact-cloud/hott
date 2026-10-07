@@ -20,7 +20,7 @@ export default function BlogPost({ slug, onPricingClick }: BlogPostProps) {
   const text = post ? getPostText(post, lang) : null;
 
   useEffect(() => {
-    document.title = text ? `${text.title} — PANDORA IPTV` : `${bt.notFoundTitle} — PANDORA IPTV`;
+    document.title = text ? `${text.title} — NERO IPTV` : `${bt.notFoundTitle} — NERO IPTV`;
     let meta = document.querySelector('meta[name="description"]');
     if (!meta) {
       meta = document.createElement("meta");
@@ -105,17 +105,17 @@ export default function BlogPost({ slug, onPricingClick }: BlogPostProps) {
             {bt.ctaButton} <ArrowRight className="w-4 h-4" />
           </button>
           <a
-            href="https://www.instagram.com/pandora-iptv/"
+            href="https://www.instagram.com/nero-iptv/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-white/10 border border-white/25 text-white font-bold px-6 py-3 rounded-full hover:bg-white/20 transition-all"
           >
-            <Instagram className="w-4 h-4" /> @PANDORA IPTV
+            <Instagram className="w-4 h-4" /> @NERO IPTV
           </a>
         </div>
         <p className="text-white/50 text-xs mt-4 font-mono">
           <span className="hover:text-white transition-colors">
-            PANDORA IPTV
+            NERO IPTV
           </span>
         </p>
       </div>

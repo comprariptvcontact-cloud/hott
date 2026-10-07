@@ -136,9 +136,9 @@ export default function Testimonials() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Product",
-            name: "PANDORA IPTV",
+            name: "NERO IPTV",
             description: "Premium IPTV subscription for Europe — 69,000+ live channels, 220,000+ movies & series in up to 8K.",
-            brand: { "@type": "Brand", name: "PANDORA IPTV" },
+            brand: { "@type": "Brand", name: "NERO IPTV" },
             aggregateRating: {
               "@type": "AggregateRating",
               ratingValue: avgRating,

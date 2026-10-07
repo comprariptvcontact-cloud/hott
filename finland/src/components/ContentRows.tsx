@@ -99,10 +99,10 @@ const contentTexts: Record<string, ContentRowText> = {
       integrated: "VOLL INTEGRIERT:",
     },
     promoTitles: {
-      subscribe: "PANDORA IPTV BUCHEN",
-      iptvPlus: "PANDORA IPTV+",
-      sport: "PANDORA IPTV SPORT",
-      music: "PANDORA IPTV MUSIK",
+      subscribe: "NERO IPTV BUCHEN",
+      iptvPlus: "NERO IPTV+",
+      sport: "NERO IPTV SPORT",
+      music: "NERO IPTV MUSIK",
       freeTV: "IM FREE-TV SEHEN",
       streaming: "STREAMING-DIENSTE",
     },
@@ -120,10 +120,10 @@ const contentTexts: Record<string, ContentRowText> = {
       integrated: "FULLY INTEGRATED:",
     },
     promoTitles: {
-      subscribe: "SUBSCRIBE TO PANDORA IPTV",
-      iptvPlus: "PANDORA IPTV+",
-      sport: "PANDORA IPTV SPORT",
-      music: "PANDORA IPTV MUSIC",
+      subscribe: "SUBSCRIBE TO NERO IPTV",
+      iptvPlus: "NERO IPTV+",
+      sport: "NERO IPTV SPORT",
+      music: "NERO IPTV MUSIC",
       freeTV: "WATCH FREE TV",
       streaming: "STREAMING SERVICES",
     },
@@ -141,10 +141,10 @@ const contentTexts: Record<string, ContentRowText> = {
       integrated: "VOLLEDIG GEÏNTEGREERD:",
     },
     promoTitles: {
-      subscribe: "ABONNEER OP PANDORA IPTV",
-      iptvPlus: "PANDORA IPTV+",
-      sport: "PANDORA IPTV SPORT",
-      music: "PANDORA IPTV MUZIEK",
+      subscribe: "ABONNEER OP NERO IPTV",
+      iptvPlus: "NERO IPTV+",
+      sport: "NERO IPTV SPORT",
+      music: "NERO IPTV MUZIEK",
       freeTV: "GRATIS TV KIJKEN",
       streaming: "STREAMINGDIENSTEN",
     },
@@ -187,7 +187,7 @@ const PromoBanner: FC<{ card: PromoCard; ct: ContentRowText; onClick: () => void
       >
         <img
           src={card.image}
-          alt={title || "PANDORA IPTV content"}
+          alt={title || "NERO IPTV content"}
           loading="lazy"
           className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-55 transition-opacity duration-300"
         />
@@ -250,7 +250,7 @@ function ContentRowsInner({ onPricingClick }: ContentRowsProps) {
       <ContentRow
         labelColor="white"
         label={ct.getIt}
-        title="PANDORA IPTV"
+        title="NERO IPTV"
         titleColor="accent"
         promoCards={HOL_DIR_CARDS}
         ct={ct}
@@ -258,7 +258,7 @@ function ContentRowsInner({ onPricingClick }: ContentRowsProps) {
       />
       <ContentRow
         labelColor="accent"
-        label="PANDORA IPTV+:"
+        label="NERO IPTV+:"
         title={ct.seriesHighlights}
         items={SERIEN}
         hasArrow

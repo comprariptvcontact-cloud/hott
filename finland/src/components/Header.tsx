@@ -34,8 +34,8 @@ export default function Header({ langPrefix, onPricingClick, onReviewsClick, onM
         <header className="w-full border-b border-white/10" style={{ background: "#0d0d0d" }}>
           <div className="max-w-[1400px] mx-auto px-4 md:px-8 py-3 flex items-center justify-between">
             <div className="flex items-center gap-6">
-              <a href={langPrefix} aria-label="PANDORA IPTV — home" className="shrink-0 select-none flex items-center no-underline cursor-pointer hover:opacity-80 transition-opacity">
-                <span className="text-[#facc15] font-black text-xl tracking-tight uppercase" style={{ fontStyle: "normal" }}>PANDORA</span>
+              <a href={langPrefix} aria-label="NERO IPTV — home" className="shrink-0 select-none flex items-center no-underline cursor-pointer hover:opacity-80 transition-opacity">
+                <span className="text-[#facc15] font-black text-xl tracking-tight uppercase" style={{ fontStyle: "normal" }}>NERO</span>
                 <span className="text-white font-black text-xl tracking-tight uppercase" style={{ fontStyle: "normal" }}>&nbsp;IPTV</span>
               </a>
 

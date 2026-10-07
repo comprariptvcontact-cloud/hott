@@ -6,17 +6,17 @@ interface VideoShowcaseProps {
 }
 
 const videoBadge: Record<string, string> = {
-  de: "HOL DIR PANDORA IPTV",
-  en: "GET PANDORA IPTV",
-  nl: "ONTDEK PANDORA IPTV",
-  fr: "DÉCOUVREZ PANDORA IPTV",
-  es: "OBTÉN PANDORA IPTV",
-  it: "SCOPRI PANDORA IPTV",
-  sv: "SKAFFA PANDORA IPTV",
-  no: "SKAFF DEG PANDORA IPTV",
-  da: "FÅ PANDORA IPTV",
-  fi: "HANKI PANDORA IPTV",
-  ar: "احصل على PANDORA IPTV",
+  de: "HOL DIR NERO IPTV",
+  en: "GET NERO IPTV",
+  nl: "ONTDEK NERO IPTV",
+  fr: "DÉCOUVREZ NERO IPTV",
+  es: "OBTÉN NERO IPTV",
+  it: "SCOPRI NERO IPTV",
+  sv: "SKAFFA NERO IPTV",
+  no: "SKAFF DEG NERO IPTV",
+  da: "FÅ NERO IPTV",
+  fi: "HANKI NERO IPTV",
+  ar: "احصل على NERO IPTV",
 };
 
 const videoSections: Record<string, { heading: string; headingItalic: string; subtitle: string }> = {

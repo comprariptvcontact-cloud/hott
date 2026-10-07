@@ -21,16 +21,13 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
 const DIST = resolve(ROOT, "dist");
 // Canonical origin — must match the host that actually serves 200s.
-const SITE = "https://www.pandora-iptv.pro";
-const BRAND = "PANDORA IPTV";
+const SITE = "https://www.neroiptv.pro";
+const BRAND = "NERO IPTV";
 
 // Must match index.html exactly — these are the anchors the template is patched on.
-const TPL_HTML_TAG = '<html lang="en">';
+const TPL_HTML_TAG = '<html lang="nl">';
 const TPL_CANONICAL = `<link rel="canonical" href="${SITE}/" />`;
-const TPL_TITLE = "<title>Pandora IPTV — Premium IPTV Pandora Subscription | pandora-iptv.pro</title>";
-
-const HOME_DESCRIPTION =
-  "Pandora IPTV (IPTV Pandora) — premium IPTV subscription for Europe with 69,000+ live channels and 220,000+ movies & series as VOD in up to 8K. Buy your Pandora IPTV subscription today for Smart TV, Android & Fire TV.";
+const TPL_TITLE = "<title>Nero IPTV — Premium IPTV Abonnement | neroiptv.pro</title>";
 
 const template = readFileSync(resolve(DIST, "index.html"), "utf8");
 
@@ -292,14 +289,14 @@ for (const post of ALL_POSTS) {
 const sorted = [...ALL_POSTS].sort((a, b) => b.dateISO.localeCompare(a.dateISO));
 
 const BLOG_TITLE: Record<string, string> = {
-  de: `Pandora IPTV Blog — Anleitungen, Vergleiche & Tipps`,
-  en: `Pandora IPTV Blog — IPTV Guides, Comparisons & Tips`,
-  nl: `Pandora IPTV Blog — Handleidingen, Vergelijkingen & Tips`,
+  de: `Nero IPTV Blog — Anleitungen, Vergleiche & Tipps`,
+  en: `Nero IPTV Blog — IPTV Guides, Comparisons & Tips`,
+  nl: `Nero IPTV Blog — Handleidingen, Vergelijkingen & Tips`,
 };
 const BLOG_DESC: Record<string, string> = {
-  de: "Pandora IPTV Blog: IPTV-Anleitungen, App-Vergleiche, Installationstipps und Ratgeber. Mit Pandora IPTV ein zuverlässiges Premium-Abonnement in Deutschland wählen.",
-  en: "Pandora IPTV Blog: IPTV guides, app comparisons, installation tips and advice. Choose a reliable premium Pandora IPTV subscription in Europe.",
-  nl: "Pandora IPTV Blog: IPTV-handleidingen, app-vergelijkingen, installatietips en advies. Kies een betrouwbaar premium Pandora IPTV abonnement in Europa.",
+  de: "Nero IPTV Blog: IPTV-Anleitungen, App-Vergleiche, Installationstipps und Ratgeber. Mit Nero IPTV ein zuverlässiges Premium-Abonnement in Deutschland wählen.",
+  en: "Nero IPTV Blog: IPTV guides, app comparisons, installation tips and advice. Choose a reliable premium Nero IPTV subscription in Europe.",
+  nl: "Nero IPTV Blog: IPTV-handleidingen, app-vergelijkingen, installatietips en advies. Kies een betrouwbaar premium Nero IPTV abonnement in Europa.",
 };
 
 const HOME_LANGS = ["de", "en", "nl"];
@@ -355,14 +352,14 @@ for (const blogLang of HOME_LANGS) {
 
 // ---- /agb (per language) ---------------------------------------------------
 const TERMS_TITLE: Record<string, string> = {
-  de: `AGB & Kundenschutz | Pandora IPTV`,
-  en: `Terms & Customer Protection | Pandora IPTV`,
-  nl: `Voorwaarden & Klantbescherming | Pandora IPTV`,
+  de: `AGB & Kundenschutz | Nero IPTV`,
+  en: `Terms & Customer Protection | Nero IPTV`,
+  nl: `Voorwaarden & Klantbescherming | Nero IPTV`,
 };
 const TERMS_DESC: Record<string, string> = {
-  de: "Pandora IPTV: 15 Tage Rückerstattungsgarantie, 24/7 Support, wöchentliche Wartung und vierteljährliche Film-Updates. Vollständige AGB und Kundenschutz von Pandora IPTV.",
-  en: "Pandora IPTV: 15-day money-back guarantee, 24/7 support, weekly maintenance and quarterly movie updates. Full terms and customer protection of Pandora IPTV.",
-  nl: "Pandora IPTV: 15 dagen geld-terug-garantie, 24/7 ondersteuning, wekelijks onderhoud en driemaandelijkse filmupdates. Volledige voorwaarden en klantbescherming van Pandora IPTV.",
+  de: "Nero IPTV: 15 Tage Rückerstattungsgarantie, 24/7 Support, wöchentliche Wartung und vierteljährliche Film-Updates. Vollständige AGB und Kundenschutz von Nero IPTV.",
+  en: "Nero IPTV: 15-day money-back guarantee, 24/7 support, weekly maintenance and quarterly movie updates. Full terms and customer protection of Nero IPTV.",
+  nl: "Nero IPTV: 15 dagen geld-terug-garantie, 24/7 ondersteuning, wekelijks onderhoud en driemaandelijkse filmupdates. Volledige voorwaarden en klantbescherming van Nero IPTV.",
 };
 const TERMS_LABEL: Record<string, string> = { de: "AGB", en: "Terms", nl: "Voorwaarden" };
 const TERMS_H1: Record<string, string> = {
@@ -421,20 +418,20 @@ for (const tLang of HOME_LANGS) {
 
 // ---- homepage (per language) -----------------------------------------------
 const HOME_TITLE: Record<string, string> = {
-  de: "Pandora IPTV — Pandora IPTV | Premium IPTV Abo Deutschland",
-  en: "Pandora IPTV — Pandora IPTV | Premium IPTV Subscription EU",
-  nl: "Pandora IPTV — Pandora IPTV | Premium IPTV Abonnement NL",
+  de: "Nero IPTV — Nero IPTV | Premium IPTV Abo Deutschland",
+  en: "Nero IPTV — Nero IPTV | Premium IPTV Subscription EU",
+  nl: "Nero IPTV — Nero IPTV | Premium IPTV Abonnement NL",
 };
 const HOME_DESC: Record<string, string> = {
-  de: "Pandora IPTV auf pandora-iptv.pro: Pandora IPTV Premium-IPTV-Abonnement für Deutschland. 69.000+ Live-Sender, 220.000+ Filme & Serien in bis zu 8K. Pandora IPTV kaufen für Smart TV, Android & Fire TV.",
-  en: "Pandora IPTV at pandora-iptv.pro: Pandora IPTV premium IPTV subscription for Europe. 69,000+ live channels, 220,000+ movies & series in up to 8K. Buy Pandora IPTV for Smart TV, Android & Fire TV.",
-  nl: "Pandora IPTV op pandora-iptv.pro: Pandora IPTV premium IPTV-abonnement voor Nederland. 69.000+ live zenders, 220.000+ films & series in tot 8K. Pandora IPTV kopen voor Smart TV, Android & Fire TV.",
+  de: "Nero IPTV auf neroiptv.pro: Nero IPTV Premium-IPTV-Abonnement für Deutschland. 69.000+ Live-Sender, 220.000+ Filme & Serien in bis zu 8K. Nero IPTV kaufen für Smart TV, Android & Fire TV.",
+  en: "Nero IPTV at neroiptv.pro: Nero IPTV premium IPTV subscription for Europe. 69,000+ live channels, 220,000+ movies & series in up to 8K. Buy Nero IPTV for Smart TV, Android & Fire TV.",
+  nl: "Nero IPTV op neroiptv.pro: Nero IPTV premium IPTV-abonnement voor Nederland. 69.000+ live zenders, 220.000+ films & series in tot 8K. Nero IPTV kopen voor Smart TV, Android & Fire TV.",
 };
 const HOME_BODY: Record<string, string[]> = {
   de: [
-    `<h1>Pandora IPTV — Pandora IPTV Premium IPTV Abonnement für Deutschland</h1>`,
-    `<p>Pandora IPTV auf pandora-iptv.pro: Pandora IPTV ist ein Premium-IPTV-Abonnement für Deutschland mit über 69.000 Live-Sendern und 220.000 Filmen und Serien als Video-on-Demand — in bis zu 8K Ultra HD. Kompatibel mit Smart TV, Android, Fire TV, MAG-Boxen und weiteren Geräten. Pandora IPTV von Pandora IPTV bietet Ihnen das beste Preis-Leistungs-Verhältnis.</p>`,
-    `<h2>Warum Pandora IPTV von Pandora IPTV wählen?</h2>`,
+    `<h1>Nero IPTV — Nero IPTV Premium IPTV Abonnement für Deutschland</h1>`,
+    `<p>Nero IPTV auf neroiptv.pro: Nero IPTV ist ein Premium-IPTV-Abonnement für Deutschland mit über 69.000 Live-Sendern und 220.000 Filmen und Serien als Video-on-Demand — in bis zu 8K Ultra HD. Kompatibel mit Smart TV, Android, Fire TV, MAG-Boxen und weiteren Geräten. Nero IPTV von Nero IPTV bietet Ihnen das beste Preis-Leistungs-Verhältnis.</p>`,
+    `<h2>Warum Nero IPTV von Nero IPTV wählen?</h2>`,
     `<ul>`,
     `<li>69.000+ Live-Sender aus Deutschland und ganz Europa, inklusive Bundesliga und UEFA Champions League</li>`,
     `<li>220.000+ Filme und Serien als VOD, wöchentlich aktualisiert</li>`,
@@ -445,9 +442,9 @@ const HOME_BODY: Record<string, string[]> = {
     `<p><a href="/de/blog">Alle Ratgeber im Blog</a></p>`,
   ],
   en: [
-    `<h1>Pandora IPTV — Pandora IPTV Premium IPTV Subscription for Europe</h1>`,
-    `<p>Pandora IPTV at pandora-iptv.pro: Pandora IPTV is a premium IPTV subscription for Europe with over 69,000 live channels and 220,000 movies and series as video-on-demand — in up to 8K Ultra HD. Compatible with Smart TV, Android, Fire TV, MAG boxes and more. Pandora IPTV from Pandora IPTV gives you the best value for premium streaming.</p>`,
-    `<h2>Why choose Pandora IPTV from Pandora IPTV?</h2>`,
+    `<h1>Nero IPTV — Nero IPTV Premium IPTV Subscription for Europe</h1>`,
+    `<p>Nero IPTV at neroiptv.pro: Nero IPTV is a premium IPTV subscription for Europe with over 69,000 live channels and 220,000 movies and series as video-on-demand — in up to 8K Ultra HD. Compatible with Smart TV, Android, Fire TV, MAG boxes and more. Nero IPTV from Nero IPTV gives you the best value for premium streaming.</p>`,
+    `<h2>Why choose Nero IPTV from Nero IPTV?</h2>`,
     `<ul>`,
     `<li>69,000+ live channels from Europe and worldwide, including Premier League and UEFA Champions League</li>`,
     `<li>220,000+ movies and series as VOD, updated weekly</li>`,
@@ -458,9 +455,9 @@ const HOME_BODY: Record<string, string[]> = {
     `<p><a href="/en/blog">Browse all guides on the blog</a></p>`,
   ],
   nl: [
-    `<h1>Pandora IPTV — Pandora IPTV Premium IPTV Abonnement voor Nederland</h1>`,
-    `<p>Pandora IPTV op pandora-iptv.pro: Pandora IPTV is een premium IPTV-abonnement voor Nederland met meer dan 69.000 live zenders en 220.000 films en series als video-on-demand — in maximaal 8K Ultra HD. Compatibel met Smart TV, Android, Fire TV, MAG-boxen en meer. Pandora IPTV van Pandora IPTV biedt u de beste prijs-kwaliteitverhouding.</p>`,
-    `<h2>Waarom kiezen voor Pandora IPTV van Pandora IPTV?</h2>`,
+    `<h1>Nero IPTV — Nero IPTV Premium IPTV Abonnement voor Nederland</h1>`,
+    `<p>Nero IPTV op neroiptv.pro: Nero IPTV is een premium IPTV-abonnement voor Nederland met meer dan 69.000 live zenders en 220.000 films en series als video-on-demand — in maximaal 8K Ultra HD. Compatibel met Smart TV, Android, Fire TV, MAG-boxen en meer. Nero IPTV van Nero IPTV biedt u de beste prijs-kwaliteitverhouding.</p>`,
+    `<h2>Waarom kiezen voor Nero IPTV van Nero IPTV?</h2>`,
     `<ul>`,
     `<li>69.000+ live zenders uit Nederland en heel Europa, inclusief Eredivisie en UEFA Champions League</li>`,
     `<li>220.000+ films en series als VOD, wekelijks bijgewerkt</li>`,
@@ -509,9 +506,9 @@ for (const hLang of HOME_LANGS) {
   writeFileSync(resolve(DIST, prefix.slice(1), "index.html"), homeHtml, "utf8");
 }
 
-// Root index.html — the SPA shell that handles geo-redirect via JS.
-// Rebuild it with generic English meta (crawlers see the /en version for
-// content; this page exists only for the client-side redirect).
+// Root index.html — the SPA shell served at "/". Dutch is the default site
+// language (SITE_LANG), so the root is rendered in Dutch: a visitor landing on
+// "/" sees the Dutch homepage, and the SPA boots in Dutch to match.
 const rootOrgJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -524,18 +521,18 @@ const rootWebsiteJsonLd = {
   "@type": "WebSite",
   name: BRAND,
   url: SITE,
-  inLanguage: "en",
-  description: HOME_DESCRIPTION,
+  inLanguage: SITE_LANG,
+  description: HOME_DESC[SITE_LANG] ?? HOME_DESC.nl,
 };
 const rootHtml = buildPage({
-  lang: "en",
-  title: `Pandora IPTV — Pandora IPTV | Buy Premium IPTV Subscription`,
-  description: HOME_DESCRIPTION,
+  lang: SITE_LANG,
+  title: HOME_TITLE[SITE_LANG] ?? HOME_TITLE.nl,
+  description: HOME_DESC[SITE_LANG] ?? HOME_DESC.nl,
   canonical: `${SITE}/`,
   ogType: "website",
   jsonLd: [rootOrgJsonLd, rootWebsiteJsonLd],
   hreflang: hreflangSet(""),
-  bodyHtml: `<nav><a href="/">${BRAND}</a></nav>\n<p>${esc(HOME_DESCRIPTION)}</p>`,
+  bodyHtml: [`<nav><a href="/">${BRAND}</a></nav>`, ...(HOME_BODY[SITE_LANG] ?? HOME_BODY.nl)].join("\n"),
 });
 writeFileSync(resolve(DIST, "index.html"), rootHtml, "utf8");
 

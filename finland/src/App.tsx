@@ -23,7 +23,7 @@ import { getBlogText } from "./blogI18n";
 import { getTerms } from "./termsText";
 import type { LangCode } from "./i18n";
 
-const SITE_ORIGIN = "https://www.pandora-iptv.pro";
+const SITE_ORIGIN = "https://www.neroiptv.pro";
 
 const INDEXABLE = "index, follow, max-image-preview:large, max-snippet:-1";
 const NOT_INDEXABLE = "noindex, follow";
@@ -180,7 +180,7 @@ function AppInner({ view, urlLang }: { view: View; urlLang: HomeLang | null }) {
 
     if (view.type === "not-found") {
       setMetaByName("robots", NOT_INDEXABLE);
-      document.title = `${getBlogText(lang).notFoundTitle} — PANDORA IPTV`;
+      document.title = `${getBlogText(lang).notFoundTitle} — NERO IPTV`;
       setMetaByName("description", getBlogText(lang).notFoundDesc);
       link?.remove();
       return;
@@ -190,7 +190,7 @@ function AppInner({ view, urlLang }: { view: View; urlLang: HomeLang | null }) {
 
     if (view.type === "terms") {
       const tt = getTerms(lang);
-      document.title = `${tt.title1} ${tt.title2} — PANDORA IPTV`;
+      document.title = `${tt.title1} ${tt.title2} — NERO IPTV`;
       setMetaByName("description", tt.intro);
     }
 
@@ -289,7 +289,7 @@ function AppInner({ view, urlLang }: { view: View; urlLang: HomeLang | null }) {
               {getBlogText(lang).notFoundDesc}
             </p>
             <a href={langPrefix} className="inline-flex items-center gap-2 text-[#facc15] font-bold hover:underline">
-              PANDORA IPTV
+              NERO IPTV
             </a>
           </section>
         )}

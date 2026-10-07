@@ -7,11 +7,6 @@ const flagSrc = (code: string) => `https://flagcdn.com/w40/${code}.png`;
 
 const HOME_LANGS: LangCode[] = ["de", "nl", "en"];
 
-function toHomeLang(lang: LangCode): string {
-  if (HOME_LANGS.includes(lang)) return lang;
-  return "en";
-}
-
 export default function LanguageSwitcher() {
   const { lang, setLang } = useLanguage();
   const [open, setOpen] = useState(false);
@@ -42,13 +37,20 @@ export default function LanguageSwitcher() {
 
     const path = window.location.pathname;
     const m = path.match(/^\/(de|nl|en)(\/.*)?$/);
+    const rest = m ? (m[2] || "") : "";
 
-    if (m) {
-      const rest = m[2] || "";
-      window.location.href = `/${toHomeLang(newLang)}${rest}`;
-    } else if (path === "/") {
-      window.location.href = `/${toHomeLang(newLang)}`;
+    if (HOME_LANGS.includes(newLang)) {
+      // These languages have their own prerendered pages — navigate so the URL,
+      // SEO metadata and server-rendered content all match the chosen language.
+      const target = `/${newLang}${rest}`;
+      if (target !== path) window.location.href = target;
+    } else if (m) {
+      // A client-only language picked while on a /de|/nl|/en page: setLang has
+      // already re-rendered in that language, so just drop the now-mismatched
+      // prefix (without a reload) so a refresh restores it from localStorage.
+      window.history.replaceState(null, "", rest || "/");
     }
+    // Client-only language on an unprefixed path: setLang already handled it.
   };
 
   return (

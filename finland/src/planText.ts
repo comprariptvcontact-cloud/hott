@@ -312,7 +312,7 @@ export function getPlanText(lang: LangCode): PlanText {
  */
 export function planFeatures(plan: PricingPlan, pt: PlanText): string[] {
   const lines: string[] = [];
-  if (plan.durationMonths === 1) lines.push(pt.tryOut);
+  if (plan.durationMonths === 3) lines.push(pt.tryOut);
   if (plan.popular) lines.push(pt.bestSeller);
   if (plan.freeMonths) lines.push(pt.freeDeal(plan.freeMonths, plan.durationMonths + plan.freeMonths));
   if (plan.devices === 2) lines.push(pt.twoDevices);
@@ -321,8 +321,7 @@ export function planFeatures(plan: PricingPlan, pt: PlanText): string[] {
 
 /** The savings badge for one plan — keyed off its length, as the data was. */
 export function planSavings(plan: PricingPlan, pt: PlanText): string {
-  if (plan.durationMonths === 1) return pt.savings.test;
-  if (plan.durationMonths === 3) return pt.savings.trial;
+  if (plan.durationMonths === 3) return pt.savings.test;
   if (plan.durationMonths === 6) return pt.savings.best;
   return pt.savings.weekdeal;
 }

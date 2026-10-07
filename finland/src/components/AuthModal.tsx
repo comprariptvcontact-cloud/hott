@@ -69,7 +69,7 @@ const authTexts: Record<string, {
     sending: "Wird gesendet...",
     submitBtn: "Registrierung absenden",
     disclaimer: "Ihre Daten werden sicher übermittelt. Sie erhalten Ihre Zugangsdaten nach Bearbeitung per WhatsApp.",
-    waHeader: "Neue Kundenregistrierung - PANDORA IPTV",
+    waHeader: "Neue Kundenregistrierung - NERO IPTV",
     noPhone: "Nicht angegeben",
     noPlan: "Nicht ausgewählt",
     noMessage: "Keine Nachricht",
@@ -106,7 +106,7 @@ const authTexts: Record<string, {
     sending: "Sending...",
     submitBtn: "Submit registration",
     disclaimer: "Your data is transmitted securely. You will receive your credentials after processing via WhatsApp.",
-    waHeader: "New customer registration - PANDORA IPTV",
+    waHeader: "New customer registration - NERO IPTV",
     noPhone: "Not specified",
     noPlan: "Not selected",
     noMessage: "No message",
@@ -143,7 +143,7 @@ const authTexts: Record<string, {
     sending: "Wordt verzonden...",
     submitBtn: "Registratie verzenden",
     disclaimer: "Uw gegevens worden veilig verzonden. U ontvangt uw inloggegevens na verwerking via WhatsApp.",
-    waHeader: "Nieuwe klantregistratie - PANDORA IPTV",
+    waHeader: "Nieuwe klantregistratie - NERO IPTV",
     noPhone: "Niet opgegeven",
     noPlan: "Niet geselecteerd",
     noMessage: "Geen bericht",
@@ -259,7 +259,7 @@ export default function AuthModal({ onClose }: AuthModalProps) {
 
         <div className="p-6 md:p-8">
           <div className="flex items-center gap-2 mb-2">
-            <span className="text-[#facc15] font-black text-xl tracking-tight uppercase">PANDORA</span>
+            <span className="text-[#facc15] font-black text-xl tracking-tight uppercase">NERO</span>
             <span className="text-white font-black text-xl tracking-tight uppercase">&nbsp;IPTV</span>
           </div>
           <p className="text-white/50 text-sm mb-6">

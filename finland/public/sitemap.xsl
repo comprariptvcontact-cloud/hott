@@ -15,7 +15,7 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <meta name="robots" content="noindex"/>
-        <title>Sitemap — PANDORA IPTV</title>
+        <title>Sitemap — NERO IPTV</title>
         <style>
           :root { color-scheme: light; }
           body { margin:0; background:#f6f7f9; color:#111827;
@@ -41,7 +41,7 @@
       </head>
       <body>
         <div class="wrap">
-          <div class="brand"><b style="color:#facc15">PANDORA</b><b class="d">IPTV</b></div>
+          <div class="brand"><b style="color:#facc15">NERO</b><b class="d">IPTV</b></div>
           <xsl:apply-templates/>
         </div>
       </body>

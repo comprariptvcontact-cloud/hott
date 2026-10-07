@@ -31,7 +31,7 @@ export default function Pricing({ onSelectPlan: _unused }: PricingProps) {
   const pt = getPlanText(lang);
   const [activeDevices, setActiveDevices] = useState<1 | 2>(1);
 
-  const MONTH_ORDER = [12, 1, 3, 6, 24];
+  const MONTH_ORDER = [12, 3, 6, 24];
   const plans = SUBSCRIPTION_PLANS
     .filter(p => p.devices === activeDevices)
     .sort((a, b) => {
@@ -115,9 +115,9 @@ export default function Pricing({ onSelectPlan: _unused }: PricingProps) {
         </div>
 
         {/* ── Plan grid ─────────────────────────────────────────────────── */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 max-w-7xl mx-auto items-stretch">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto items-stretch">
           {plans.map(plan => (
-            <div key={plan.id} id={plan.durationMonths === 1 ? "plan-1mo" : undefined} className="relative flex flex-col transition-all duration-300">
+            <div key={plan.id} id={plan.durationMonths === 3 ? "plan-1mo" : undefined} className="relative flex flex-col transition-all duration-300">
 
               {/* Card */}
               <div className="relative flex-1 flex flex-col rounded-2xl overflow-hidden"
@@ -143,8 +143,8 @@ export default function Pricing({ onSelectPlan: _unused }: PricingProps) {
                   </div>
                 )}
 
-                {/* TEST PACK ribbon — 1-month card */}
-                {plan.durationMonths === 1 && (
+                {/* TEST PACK ribbon — 3-month card */}
+                {plan.durationMonths === 3 && (
                   <div className="absolute z-10 pointer-events-none"
                     style={{ top: "16px", right: "-34px", width: "130px", textAlign: "center", transform: "rotate(45deg)",
                       background: `linear-gradient(90deg, ${GREEN_D}, ${GREEN})`,

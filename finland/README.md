@@ -1,6 +1,6 @@
-# PANDORA IPTV — www.pandora-iptv.pro
+# NERO IPTV — www.neroiptv.pro
 
-German-language sales site for **PANDORA IPTV** premium IPTV subscriptions, targeting
+German-language sales site for **NERO IPTV** premium IPTV subscriptions, targeting
 Germany. Vite + React 19 + Tailwind 4 SPA with a prerendered blog.
 
 The published site language is German (`SITE_LANG` in `src/i18n.ts`). The header
