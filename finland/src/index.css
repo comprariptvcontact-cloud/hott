@@ -26,8 +26,8 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #1f2a44;
   overflow-x: hidden;
   max-width: 100%;
 }

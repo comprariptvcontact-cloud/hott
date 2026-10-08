@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Replace https://hotplayer.app with your production domain, then resubmit in Search Console. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://hotplayer.app/nl</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://hotplayer.app/nl"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hotplayer.app/de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hotplayer.app/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hotplayer.app/nl"/>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://hotplayer.app/de</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://hotplayer.app/nl"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hotplayer.app/de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hotplayer.app/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hotplayer.app/nl"/>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://hotplayer.app/en</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://hotplayer.app/nl"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hotplayer.app/de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hotplayer.app/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hotplayer.app/nl"/>
+    <priority>1.0</priority>
+  </url>
+  <url><loc>https://hotplayer.app/nl/blog</loc><priority>0.7</priority></url>
+  <url><loc>https://hotplayer.app/de/blog</loc><priority>0.7</priority></url>
+  <url><loc>https://hotplayer.app/en/blog</loc><priority>0.7</priority></url>
+  <url><loc>https://hotplayer.app/nl/agb</loc><priority>0.3</priority></url>
+  <url><loc>https://hotplayer.app/de/agb</loc><priority>0.3</priority></url>
+  <url><loc>https://hotplayer.app/en/agb</loc><priority>0.3</priority></url>
+</urlset>

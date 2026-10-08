@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
 
-# The Sitemap: lines are appended at build time by scripts/prerender.ts, which
-# writes one per emitted sitemap. Do not add them by hand — the set changes with
-# the languages the blog is published in, and a hand-kept list goes stale.
+Sitemap: https://hotplayer.app/sitemap.xml
