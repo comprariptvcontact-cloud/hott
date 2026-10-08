@@ -1,4 +1,4 @@
-// HotPlayer — content for the landing page, a 1:1 match of hotplayer.app/en.
+// HotPlayer — content for the landing page, served at www.hotiptv.be.
 // Three languages: Dutch (nl, default), German (de), English (en).
 
 export type HpLang = "nl" | "de" | "en";

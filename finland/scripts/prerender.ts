@@ -21,13 +21,14 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
 const DIST = resolve(ROOT, "dist");
 // Canonical origin — must match the host that actually serves 200s.
-const SITE = "https://www.iptvmate.eu";
-const BRAND = "IPTV Mate";
+const SITE = "https://www.hotiptv.be";
+const BRAND = "HotPlayer";
 
 // Must match index.html exactly — these are the anchors the template is patched on.
 const TPL_HTML_TAG = '<html lang="nl">';
 const TPL_CANONICAL = `<link rel="canonical" href="${SITE}/" />`;
-const TPL_TITLE = "<title>IPTV Mate — Premium IPTV Abonnement | iptvmate.eu</title>";
+const TPL_TITLE =
+  "<title>HotPlayer — Hot IPTV Media Player for Smart TV & Firestick</title>";
 
 const template = readFileSync(resolve(DIST, "index.html"), "utf8");
 
@@ -289,14 +290,14 @@ for (const post of ALL_POSTS) {
 const sorted = [...ALL_POSTS].sort((a, b) => b.dateISO.localeCompare(a.dateISO));
 
 const BLOG_TITLE: Record<string, string> = {
-  de: `IPTV Mate Blog — Anleitungen, Vergleiche & Tipps`,
-  en: `IPTV Mate Blog — IPTV Guides, Comparisons & Tips`,
-  nl: `IPTV Mate Blog — Handleidingen, Vergelijkingen & Tips`,
+  de: `HotPlayer Blog — Hot IPTV Anleitungen, Vergleiche & Tipps`,
+  en: `HotPlayer Blog — Hot IPTV Guides, Comparisons & Tips`,
+  nl: `HotPlayer Blog — Hot IPTV Handleidingen, Vergelijkingen & Tips`,
 };
 const BLOG_DESC: Record<string, string> = {
-  de: "IPTV Mate Blog: IPTV-Anleitungen, App-Vergleiche, Installationstipps und Ratgeber. Mit IPTV Mate ein zuverlässiges Premium-Abonnement in Deutschland wählen.",
-  en: "IPTV Mate Blog: IPTV guides, app comparisons, installation tips and advice. Choose a reliable premium IPTV Mate subscription in Europe.",
-  nl: "IPTV Mate Blog: IPTV-handleidingen, app-vergelijkingen, installatietips en advies. Kies een betrouwbaar premium IPTV Mate abonnement in Europa.",
+  de: "HotPlayer Blog: Hot IPTV-Anleitungen, App-Vergleiche, Installationstipps und Ratgeber zum Abspielen deiner M3U-Playlists und Xtream Codes.",
+  en: "HotPlayer Blog: Hot IPTV guides, app comparisons, installation tips and advice for playing your own M3U playlists and Xtream Codes.",
+  nl: "HotPlayer Blog: Hot IPTV-handleidingen, app-vergelijkingen, installatietips en advies voor het afspelen van je eigen M3U-afspeellijsten en Xtream Codes.",
 };
 
 const HOME_LANGS = ["de", "en", "nl"];
@@ -352,14 +353,14 @@ for (const blogLang of HOME_LANGS) {
 
 // ---- /agb (per language) ---------------------------------------------------
 const TERMS_TITLE: Record<string, string> = {
-  de: `AGB & Kundenschutz | IPTV Mate`,
-  en: `Terms & Customer Protection | IPTV Mate`,
-  nl: `Voorwaarden & Klantbescherming | IPTV Mate`,
+  de: `AGB & Kundenschutz | HotPlayer`,
+  en: `Terms & Customer Protection | HotPlayer`,
+  nl: `Voorwaarden & Klantbescherming | HotPlayer`,
 };
 const TERMS_DESC: Record<string, string> = {
-  de: "IPTV Mate: 15 Tage Rückerstattungsgarantie, 24/7 Support, wöchentliche Wartung und vierteljährliche Film-Updates. Vollständige AGB und Kundenschutz von IPTV Mate.",
-  en: "IPTV Mate: 15-day money-back guarantee, 24/7 support, weekly maintenance and quarterly movie updates. Full terms and customer protection of IPTV Mate.",
-  nl: "IPTV Mate: 15 dagen geld-terug-garantie, 24/7 ondersteuning, wekelijks onderhoud en driemaandelijkse filmupdates. Volledige voorwaarden en klantbescherming van IPTV Mate.",
+  de: "HotPlayer: 15 Tage Rückerstattungsgarantie und 24/7 Support für die Aktivierung. Vollständige AGB und Kundenschutz des HotPlayer Hot IPTV Mediaplayers.",
+  en: "HotPlayer: 15-day money-back guarantee and 24/7 support on activation. Full terms and customer protection for the HotPlayer Hot IPTV media player.",
+  nl: "HotPlayer: 15 dagen geld-terug-garantie en 24/7 ondersteuning bij activatie. Volledige voorwaarden en klantbescherming van de HotPlayer Hot IPTV mediaspeler.",
 };
 const TERMS_LABEL: Record<string, string> = { de: "AGB", en: "Terms", nl: "Voorwaarden" };
 const TERMS_H1: Record<string, string> = {
@@ -418,52 +419,55 @@ for (const tLang of HOME_LANGS) {
 
 // ---- homepage (per language) -----------------------------------------------
 const HOME_TITLE: Record<string, string> = {
-  de: "IPTV Mate — Premium IPTV Abonnement Deutschland | 8K",
-  en: "IPTV Mate — Premium IPTV Subscription Europe | 8K",
-  nl: "IPTV Mate — Premium IPTV Abonnement Nederland | 8K",
+  de: "HotPlayer — Hot IPTV Mediaplayer für Smart-TV & Firestick",
+  en: "HotPlayer — Hot IPTV Media Player for Smart TV & Firestick",
+  nl: "HotPlayer — Hot IPTV Mediaspeler voor Smart TV & Firestick",
 };
 const HOME_DESC: Record<string, string> = {
-  de: "IPTV Mate auf iptvmate.eu: Premium-IPTV-Abonnement für Deutschland mit 69.000+ Live-Sendern und 220.000+ Filmen & Serien in bis zu 8K. IPTV Mate kaufen für Smart TV, Android & Fire TV.",
-  en: "IPTV Mate at iptvmate.eu: premium IPTV subscription for Europe with 69,000+ live channels and 220,000+ movies & series in up to 8K. Buy IPTV Mate for Smart TV, Android & Fire TV.",
-  nl: "IPTV Mate op iptvmate.eu: premium IPTV-abonnement voor Nederland met 69.000+ live zenders en 220.000+ films & series in tot 8K. IPTV Mate kopen voor Smart TV, Android & Fire TV.",
+  de: "HotPlayer ist der beste Hot IPTV Mediaplayer für Smart-TV, Firestick & Android. Spiele deine eigenen M3U-Playlists oder Xtream Codes in bis zu 8K. Jetzt aktivieren.",
+  en: "HotPlayer is the best Hot IPTV media player for Smart TV, Firestick, Roku & Android. Play your own M3U playlists or Xtream Codes in up to 8K. Activate now.",
+  nl: "HotPlayer is de beste Hot IPTV mediaspeler voor smart-tv, Firestick & Android. Speel je eigen M3U-afspeellijsten of Xtream Codes af in tot wel 8K. Nu activeren.",
 };
 const HOME_BODY: Record<string, string[]> = {
   de: [
-    `<h1>IPTV Mate — Premium IPTV Abonnement für Deutschland</h1>`,
-    `<p>IPTV Mate auf iptvmate.eu ist ein Premium-IPTV-Abonnement für Deutschland mit über 69.000 Live-Sendern und 220.000 Filmen und Serien als Video-on-Demand — in bis zu 8K Ultra HD. Kompatibel mit Smart TV, Android, Fire TV, MAG-Boxen und weiteren Geräten. IPTV Mate bietet Ihnen das beste Preis-Leistungs-Verhältnis.</p>`,
-    `<h2>Warum IPTV Mate wählen?</h2>`,
+    `<h1>HotPlayer — Hot IPTV Mediaplayer für Smart-TV & Firestick</h1>`,
+    `<p>HotPlayer ist ein Hot IPTV Mediaplayer für Smart-TV, Firestick, Android TV, Roku, Samsung und LG. Die App spielt deine eigenen M3U-Playlists und Xtream Codes ab — es sind keine Sender enthalten.</p>`,
+    `<p>Als schlanker Hot IPTV Player bietet HotPlayer eine schnelle, einfache Oberfläche mit Favoriten, Suche, Kindersicherung, Multi-Liste und MAC-Sperre, damit deine Playlist flüssig in bis zu 8K auf jedem Bildschirm läuft.</p>`,
+    `<h2>Warum HotPlayer der beste Hot IPTV Player ist</h2>`,
     `<ul>`,
-    `<li>69.000+ Live-Sender aus Deutschland und ganz Europa, inklusive Bundesliga und UEFA Champions League</li>`,
-    `<li>220.000+ Filme und Serien als VOD, wöchentlich aktualisiert</li>`,
-    `<li>Bis zu 8K Ultra HD Bildqualität</li>`,
-    `<li>15 Tage Rückerstattungsgarantie und 24/7 Support</li>`,
-    `<li>Läuft auf Smart TV, Android, Fire TV Stick und weiteren Geräten</li>`,
+    `<li>Spielt deine eigenen M3U-Playlists und Xtream Codes ab</li>`,
+    `<li>Für Smart-TV, Firestick, Android TV, Roku, Samsung und LG</li>`,
+    `<li>Favoriten, Suche, Kindersicherung, Multi-Liste und MAC-Sperre</li>`,
+    `<li>Wiedergabe in bis zu 8K Ultra HD</li>`,
+    `<li>Einmal aktivieren und auf jedem Gerät nutzen</li>`,
     `</ul>`,
     `<p><a href="/de/blog">Alle Ratgeber im Blog</a></p>`,
   ],
   en: [
-    `<h1>IPTV Mate — Premium IPTV Subscription for Europe</h1>`,
-    `<p>IPTV Mate at iptvmate.eu is a premium IPTV subscription for Europe with over 69,000 live channels and 220,000 movies and series as video-on-demand — in up to 8K Ultra HD. Compatible with Smart TV, Android, Fire TV, MAG boxes and more. IPTV Mate gives you the best value for premium streaming.</p>`,
-    `<h2>Why choose IPTV Mate?</h2>`,
+    `<h1>HotPlayer — Hot IPTV Media Player for Smart TV & Firestick</h1>`,
+    `<p>HotPlayer is a Hot IPTV media player built for Smart TV, Firestick, Android TV, Roku, Samsung and LG. It plays your own M3U playlists and Xtream Codes — no channels are included with the app.</p>`,
+    `<p>As a lightweight Hot IPTV player, HotPlayer gives you a fast, simple interface with favorites, search, parental controls, multi-list support and MAC lock, so your playlist streams smoothly in up to 8K on any screen.</p>`,
+    `<h2>Why HotPlayer is the best Hot IPTV player</h2>`,
     `<ul>`,
-    `<li>69,000+ live channels from Europe and worldwide, including Premier League and UEFA Champions League</li>`,
-    `<li>220,000+ movies and series as VOD, updated weekly</li>`,
-    `<li>Up to 8K Ultra HD picture quality</li>`,
-    `<li>15-day money-back guarantee and 24/7 support</li>`,
-    `<li>Works on Smart TV, Android, Fire TV Stick and more</li>`,
+    `<li>Plays your own M3U playlists and Xtream Codes</li>`,
+    `<li>Works on Smart TV, Firestick, Android TV, Roku, Samsung and LG</li>`,
+    `<li>Favorites, search, parental controls, multi-list and MAC lock</li>`,
+    `<li>Playback in up to 8K Ultra HD</li>`,
+    `<li>Activate once and use on any device</li>`,
     `</ul>`,
     `<p><a href="/en/blog">Browse all guides on the blog</a></p>`,
   ],
   nl: [
-    `<h1>IPTV Mate — Premium IPTV Abonnement voor Nederland</h1>`,
-    `<p>IPTV Mate op iptvmate.eu is een premium IPTV-abonnement voor Nederland met meer dan 69.000 live zenders en 220.000 films en series als video-on-demand — in maximaal 8K Ultra HD. Compatibel met Smart TV, Android, Fire TV, MAG-boxen en meer. IPTV Mate biedt u de beste prijs-kwaliteitverhouding.</p>`,
-    `<h2>Waarom kiezen voor IPTV Mate?</h2>`,
+    `<h1>HotPlayer — Hot IPTV Mediaspeler voor Smart TV & Firestick</h1>`,
+    `<p>HotPlayer is een Hot IPTV mediaspeler voor smart-tv, Firestick, Android TV, Roku, Samsung en LG. De app speelt je eigen M3U-afspeellijsten en Xtream Codes af — er zijn geen zenders inbegrepen.</p>`,
+    `<p>Als lichte Hot IPTV speler biedt HotPlayer een snelle, eenvoudige interface met favorieten, zoeken, ouderlijk toezicht, multi-lijst en MAC-vergrendeling, zodat je afspeellijst vloeiend in tot wel 8K op elk scherm speelt.</p>`,
+    `<h2>Waarom HotPlayer de beste Hot IPTV speler is</h2>`,
     `<ul>`,
-    `<li>69.000+ live zenders uit Nederland en heel Europa, inclusief Eredivisie en UEFA Champions League</li>`,
-    `<li>220.000+ films en series als VOD, wekelijks bijgewerkt</li>`,
-    `<li>Tot 8K Ultra HD beeldkwaliteit</li>`,
-    `<li>15 dagen geld-terug-garantie en 24/7 ondersteuning</li>`,
-    `<li>Werkt op Smart TV, Android, Fire TV Stick en meer</li>`,
+    `<li>Speelt je eigen M3U-afspeellijsten en Xtream Codes af</li>`,
+    `<li>Werkt op smart-tv, Firestick, Android TV, Roku, Samsung en LG</li>`,
+    `<li>Favorieten, zoeken, ouderlijk toezicht, multi-lijst en MAC-vergrendeling</li>`,
+    `<li>Weergave in tot wel 8K Ultra HD</li>`,
+    `<li>Eén keer activeren en op elk apparaat gebruiken</li>`,
     `</ul>`,
     `<p><a href="/nl/blog">Bekijk alle handleidingen op de blog</a></p>`,
   ],

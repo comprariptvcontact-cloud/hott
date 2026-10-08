@@ -36,7 +36,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
 const DATA = resolve(ROOT, "src", "data");
 
-const SITE = "https://www.iptvmate.eu";
+const SITE = "https://www.hotiptv.be";
 const INSTA = "https://www.instagram.com/iptv-mate/";
 
 /** Everything that is neither German nor English gets rewritten. */

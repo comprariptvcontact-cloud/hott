@@ -1,7 +1,7 @@
 import { BlogPost } from "./blogPosts";
 
-const SITE = "https://www.iptvmate.eu";
-const INSTA = "https://www.iptvmate.eu";
+const SITE = "https://www.hotiptv.be";
+const INSTA = "https://www.hotiptv.be";
 
 export const SEO_BLOG_POSTS: BlogPost[] = [
   // ============================= NEDERLAND / NEDERLANDS =============================

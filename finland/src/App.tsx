@@ -23,7 +23,7 @@ import { getBlogText } from "./blogI18n";
 import { getTerms } from "./termsText";
 import type { LangCode } from "./i18n";
 
-const SITE_ORIGIN = "https://www.iptvmate.eu";
+const SITE_ORIGIN = "https://www.hotiptv.be";
 
 const INDEXABLE = "index, follow, max-image-preview:large, max-snippet:-1";
 const NOT_INDEXABLE = "noindex, follow";
@@ -179,7 +179,7 @@ function AppInner({ view, urlLang }: { view: View; urlLang: HomeLang | null }) {
 
     if (view.type === "not-found") {
       setMetaByName("robots", NOT_INDEXABLE);
-      document.title = `${getBlogText(lang).notFoundTitle} — IPTV MATE`;
+      document.title = `${getBlogText(lang).notFoundTitle} — HotPlayer`;
       setMetaByName("description", getBlogText(lang).notFoundDesc);
       link?.remove();
       return;
@@ -189,7 +189,7 @@ function AppInner({ view, urlLang }: { view: View; urlLang: HomeLang | null }) {
 
     if (view.type === "terms") {
       const tt = getTerms(lang);
-      document.title = `${tt.title1} ${tt.title2} — IPTV MATE`;
+      document.title = `${tt.title1} ${tt.title2} — HotPlayer`;
       setMetaByName("description", tt.intro);
     }
 
