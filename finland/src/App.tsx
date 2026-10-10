@@ -22,6 +22,8 @@ import { getPostBySlug } from "./data/allPosts";
 import { getBlogText } from "./blogI18n";
 import { getTerms } from "./termsText";
 import type { LangCode } from "./i18n";
+import RichText from "./components/RichText";
+import { getKeywordPage } from "./data/keywordPages";
 
 const SITE_ORIGIN = "https://www.hotiptv.be";
 
@@ -43,6 +45,7 @@ type View =
   | { type: "home"; homeLang: HomeLang }
   | { type: "blog-grid" }
   | { type: "blog-post"; slug: string }
+  | { type: "keyword-page"; slug: string }
   | { type: "terms" }
   | { type: "not-found" };
 
@@ -67,6 +70,12 @@ function resolveView(): { view: View; urlLang: HomeLang | null } {
 
   const match = effectiveRest.match(/^\/blog\/([^/]+)$/);
   if (match && getPostBySlug(match[1])) return { view: { type: "blog-post", slug: match[1] }, urlLang: lang };
+
+  // Root-level SEO keyword landing pages, e.g. /iptv-kopen, /iptv-nederland.
+  if (!lang) {
+    const kwSlug = effectiveRest.replace(/^\//, "");
+    if (getKeywordPage(kwSlug)) return { view: { type: "keyword-page", slug: kwSlug }, urlLang: null };
+  }
 
   return { view: { type: "not-found" }, urlLang: lang };
 }
@@ -112,6 +121,9 @@ function AppInner({ view, urlLang }: { view: View; urlLang: HomeLang | null }) {
   const { t, dir, lang, setLang } = useLanguage();
   const [selectedPlanForCheckout, setSelectedPlanForCheckout] = useState<PricingPlan | null>(null);
   const isHome = view.type === "home";
+  // The keyword landing pages render the Pricing section inline, so in-page
+  // anchor scrolling works there exactly as it does on the home page.
+  const isScrollable = view.type === "home" || view.type === "keyword-page";
 
   useEffect(() => {
     if (view.type === "home") {
@@ -124,7 +136,7 @@ function AppInner({ view, urlLang }: { view: View; urlLang: HomeLang | null }) {
   const langPrefix = `/${lang === "nl" ? "nl" : lang === "de" ? "de" : "en"}`;
 
   const scrollToSection = (id: string) => {
-    if (!isHome) {
+    if (!isScrollable) {
       window.location.href = `${langPrefix}/#${id}`;
       return;
     }
@@ -186,6 +198,14 @@ function AppInner({ view, urlLang }: { view: View; urlLang: HomeLang | null }) {
     }
 
     setMetaByName("robots", INDEXABLE);
+
+    if (view.type === "keyword-page") {
+      const kp = getKeywordPage(view.slug);
+      if (kp) {
+        document.title = kp.title;
+        setMetaByName("description", kp.description);
+      }
+    }
 
     if (view.type === "terms") {
       const tt = getTerms(lang);
@@ -257,6 +277,50 @@ function AppInner({ view, urlLang }: { view: View; urlLang: HomeLang | null }) {
             <PaymentsAndFaq />
           </>
         )}
+
+        {view.type === "keyword-page" && (() => {
+          const kp = getKeywordPage(view.slug);
+          if (!kp) return null;
+          return (
+            <>
+              <section className="px-4 md:px-8 max-w-4xl mx-auto w-full pt-10 pb-4">
+                <nav className="text-sm text-white/50 mb-4">
+                  <a href={langPrefix} className="hover:text-[#facc15]">HotPlayer</a> › {kp.keyword}
+                </nav>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight mb-6">
+                  {kp.h1}
+                </h1>
+                <div className="space-y-5">
+                  {kp.lead.map((p, i) =>
+                    p.startsWith("## ") ? (
+                      <h2 key={i} className="text-2xl sm:text-3xl font-extrabold text-white !mt-10 !mb-2">
+                        <RichText text={p.slice(3)} />
+                      </h2>
+                    ) : (
+                      <p key={i} className="text-lg leading-relaxed text-neutral-300">
+                        <RichText text={p} />
+                      </p>
+                    )
+                  )}
+                </div>
+              </section>
+              <Pricing onSelectPlan={setSelectedPlanForCheckout} />
+              <DeviceCompatibility onPricingClick={() => scrollToSection("pricing-section")} />
+              <section className="px-4 md:px-8 max-w-3xl mx-auto w-full py-12">
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-6">FAQ</h2>
+                <div className="space-y-5">
+                  {kp.faq.map((f, i) => (
+                    <div key={i}>
+                      <h3 className="text-lg font-bold text-white mb-1">{f.q}</h3>
+                      <p className="text-neutral-300">{f.a}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+              <PaymentsAndFaq />
+            </>
+          );
+        })()}
 
         {view.type === "blog-grid" && (
           <>
