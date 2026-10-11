@@ -31,6 +31,15 @@ const TPL_CANONICAL = `<link rel="canonical" href="${SITE}/" />`;
 const TPL_TITLE =
   "<title>HotPlayer — Hot IPTV Media Player for Smart TV & Firestick</title>";
 
+const WA_URL = "https://wa.me/447462229301";
+const OFFER_HTML = [
+  `<section aria-label="Zeitlich begrenztes Angebot">`,
+  `<p><strong>Zeitlich begrenztes Angebot</strong></p>`,
+  `<h2>12 + 3 Monate GRATIS — 15 Monate ${BRAND}</h2>`,
+  `<p>Zahle 12 Monate und erhalte 3 Monate geschenkt — 220.000+ VOD, 69.000+ Sender, permanente Updates, 4K UHD.</p>`,
+  `<p><a href="${SITE}/iptv-12-monate">Angebot sichern</a> · <a href="${WA_URL}" rel="noopener">Per WhatsApp bestellen</a></p>`,
+  `</section>`,
+].join("\n");
 const template = readFileSync(resolve(DIST, "index.html"), "utf8");
 
 for (const [name, anchor] of Object.entries({ TPL_HTML_TAG, TPL_CANONICAL, TPL_TITLE })) {
@@ -235,6 +244,7 @@ for (const post of ALL_POSTS) {
     `<h1>${esc(t.title)}</h1>`,
     `<p>${esc(stripMd(t.excerpt))}</p>`,
     `<img src="${esc(post.image)}" alt="${esc(t.title)}" width="1200" height="675" />`,
+    ...(post.offer ? [OFFER_HTML] : []),
     // A body paragraph starting with "## " becomes a real <h2>, so long posts can carry
     // scannable subheadings (and featured-snippet-friendly sections) instead of one flat
     // wall of <p> tags. Plain paragraphs are unaffected.
@@ -515,6 +525,7 @@ for (const hLang of HOME_LANGS) {
 // Root-level, single-language (Dutch) landing pages that reuse the Pricing
 // packages in the SPA. Emitted here as real crawlable HTML with WebPage +
 // BreadcrumbList + FAQPage JSON-LD, and added to sitemap-pages.xml below.
+const DE_KW_SLUGS = new Set(["iptv-12-monate", "welcher-iptv-anbieter-ist-der-beste", "iptv-bundesliga"]);
 const keywordPageLocs: string[] = [];
 for (const kp of KEYWORD_PAGES) {
   const canonical = `${SITE}/${kp.slug}`;
@@ -527,7 +538,7 @@ for (const kp of KEYWORD_PAGES) {
     `</section>`,
   ].join("\n");
   const keywordHtml = buildPage({
-    lang: "nl",
+    lang: DE_KW_SLUGS.has(kp.slug) ? "de" : "nl",
     title: kp.title,
     description: kp.description,
     canonical,
@@ -538,7 +549,7 @@ for (const kp of KEYWORD_PAGES) {
         "@type": "WebPage",
         name: kp.title,
         url: canonical,
-        inLanguage: "nl",
+        inLanguage: DE_KW_SLUGS.has(kp.slug) ? "de" : "nl",
         description: kp.description,
         isPartOf: { "@type": "WebSite", name: BRAND, url: SITE },
       },

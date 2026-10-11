@@ -6,6 +6,7 @@ import { useLanguage } from "../LanguageContext";
 import { getBlogText } from "../blogI18n";
 import BlogPostCard, { formatPostDate } from "./BlogPostCard";
 import RichText from "./RichText";
+import OfferCountdown from "./OfferCountdown";
 
 interface BlogPostProps {
   slug: string;
@@ -74,6 +75,12 @@ export default function BlogPost({ slug, onPricingClick }: BlogPostProps) {
           onError={e => { e.currentTarget.src = "/hero-bg.jpg"; }}
         />
       </div>
+
+      {post.offer && (
+        <div className="max-w-3xl mx-auto">
+          <OfferCountdown onPricingClick={onPricingClick} />
+        </div>
+      )}
 
       <div className="max-w-3xl mx-auto space-y-6 mb-12">
         {text.body.map((paragraph, i) => {

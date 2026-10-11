@@ -15,6 +15,8 @@ export interface BlogPost {
   /** Fixed display language for single-language SEO landing posts. When set, the post always
    *  renders in this language regardless of the site-wide language switcher. */
   lang?: LangCode;
+  /** When true, the post leads with the 12 + 3-month offer block. */
+  offer?: boolean;
   content: Partial<Record<LangCode, BlogPostText>>;
 }
 
