@@ -1285,7 +1285,7 @@ export const NL_KW_BLOG_POSTS: BlogPost[] = [
     },
   },
   {
-    slug: "iptv-4k",
+    slug: "iptv-4k-nl",
     category: "Gids",
     dateISO: "2026-08-18",
     image: "https://images.unsplash.com/photo-1517602302552-471fe67acf66?auto=format&fit=crop&w=1200&q=80",
