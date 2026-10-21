@@ -1,3 +1,4 @@
+import SiteLinks from "./components/SiteLinks";
 import { useEffect, useState } from "react";
 import { PricingPlan } from "./types";
 import { LanguageProvider, useLanguage } from "./LanguageContext";
@@ -359,6 +360,7 @@ function AppInner({ view, urlLang }: { view: View; urlLang: HomeLang | null }) {
       </main>
 
       <footer className="mt-16 text-white bg-black">
+        <SiteLinks lang={lang} langPrefix={langPrefix} />
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 pt-16 pb-10 grid grid-cols-2 md:grid-cols-4 gap-10 text-left">
           <div>
             <h5 className="text-sm font-bold uppercase tracking-wider text-white mb-5">{t.footer.sub1}</h5>
