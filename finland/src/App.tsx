@@ -1,3 +1,4 @@
+import BlogOfferBanner from "./components/BlogOfferBanner";
 import SiteLinks from "./components/SiteLinks";
 import { useEffect, useState } from "react";
 import { PricingPlan } from "./types";
@@ -245,6 +246,7 @@ function AppInner({ view, urlLang }: { view: View; urlLang: HomeLang | null }) {
       <main className="flex-grow overflow-x-clip">
         {view.type === "home" && (
           <>
+              <BlogOfferBanner />
             <Hero
               onPricingClick={() => scrollToSection("pricing-section")}
               onTrialClick={() => {

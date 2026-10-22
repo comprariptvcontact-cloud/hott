@@ -159,7 +159,7 @@ export const NL_KW_BLOG_POSTS2: BlogPost[] = [
     },
   },
   {
-    slug: "iptv-formuler",
+    slug: "iptv-op-formuler",
     category: "Gids",
     dateISO: "2026-10-13",
     image: "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?auto=format&fit=crop&w=1200&q=80",
@@ -381,7 +381,7 @@ export const NL_KW_BLOG_POSTS2: BlogPost[] = [
     },
   },
   {
-    slug: "beste-iptv-apps",
+    slug: "beste-iptv-apps-overzicht",
     category: "Gids",
     dateISO: "2026-10-03",
     image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
