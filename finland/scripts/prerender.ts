@@ -121,6 +121,7 @@ function buildPage(o: PageOpts): string {
   ].join("\n    ");
 
   return template
+    .replace(/<meta\s+name=["']description["'][^>]*>/i, "")
     .replace(TPL_HTML_TAG, `<html lang="${o.lang}">`)
     .replace(TPL_CANONICAL, `<link rel="canonical" href="${esc(o.canonical)}" />`)
     .replace(TPL_TITLE, `<title>${esc(o.title)}</title>\n    ${head}`)
