@@ -5,7 +5,7 @@ import { BlogPost } from "./blogPosts";
 // is optimized for the German keyword set (iptv abo, iptv-abonnement, bester
 // iptv anbieter, iptv anbieter liste, iptv bundesliga). Dated newest so it leads
 // the blog grid.
-const SITE = "https://www.hotiptv.be";
+const SITE = "https://www.hot-iptv.store";
 const BRAND = "HotPlayer";
 
 export const DE_OFFER_POSTS: BlogPost[] = [

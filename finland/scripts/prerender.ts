@@ -22,7 +22,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
 const DIST = resolve(ROOT, "dist");
 // Canonical origin — must match the host that actually serves 200s.
-const SITE = "https://www.hotiptv.be";
+const SITE = "https://www.hot-iptv.store";
 const BRAND = "HotPlayer";
 
 // Must match index.html exactly — these are the anchors the template is patched on.

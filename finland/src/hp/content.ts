@@ -1,4 +1,4 @@
-// HotPlayer — content for the landing page, served at www.hotiptv.be.
+// HotPlayer — content for the landing page, served at www.hot-iptv.store.
 // Three languages: Dutch (nl, default), German (de), English (en).
 
 export type HpLang = "nl" | "de" | "en";

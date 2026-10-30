@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.hotiptv.be/sitemap.xml
+# Sitemap: lines are appended at build time by scripts/prerender.ts
+# (the sitemap index + one child per language), so they can never drift
+# out of sync with what was actually emitted. Do not add them by hand here.
