@@ -94,6 +94,9 @@ function setMetaByName(name: string, content: string) {
 
 function GeoRedirect() {
   useEffect(() => {
+    // English is the default home page. Only an explicit language the visitor
+    // picked in the switcher (persisted in localStorage) overrides it; everyone
+    // else — regardless of region — lands on /en.
     try {
       const stored = window.localStorage.getItem("dark.lang");
       if (stored && isHomeLang(stored)) {
@@ -102,14 +105,7 @@ function GeoRedirect() {
       }
     } catch { /* ignore */ }
 
-    fetch("https://get.geojs.io/v1/ip/country.json")
-      .then(r => r.json())
-      .then((data: { country: string }) => {
-        const c = (data.country || "").toUpperCase();
-        if (c === "DE" || c === "AT" || c === "CH" || c === "LI" || c === "LU") window.location.replace("/de");
-        else window.location.replace("/en");
-      })
-      .catch(() => window.location.replace("/en"));
+    window.location.replace("/en");
   }, []);
 
   return (
