@@ -1,7 +1,7 @@
 ﻿export type LangCode = 'fi' | 'en' | 'fr' | 'da' | 'ar' | 'de' | 'es' | 'it' | 'nl' | 'sv' | 'no' | 'pl' | 'pt' | 'ro' | 'cs' | 'tr';
 
-/** The one language the site is published in. This is a Dutch-only site. */
-export const SITE_LANG: LangCode = 'nl';
+/** The default site language. English is the default home page (served at /en and /). */
+export const SITE_LANG: LangCode = 'en';
 
 /**
  * Languages offered in the header switcher: Dutch (the published site language),

@@ -26,7 +26,7 @@ const SITE = "https://www.hot-iptv.store";
 const BRAND = "HotPlayer";
 
 // Must match index.html exactly — these are the anchors the template is patched on.
-const TPL_HTML_TAG = '<html lang="nl">';
+const TPL_HTML_TAG = '<html lang="en">';
 const TPL_CANONICAL = `<link rel="canonical" href="${SITE}/" />`;
 const TPL_TITLE =
   "<title>HotPlayer — Hot IPTV Media Player for Smart TV & Firestick</title>";
@@ -133,7 +133,7 @@ function hreflangSet(pathSuffix: string): HreflangLink[] {
     { lang: "de", href: `${SITE}/de${pathSuffix}` },
     { lang: "en", href: `${SITE}/en${pathSuffix}` },
     { lang: "nl", href: `${SITE}/nl${pathSuffix}` },
-    { lang: "x-default", href: `${SITE}/nl${pathSuffix}` },
+    { lang: "x-default", href: `${SITE}/en${pathSuffix}` },
   ];
 }
 
@@ -585,9 +585,9 @@ for (const kp of KEYWORD_PAGES) {
   keywordPageLocs.push(canonical);
 }
 
-// Root index.html — the SPA shell served at "/". Dutch is the default site
-// language (SITE_LANG), so the root is rendered in Dutch: a visitor landing on
-// "/" sees the Dutch homepage, and the SPA boots in Dutch to match.
+// Root index.html — the SPA shell served at "/". English is the default site
+// language (SITE_LANG), so the root is rendered in English: a visitor landing on
+// "/" sees the English homepage, and the SPA boots in English to match.
 const rootOrgJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",

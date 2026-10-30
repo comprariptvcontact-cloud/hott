@@ -107,9 +107,9 @@ function GeoRedirect() {
       .then((data: { country: string }) => {
         const c = (data.country || "").toUpperCase();
         if (c === "DE" || c === "AT" || c === "CH" || c === "LI" || c === "LU") window.location.replace("/de");
-        else window.location.replace("/nl");
+        else window.location.replace("/en");
       })
-      .catch(() => window.location.replace("/nl"));
+      .catch(() => window.location.replace("/en"));
   }, []);
 
   return (
