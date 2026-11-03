@@ -282,6 +282,19 @@ function AppInner({ view, urlLang }: { view: View; urlLang: HomeLang | null }) {
           if (!kp) return null;
           return (
             <>
+              <Hero
+              onPricingClick={() => scrollToSection("pricing-section")}
+              onTrialClick={() => {
+                scrollToSection("pricing-section");
+                setTimeout(() => {
+                  document.getElementById("plan-1mo")?.scrollIntoView({ behavior: "smooth", block: "center" });
+                  document.getElementById("plan-1mo")?.classList.add("ring-2", "ring-[#facc15]");
+                  setTimeout(() => document.getElementById("plan-1mo")?.classList.remove("ring-2", "ring-[#facc15]"), 2000);
+                }, 600);
+              }}
+            />
+              <BlogOfferBanner />
+              <MovieGrid onPricingClick={() => scrollToSection("pricing-section")} />
               <section className="px-4 md:px-8 max-w-4xl mx-auto w-full pt-10 pb-4">
                 <nav className="text-sm text-white/50 mb-4">
                   <a href={langPrefix} className="hover:text-[#facc15]">HotPlayer</a> › {kp.keyword}
@@ -332,6 +345,7 @@ function AppInner({ view, urlLang }: { view: View; urlLang: HomeLang | null }) {
           <>
             <div className="pt-6 md:pt-10" />
             <BlogPost slug={view.slug} onPricingClick={() => scrollToSection("pricing-section")} />
+            <Pricing onSelectPlan={setSelectedPlanForCheckout} />
           </>
         )}
 
