@@ -420,6 +420,43 @@ function AppInner({ view, urlLang }: { view: View; urlLang: HomeLang | null }) {
             <a href={`${langPrefix}/blog`} className="hover:text-white transition-colors no-underline">{t.nav.blog}</a>
           </div>
         </div>
+      
+      {/* authority-links: curated TV/streaming references, bottom of every page */}
+      <div data-authority-links className="max-w-7xl mx-auto w-full px-6 md:px-12 py-8 border-t border-neutral-800/50 bg-[#0a0f1c]">
+        <p className="text-[10px] uppercase tracking-[0.2em] text-neutral-500 mb-3 font-mono">Further reading</p>
+        <p className="text-[11px] leading-relaxed text-neutral-600 break-words">
+          <a href="https://en.wikipedia.org/wiki/Internet_Protocol_television" target="_blank" rel="noopener" className="hover:text-neutral-300 transition-colors">IPTV</a>{" · "}
+          <a href="https://en.wikipedia.org/wiki/Streaming_media" target="_blank" rel="noopener" className="hover:text-neutral-300 transition-colors">Streaming media</a>{" · "}
+          <a href="https://en.wikipedia.org/wiki/Over-the-top_media_service" target="_blank" rel="noopener" className="hover:text-neutral-300 transition-colors">Over-the-top media</a>{" · "}
+          <a href="https://en.wikipedia.org/wiki/Video_on_demand" target="_blank" rel="noopener" className="hover:text-neutral-300 transition-colors">Video on demand</a>{" · "}
+          <a href="https://en.wikipedia.org/wiki/Smart_TV" target="_blank" rel="noopener" className="hover:text-neutral-300 transition-colors">Smart TV</a>{" · "}
+          <a href="https://en.wikipedia.org/wiki/Set-top_box" target="_blank" rel="noopener" className="hover:text-neutral-300 transition-colors">Set-top box</a>{" · "}
+          <a href="https://en.wikipedia.org/wiki/Electronic_program_guide" target="_blank" rel="noopener" className="hover:text-neutral-300 transition-colors">Electronic program guide</a>{" · "}
+          <a href="https://en.wikipedia.org/wiki/4K_resolution" target="_blank" rel="noopener" className="hover:text-neutral-300 transition-colors">4K resolution</a>{" · "}
+          <a href="https://en.wikipedia.org/wiki/8K_resolution" target="_blank" rel="noopener" className="hover:text-neutral-300 transition-colors">8K resolution</a>{" · "}
+          <a href="https://en.wikipedia.org/wiki/High-definition_television" target="_blank" rel="noopener" className="hover:text-neutral-300 transition-colors">HDTV</a>{" · "}
+          <a href="https://en.wikipedia.org/wiki/Ultra-high-definition_television" target="_blank" rel="noopener" className="hover:text-neutral-300 transition-colors">Ultra-HD TV</a>{" · "}
+          <a href="https://en.wikipedia.org/wiki/HDMI" target="_blank" rel="noopener" className="hover:text-neutral-300 transition-colors">HDMI</a>{" · "}
+          <a href="https://en.wikipedia.org/wiki/HTTP_Live_Streaming" target="_blank" rel="noopener" className="hover:text-neutral-300 transition-colors">HTTP Live Streaming</a>{" · "}
+          <a href="https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP" target="_blank" rel="noopener" className="hover:text-neutral-300 transition-colors">MPEG-DASH</a>{" · "}
+          <a href="https://en.wikipedia.org/wiki/Advanced_Video_Coding" target="_blank" rel="noopener" className="hover:text-neutral-300 transition-colors">H.264 / AVC</a>{" · "}
+          <a href="https://en.wikipedia.org/wiki/High_Efficiency_Video_Coding" target="_blank" rel="noopener" className="hover:text-neutral-300 transition-colors">H.265 / HEVC</a>{" · "}
+          <a href="https://en.wikipedia.org/wiki/AV1" target="_blank" rel="noopener" className="hover:text-neutral-300 transition-colors">AV1</a>{" · "}
+          <a href="https://en.wikipedia.org/wiki/Digital_Video_Broadcasting" target="_blank" rel="noopener" className="hover:text-neutral-300 transition-colors">Digital Video Broadcasting</a>{" · "}
+          <a href="https://en.wikipedia.org/wiki/HbbTV" target="_blank" rel="noopener" className="hover:text-neutral-300 transition-colors">HbbTV</a>{" · "}
+          <a href="https://en.wikipedia.org/wiki/M3U" target="_blank" rel="noopener" className="hover:text-neutral-300 transition-colors">M3U playlist</a>{" · "}
+          <a href="https://en.wikipedia.org/wiki/Codec" target="_blank" rel="noopener" className="hover:text-neutral-300 transition-colors">Codec</a>{" · "}
+          <a href="https://en.wikipedia.org/wiki/Android_TV" target="_blank" rel="noopener" className="hover:text-neutral-300 transition-colors">Android TV</a>{" · "}
+          <a href="https://en.wikipedia.org/wiki/Amazon_Fire_TV" target="_blank" rel="noopener" className="hover:text-neutral-300 transition-colors">Amazon Fire TV</a>{" · "}
+          <a href="https://en.wikipedia.org/wiki/Apple_TV" target="_blank" rel="noopener" className="hover:text-neutral-300 transition-colors">Apple TV</a>{" · "}
+          <a href="https://en.wikipedia.org/wiki/Kodi_(software)" target="_blank" rel="noopener" className="hover:text-neutral-300 transition-colors">Kodi</a>{" · "}
+          <a href="https://en.wikipedia.org/wiki/VLC_media_player" target="_blank" rel="noopener" className="hover:text-neutral-300 transition-colors">VLC media player</a>{" · "}
+          <a href="https://en.wikipedia.org/wiki/Bit_rate" target="_blank" rel="noopener" className="hover:text-neutral-300 transition-colors">Bit rate</a>{" · "}
+          <a href="https://dvb.org/" target="_blank" rel="noopener" className="hover:text-neutral-300 transition-colors">DVB Project</a>{" · "}
+          <a href="https://www.itu.int/" target="_blank" rel="noopener" className="hover:text-neutral-300 transition-colors">ITU</a>{" · "}
+          <a href="https://developer.mozilla.org/en-US/docs/Web/Media" target="_blank" rel="noopener" className="hover:text-neutral-300 transition-colors">MDN Web media</a>
+        </p>
+      </div>
       </footer>
 
       {selectedPlanForCheckout && (
